@@ -217,7 +217,8 @@
       }).join("");
       return '<div class="index-group"><h3 class="index-letter">' + esc(L) + "</h3>" + names + "</div>";
     }).join("");
-    return '<details class="artist-index" open><summary>Browse all artists A–Z</summary>' +
+    return '<details class="artist-index"><summary>Browse all artists A–Z <span class="index-count">(' +
+      list.length + ')</span></summary>' +
       '<div class="index-cols">' + cols + "</div></details>";
   }
 

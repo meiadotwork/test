@@ -190,14 +190,20 @@ code {
   list-style-position: inside;
 }
 .artist-index > summary:hover { color: var(--accent); }
+.index-count { color: var(--ink-soft); font-weight: 500; }
+/* Bounded, scrollable so the directory never covers the page when expanded. */
 .index-cols {
-  columns: 220px 4;
-  column-gap: 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 4px 28px;
   margin-top: 16px;
+  max-height: min(50vh, 420px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .index-group {
   break-inside: avoid;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .index-letter {
   font-family: "Fraunces", Georgia, serif;
