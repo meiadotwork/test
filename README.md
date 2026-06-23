@@ -30,6 +30,44 @@ js/app.js         # data load, search/filter, profiles, related artists, routing
 data/artists.json # the dataset — edit this to add/update artists
 ```
 
+## Live data via Artsy (optional)
+
+By default the search engine only knows the curated artists in
+`data/artists.json`. You can optionally make it **fall back to Artsy** so
+searching any artist who isn't in the dataset returns live results (bio, born
+date/place, nationality, movements, works, upcoming shows, related artists).
+
+Artsy authenticates with a `client_id` + `client_secret` that must **never** ship
+in a static site, and its API isn't CORS-enabled for browsers — so a tiny
+serverless proxy holds the secret and serves clean JSON to the site. A
+Cloudflare Worker version lives in `proxy/`.
+
+**1. Get Artsy credentials** — sign up at https://developers.artsy.net, create an
+app, and copy the **Client ID** and **Client Secret**.
+
+**2. Deploy the proxy** (free Cloudflare Workers):
+```bash
+cd proxy
+npm install -g wrangler        # if needed
+wrangler login
+wrangler secret put ARTSY_CLIENT_ID       # paste your client id
+wrangler secret put ARTSY_CLIENT_SECRET   # paste your client secret
+wrangler deploy
+```
+Wrangler prints a URL like `https://artisearch-artsy.<you>.workers.dev`.
+
+**3. Point the site at it** — edit `config.js`:
+```js
+window.ARTISEARCH = { proxyBase: "https://artisearch-artsy.<you>.workers.dev" };
+```
+Commit & push to `main` and the live site will use Artsy automatically. Leave
+`proxyBase` as `""` to disable live search.
+
+> The proxy exposes `GET /api/search?q=` and `GET /api/artist?id=`. It caches the
+> weekly Artsy XAPP token in memory. Optionally set `ALLOWED_ORIGIN` to your site
+> origin to lock down CORS. Hybrid by design: curated profiles always win;
+> Artsy is only used for artists not already in `data/artists.json`.
+
 ## Adding or editing an artist
 
 Open `data/artists.json` and add an object to the array. Every field is optional

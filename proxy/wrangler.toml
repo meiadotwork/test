@@ -1,0 +1,11 @@
+name = "artisearch-artsy"
+main = "artsy-worker.js"
+compatibility_date = "2025-01-01"
+
+# Secrets (do NOT put real values here — set them with `wrangler secret put`):
+#   wrangler secret put ARTSY_CLIENT_ID
+#   wrangler secret put ARTSY_CLIENT_SECRET
+#
+# Optional: lock the proxy to your site's origin.
+# [vars]
+# ALLOWED_ORIGIN = "https://meiadotwork.github.io"

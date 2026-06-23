@@ -14,6 +14,9 @@
   var readBtn = document.getElementById("readAloud");
   var speechOK = "speechSynthesis" in window;
   var galleryItems = [], lightIndex = 0;
+  var PROXY = (window.ARTISEARCH && window.ARTISEARCH.proxyBase) || "";
+  var currentLive = null; // normalized Artsy artist currently shown, if any
+  var liveSeq = 0;        // guards out-of-order live-search responses
 
   /* ---------- utilities ---------- */
 
@@ -185,6 +188,64 @@
     return scored.filter(function (s) { return s.score > 0; }).slice(0, 4).map(function (s) { return s.a; });
   }
 
+  /* ---------- live (Artsy) data via proxy ---------- */
+
+  function liveCardHTML(item) {
+    var resolve = item.thumb ? "" : ' data-resolve="portrait" data-q="' + esc(item.name) + '"';
+    return '<button class="card" data-live-id="' + esc(item.id) + '">' +
+      '<div class="card-thumb"' + resolve + ' style="background-image:url(\'' + img(item.thumb, item.id, item.name) + '\')"></div>' +
+      '<div class="card-body">' +
+        '<h3 class="card-name">' + esc(item.name) + "</h3>" +
+        '<p class="card-sub">' + esc(item.nationality || "via Artsy") + "</p>" +
+        '<div class="tag-row"><span class="tag">Artsy</span></div>' +
+      "</div></button>";
+  }
+
+  // Append live Artsy matches beneath the local results (de-duped by name).
+  function runLiveSearch(q) {
+    if (!PROXY || q.length < 2) return;
+    var seq = ++liveSeq;
+    var slot = document.createElement("div");
+    slot.className = "live-block";
+    slot.innerHTML = '<p class="results-meta">Searching Artsy for “' + esc(q) + '”…</p>';
+    view.appendChild(slot);
+    fetch(PROXY + "/api/search?q=" + encodeURIComponent(q))
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (list) {
+        if (seq !== liveSeq) return; // a newer search superseded this one
+        var localNames = {};
+        ARTISTS.forEach(function (a) { localNames[a.name.toLowerCase()] = 1; });
+        list = (list || []).filter(function (x) { return x.id && !localNames[(x.name || "").toLowerCase()]; });
+        if (!list.length) {
+          slot.innerHTML = '<p class="results-meta">No additional matches on Artsy.</p>';
+          return;
+        }
+        slot.innerHTML = '<h2 class="section-title">From Artsy</h2>' +
+          '<div class="grid">' + list.map(liveCardHTML).join("") + "</div>";
+        hydrateImages(slot);
+      })
+      .catch(function () {
+        if (seq === liveSeq) slot.innerHTML = '<p class="results-meta">Couldn’t reach Artsy right now.</p>';
+      });
+  }
+
+  function showLiveProfile(id) {
+    currentLive = null;
+    view.innerHTML = '<button class="back-btn" id="backBtn">← Back to results</button>' +
+      '<div class="empty"><h2>Loading…</h2><p>Fetching this artist from Artsy.</p></div>';
+    fetch(PROXY + "/api/artist?id=" + encodeURIComponent(id))
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (a) {
+        if (a && a.error) throw new Error(a.error);
+        currentLive = a;
+        renderProfile(a);
+      })
+      .catch(function (err) {
+        view.innerHTML = '<button class="back-btn" id="backBtn">← Back to results</button>' +
+          '<div class="empty"><h2>Couldn’t load this artist</h2><p>' + esc(err.message || String(err)) + "</p></div>";
+      });
+  }
+
   /* ---------- rendering: list ---------- */
 
   function cardHTML(a) {
@@ -220,6 +281,7 @@
     }
     view.innerHTML = html;
     hydrateImages(view);
+    if (state.query) runLiveSearch(state.query);
   }
 
   /* ---------- rendering: profile ---------- */
@@ -422,9 +484,16 @@
     var studio = studioInner ? section("Studio & Visits", studioInner) : "";
 
     /* related */
-    var rel = relatedTo(a);
-    var related = rel.length ? section("Related Artists",
-      '<div class="related-grid">' + rel.map(cardHTML).join("") + "</div>") : "";
+    var related;
+    if (a._source === "artsy") {
+      var liveRel = a.relatedArtists || [];
+      related = liveRel.length ? section("Related Artists",
+        '<div class="related-grid">' + liveRel.map(liveCardHTML).join("") + "</div>") : "";
+    } else {
+      var rel = relatedTo(a);
+      related = rel.length ? section("Related Artists",
+        '<div class="related-grid">' + rel.map(cardHTML).join("") + "</div>") : "";
+    }
 
     view.innerHTML =
       '<button class="back-btn" id="backBtn">← Back to results</button>' +
@@ -465,6 +534,7 @@
       var id = h.slice("artist/".length);
       return ARTISTS.find(function (a) { return a.id === id; }) || null;
     }
+    if (h.indexOf("live/") === 0) return currentLive;
     return null;
   }
 
@@ -553,6 +623,10 @@
       var a = ARTISTS.find(function (x) { return x.id === id; });
       if (a) { renderProfile(a); return; }
     }
+    if (hash.indexOf("live/") === 0 && PROXY) {
+      showLiveProfile(hash.slice("live/".length));
+      return;
+    }
     renderList();
     syncChips();
   }
@@ -576,7 +650,12 @@
 
     view.addEventListener("click", function (e) {
       var card = e.target.closest(".card");
-      if (card) { location.hash = "artist/" + card.getAttribute("data-id"); return; }
+      if (card) {
+        location.hash = card.hasAttribute("data-live-id")
+          ? "live/" + card.getAttribute("data-live-id")
+          : "artist/" + card.getAttribute("data-id");
+        return;
+      }
       if (e.target.closest("#backBtn")) { location.hash = ""; return; }
       var work = e.target.closest(".work");
       if (work) openLightbox(parseInt(work.getAttribute("data-index"), 10) || 0);

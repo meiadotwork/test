@@ -234,6 +234,9 @@ code {
   border-radius: 999px;
 }
 
+.live-block { margin-top: 40px; }
+.live-block .section-title { margin-bottom: 18px; }
+
 .empty {
   text-align: center;
   padding: 80px 20px;
