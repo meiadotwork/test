@@ -449,11 +449,28 @@
     var related = rel.length ? section("Related Artists",
       '<div class="related-grid">' + rel.map(cardHTML).join("") + "</div>") : "";
 
+    /* works on video — embedded YouTube/Vimeo showing the artist's work */
+    var videosSection = "";
+    if (a.videos && a.videos.length) {
+      var vembeds = a.videos.map(function (v) {
+        var embed = toEmbed(v.url);
+        if (!embed) return "";
+        return '<figure class="video-embed">' +
+          '<div class="video-frame"><iframe src="' + esc(embed) +
+          '" title="' + esc(v.title) + '" loading="lazy" allowfullscreen ' +
+          'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>' +
+          '<figcaption class="video-cap"><span class="video-title">' + esc(v.title) + "</span>" +
+          (v.source ? '<span class="li-source">' + esc(v.source) + "</span>" : "") + "</figcaption></figure>";
+      }).join("");
+      if (vembeds) videosSection = section("Works on Video", '<div class="video-grid">' + vembeds + "</div>");
+    }
+
     view.innerHTML =
       '<button class="back-btn" id="backBtn">← Back to results</button>' +
       hero + statement + section("Movement", (a.movements || []).length
         ? '<div class="tag-row">' + a.movements.map(function (m) { return '<span class="tag">' + esc(m) + "</span>"; }).join("") + "</div>"
         : "") +
+      videosSection +
       galleries + cv + press + interviews + books + collections + shows + pastEx + fairs + work + studio + related;
 
     hydrateImages(view);
