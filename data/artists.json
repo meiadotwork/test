@@ -9,18 +9,39 @@
     "bornPlace": "Matsumoto, Nagano, Japan",
     "livesIn": "Tokyo, Japan",
     "artStatement": "My art originates from hallucinations only I can see. I translate the obsessive visions and the infinite nets of dots that have flooded my mind since childhood into paintings, sculptures, and environments. Through repetition and accumulation I seek the self-obliteration of the individual into the infinite — a love for the universe that erases the boundary between body and cosmos.",
-    "movements": ["Pop Art", "Minimalism", "Feminist Art", "Avant-garde"],
-    "mediums": ["Painting", "Installation", "Sculpture", "Performance"],
+    "movements": [
+      "Pop Art",
+      "Minimalism",
+      "Feminist Art",
+      "Avant-garde"
+    ],
+    "mediums": [
+      "Painting",
+      "Installation",
+      "Sculpture",
+      "Performance"
+    ],
     "website": "https://www.yayoi-kusama.jp/",
     "instagram": "https://www.instagram.com/yayoikusama_/",
     "email": "studio@yayoi-kusama.example",
     "salesContact": "sales@yayoi-kusama.example",
-    "studio": { "location": "Shinjuku, Tokyo, Japan", "visits": "Private working studio; not open to the public. Inquiries via her studio." },
+    "studio": {
+      "location": "Shinjuku, Tokyo, Japan",
+      "visits": "Private working studio; not open to the public. Inquiries via her studio."
+    },
     "headshots": [
-      { "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Yayoi_Kusama_circa_2004.jpg", "credit": "Photo: George Quasha, “art is (Speaking Portraits)” — CC BY 3.0 via Wikimedia Commons" },
-      { "src": "", "credit": "Studio portrait, Tokyo" }
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Yayoi_Kusama_circa_2004.jpg",
+        "credit": "Photo: George Quasha, “art is (Speaking Portraits)” — CC BY 3.0 via Wikimedia Commons"
+      },
+      {
+        "src": "",
+        "credit": "Studio portrait, Tokyo"
+      }
     ],
-    "cv": { "url": "#" },
+    "cv": {
+      "url": "#"
+    },
     "education": [
       "Kyoto Municipal School of Arts and Crafts — Nihonga painting (1948–1949)",
       "Art Students League of New York (1958)"
@@ -31,23 +52,73 @@
       "U.S. Department of State Medal of Arts (2012)"
     ],
     "galleries": [
-      { "name": "David Zwirner", "location": "New York / London / Hong Kong", "url": "https://www.davidzwirner.com/artists/yayoi-kusama" },
-      { "name": "Victoria Miro", "location": "London", "url": "https://www.victoria-miro.com/artists/31-yayoi-kusama/" },
-      { "name": "Ota Fine Arts", "location": "Tokyo / Singapore / Shanghai", "url": "#" }
+      {
+        "name": "David Zwirner",
+        "location": "New York / London / Hong Kong",
+        "url": "https://www.davidzwirner.com/artists/yayoi-kusama"
+      },
+      {
+        "name": "Victoria Miro",
+        "location": "London",
+        "url": "https://www.victoria-miro.com/artists/31-yayoi-kusama/"
+      },
+      {
+        "name": "Ota Fine Arts",
+        "location": "Tokyo / Singapore / Shanghai",
+        "url": "#"
+      }
     ],
     "interviews": [
-      { "title": "Kusama: Infinity (documentary)", "type": "video", "source": "Magnolia Pictures", "url": "https://www.youtube.com/watch?v=0-C69t22twQ" },
-      { "title": "Yayoi Kusama: The Universe of Infinite Dots", "type": "video", "source": "Art Documentary", "url": "https://www.youtube.com/watch?v=kY88qjKpgJA" },
-      { "title": "A Conversation with Yayoi Kusama", "type": "written", "source": "Tate", "url": "#" }
+      {
+        "title": "Kusama: Infinity (documentary)",
+        "type": "video",
+        "source": "Magnolia Pictures",
+        "url": "https://www.youtube.com/watch?v=0-C69t22twQ"
+      },
+      {
+        "title": "Yayoi Kusama: The Universe of Infinite Dots",
+        "type": "video",
+        "source": "Art Documentary",
+        "url": "https://www.youtube.com/watch?v=kY88qjKpgJA"
+      },
+      {
+        "title": "A Conversation with Yayoi Kusama",
+        "type": "written",
+        "source": "Tate",
+        "url": "#"
+      }
     ],
     "press": [
-      { "title": "How Yayoi Kusama Conquered the Art World", "source": "The New York Times", "url": "#" },
-      { "title": "Inside the Mind of the Polka-Dot Queen", "source": "The Guardian", "url": "#" }
+      {
+        "title": "How Yayoi Kusama Conquered the Art World",
+        "source": "The New York Times",
+        "url": "#"
+      },
+      {
+        "title": "Inside the Mind of the Polka-Dot Queen",
+        "source": "The Guardian",
+        "url": "#"
+      }
     ],
     "books": [
-      { "title": "Infinity Net: The Autobiography of Yayoi Kusama", "year": 2011, "publisher": "Tate Publishing", "url": "#" },
-      { "title": "Yayoi Kusama (Phaidon Contemporary Artists Series)", "year": 2017, "publisher": "Phaidon", "url": "#" },
-      { "title": "Yayoi Kusama: Every Day I Pray for Love", "year": 2020, "publisher": "David Zwirner Books", "url": "#" }
+      {
+        "title": "Infinity Net: The Autobiography of Yayoi Kusama",
+        "year": 2011,
+        "publisher": "Tate Publishing",
+        "url": "#"
+      },
+      {
+        "title": "Yayoi Kusama (Phaidon Contemporary Artists Series)",
+        "year": 2017,
+        "publisher": "Phaidon",
+        "url": "#"
+      },
+      {
+        "title": "Yayoi Kusama: Every Day I Pray for Love",
+        "year": 2020,
+        "publisher": "David Zwirner Books",
+        "url": "#"
+      }
     ],
     "publicCollections": [
       "The Museum of Modern Art, New York",
@@ -56,17 +127,64 @@
       "Stedelijk Museum, Amsterdam"
     ],
     "pastExhibitions": [
-      { "title": "Yayoi Kusama: Infinity Mirrors", "venue": "Hirshhorn Museum", "location": "Washington, D.C.", "year": 2017, "type": "Solo", "url": "#" },
-      { "title": "Yayoi Kusama", "venue": "Tate Modern", "location": "London", "year": 2012, "type": "Solo", "url": "#" },
-      { "title": "Love Forever: Yayoi Kusama 1958–1968", "venue": "The Museum of Modern Art", "location": "New York", "year": 1998, "type": "Solo", "url": "#" }
+      {
+        "title": "Yayoi Kusama: Infinity Mirrors",
+        "venue": "Hirshhorn Museum",
+        "location": "Washington, D.C.",
+        "year": 2017,
+        "type": "Solo",
+        "url": "#"
+      },
+      {
+        "title": "Yayoi Kusama",
+        "venue": "Tate Modern",
+        "location": "London",
+        "year": 2012,
+        "type": "Solo",
+        "url": "#"
+      },
+      {
+        "title": "Love Forever: Yayoi Kusama 1958–1968",
+        "venue": "The Museum of Modern Art",
+        "location": "New York",
+        "year": 1998,
+        "type": "Solo",
+        "url": "#"
+      }
     ],
     "artFairs": [
-      { "name": "Art Basel", "presentedBy": "David Zwirner", "location": "Basel, Switzerland", "year": 2025, "url": "#" },
-      { "name": "Frieze London", "presentedBy": "Victoria Miro", "location": "London, UK", "year": 2025, "url": "#" }
+      {
+        "name": "Art Basel",
+        "presentedBy": "David Zwirner",
+        "location": "Basel, Switzerland",
+        "year": 2025,
+        "url": "#"
+      },
+      {
+        "name": "Frieze London",
+        "presentedBy": "Victoria Miro",
+        "location": "London, UK",
+        "year": 2025,
+        "url": "#"
+      }
     ],
     "upcomingShows": [
-      { "title": "Infinite Accumulation", "venue": "David Zwirner", "location": "New York, USA", "startDate": "2026-09-10", "endDate": "2026-10-31", "url": "#" },
-      { "title": "Cosmic Nature (touring)", "venue": "Various Botanical Gardens", "location": "International", "startDate": "2026-11-15", "endDate": "2027-03-01", "url": "#" }
+      {
+        "title": "Infinite Accumulation",
+        "venue": "David Zwirner",
+        "location": "New York, USA",
+        "startDate": "2026-09-10",
+        "endDate": "2026-10-31",
+        "url": "#"
+      },
+      {
+        "title": "Cosmic Nature (touring)",
+        "venue": "Various Botanical Gardens",
+        "location": "International",
+        "startDate": "2026-11-15",
+        "endDate": "2027-03-01",
+        "url": "#"
+      }
     ],
     "series": [
       {
@@ -74,8 +192,24 @@
         "year": "1959–present",
         "description": "Vast monochrome canvases built from repeated, hand-painted loops — the foundational gesture of accumulation and self-obliteration.",
         "works": [
-          { "title": "No. F", "year": 1959, "medium": "Oil on canvas", "dimensions": "105 × 132 cm", "image": "", "price": "Price on request", "status": "Private collection" },
-          { "title": "Infinity Nets (White)", "year": 1979, "medium": "Acrylic on canvas", "dimensions": "194 × 259 cm", "image": "", "price": "Price on request", "status": "Sold" }
+          {
+            "title": "No. F",
+            "year": 1959,
+            "medium": "Oil on canvas",
+            "dimensions": "105 × 132 cm",
+            "image": "",
+            "price": "Price on request",
+            "status": "Private collection"
+          },
+          {
+            "title": "Infinity Nets (White)",
+            "year": 1979,
+            "medium": "Acrylic on canvas",
+            "dimensions": "194 × 259 cm",
+            "image": "",
+            "price": "Price on request",
+            "status": "Sold"
+          }
         ]
       },
       {
@@ -83,8 +217,22 @@
         "year": "1965–present",
         "description": "Immersive mirrored environments filled with lights and forms that dissolve the viewer into endlessly reflected space.",
         "works": [
-          { "title": "Infinity Mirror Room — Phalli's Field", "year": 1965, "medium": "Mirrors, sewn fabric", "dimensions": "Dimensions variable", "image": "", "status": "Museum collection" },
-          { "title": "Infinity Mirrored Room — The Souls of Millions of Light Years Away", "year": 2013, "medium": "Mixed media installation", "dimensions": "Dimensions variable", "image": "", "status": "Museum collection" }
+          {
+            "title": "Infinity Mirror Room — Phalli's Field",
+            "year": 1965,
+            "medium": "Mirrors, sewn fabric",
+            "dimensions": "Dimensions variable",
+            "image": "",
+            "status": "Museum collection"
+          },
+          {
+            "title": "Infinity Mirrored Room — The Souls of Millions of Light Years Away",
+            "year": 2013,
+            "medium": "Mixed media installation",
+            "dimensions": "Dimensions variable",
+            "image": "",
+            "status": "Museum collection"
+          }
         ]
       },
       {
@@ -92,7 +240,15 @@
         "year": "1990–present",
         "description": "The artist's beloved motif rendered as paintings and monumental polka-dot sculptures — humble, humorous, and deeply personal.",
         "works": [
-          { "title": "Pumpkin (Yellow)", "year": 1994, "medium": "Painted bronze", "dimensions": "200 × 250 cm", "image": "", "price": "Price on request", "status": "Available" }
+          {
+            "title": "Pumpkin (Yellow)",
+            "year": 1994,
+            "medium": "Painted bronze",
+            "dimensions": "200 × 250 cm",
+            "image": "",
+            "price": "Price on request",
+            "status": "Available"
+          }
         ]
       }
     ],
@@ -108,17 +264,33 @@
     "bornPlace": "Anyako, Ghana",
     "livesIn": "Nsukka, Nigeria",
     "artStatement": "I work with media that have a history of human touch — discarded bottle caps, printing plates, milk-tin lids. By stitching thousands of fragments together with copper wire I make works that are deliberately non-fixed: they can be draped, folded, and re-formed at every installation. Form should remain free. My materials carry the memory of trade, consumption, and the meeting of cultures across the Atlantic.",
-    "movements": ["Contemporary African Art", "Assemblage", "Post-colonial Art"],
-    "mediums": ["Sculpture", "Installation", "Printmaking"],
+    "movements": [
+      "Contemporary African Art",
+      "Assemblage",
+      "Post-colonial Art"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Printmaking"
+    ],
     "website": "https://www.elanatsui.art/",
     "instagram": "https://www.instagram.com/el.anatsui/",
     "email": "studio@elanatsui.example",
     "salesContact": "sales@elanatsui.example",
-    "studio": { "location": "Nsukka, Nigeria", "visits": "Active working studio; visits by arrangement through his galleries." },
+    "studio": {
+      "location": "Nsukka, Nigeria",
+      "visits": "Active working studio; visits by arrangement through his galleries."
+    },
     "headshots": [
-      { "src": "", "credit": "Portrait placeholder — no freely-licensed photo of the artist was available" }
+      {
+        "src": "",
+        "credit": "Portrait placeholder — no freely-licensed photo of the artist was available"
+      }
     ],
-    "cv": { "url": "#" },
+    "cv": {
+      "url": "#"
+    },
     "education": [
       "BA Sculpture, University of Science and Technology, Kumasi, Ghana (1968)",
       "Postgraduate Diploma in Art Education, Kumasi (1969)"
@@ -128,21 +300,62 @@
       "Praemium Imperiale, Sculpture (2017)"
     ],
     "galleries": [
-      { "name": "Jack Shainman Gallery", "location": "New York", "url": "https://jackshainman.com/artists/el_anatsui" },
-      { "name": "October Gallery", "location": "London", "url": "https://www.octobergallery.co.uk/artists/anatsui" }
+      {
+        "name": "Jack Shainman Gallery",
+        "location": "New York",
+        "url": "https://jackshainman.com/artists/el_anatsui"
+      },
+      {
+        "name": "October Gallery",
+        "location": "London",
+        "url": "https://www.octobergallery.co.uk/artists/anatsui"
+      }
     ],
     "interviews": [
-      { "title": "El Anatsui: Studio Process", "type": "video", "source": "Art21 “Extended Play”", "url": "https://www.youtube.com/watch?v=_d3RIE195JI" },
-      { "title": "El Anatsui in “Change”", "type": "video", "source": "Art21", "url": "https://www.youtube.com/watch?v=4tK2e_mSSps" },
-      { "title": "On Material and Memory", "type": "written", "source": "Frieze", "url": "#" }
+      {
+        "title": "El Anatsui: Studio Process",
+        "type": "video",
+        "source": "Art21 “Extended Play”",
+        "url": "https://www.youtube.com/watch?v=_d3RIE195JI"
+      },
+      {
+        "title": "El Anatsui in “Change”",
+        "type": "video",
+        "source": "Art21",
+        "url": "https://www.youtube.com/watch?v=4tK2e_mSSps"
+      },
+      {
+        "title": "On Material and Memory",
+        "type": "written",
+        "source": "Frieze",
+        "url": "#"
+      }
     ],
     "press": [
-      { "title": "El Anatsui Turns Bottle Caps Into Gold", "source": "The New York Times", "url": "#" },
-      { "title": "The Sculptor Who Drapes Buildings in Metal", "source": "Financial Times", "url": "#" }
+      {
+        "title": "El Anatsui Turns Bottle Caps Into Gold",
+        "source": "The New York Times",
+        "url": "#"
+      },
+      {
+        "title": "The Sculptor Who Drapes Buildings in Metal",
+        "source": "Financial Times",
+        "url": "#"
+      }
     ],
     "books": [
-      { "title": "El Anatsui: Art and Life", "year": 2012, "publisher": "Prestel", "url": "#" },
-      { "title": "El Anatsui: Triumphant Scale", "year": 2019, "publisher": "Prestel / Haus der Kunst", "url": "#" }
+      {
+        "title": "El Anatsui: Art and Life",
+        "year": 2012,
+        "publisher": "Prestel",
+        "url": "#"
+      },
+      {
+        "title": "El Anatsui: Triumphant Scale",
+        "year": 2019,
+        "publisher": "Prestel / Haus der Kunst",
+        "url": "#"
+      }
     ],
     "publicCollections": [
       "The Metropolitan Museum of Art, New York",
@@ -151,15 +364,49 @@
       "Smithsonian National Museum of African Art, Washington D.C."
     ],
     "pastExhibitions": [
-      { "title": "El Anatsui: Triumphant Scale", "venue": "Haus der Kunst", "location": "Munich", "year": 2019, "type": "Solo", "url": "#" },
-      { "title": "Gravity and Grace: Monumental Works", "venue": "Brooklyn Museum", "location": "New York", "year": 2013, "type": "Solo", "url": "#" },
-      { "title": "All the World's Futures — 56th Venice Biennale", "venue": "Giardini & Arsenale", "location": "Venice", "year": 2015, "type": "Group", "url": "#" }
+      {
+        "title": "El Anatsui: Triumphant Scale",
+        "venue": "Haus der Kunst",
+        "location": "Munich",
+        "year": 2019,
+        "type": "Solo",
+        "url": "#"
+      },
+      {
+        "title": "Gravity and Grace: Monumental Works",
+        "venue": "Brooklyn Museum",
+        "location": "New York",
+        "year": 2013,
+        "type": "Solo",
+        "url": "#"
+      },
+      {
+        "title": "All the World's Futures — 56th Venice Biennale",
+        "venue": "Giardini & Arsenale",
+        "location": "Venice",
+        "year": 2015,
+        "type": "Group",
+        "url": "#"
+      }
     ],
     "artFairs": [
-      { "name": "Art Basel", "presentedBy": "Jack Shainman Gallery", "location": "Basel, Switzerland", "year": 2024, "url": "#" }
+      {
+        "name": "Art Basel",
+        "presentedBy": "Jack Shainman Gallery",
+        "location": "Basel, Switzerland",
+        "year": 2024,
+        "url": "#"
+      }
     ],
     "upcomingShows": [
-      { "title": "Behind the Red Moon (touring)", "venue": "Tate Modern, Turbine Hall", "location": "London, UK", "startDate": "2026-07-01", "endDate": "2026-12-20", "url": "#" }
+      {
+        "title": "Behind the Red Moon (touring)",
+        "venue": "Tate Modern, Turbine Hall",
+        "location": "London, UK",
+        "startDate": "2026-07-01",
+        "endDate": "2026-12-20",
+        "url": "#"
+      }
     ],
     "series": [
       {
@@ -167,8 +414,23 @@
         "year": "2002–present",
         "description": "Monumental shimmering 'cloths' made from flattened liquor-bottle caps stitched with copper wire — metal that flows like fabric.",
         "works": [
-          { "title": "Sasa", "year": 2004, "medium": "Aluminium and copper wire", "dimensions": "640 × 840 cm", "image": "", "status": "Museum collection" },
-          { "title": "Gravity and Grace", "year": 2010, "medium": "Aluminium and copper wire", "dimensions": "457 × 1117 cm", "image": "", "price": "Price on request", "status": "Sold" }
+          {
+            "title": "Sasa",
+            "year": 2004,
+            "medium": "Aluminium and copper wire",
+            "dimensions": "640 × 840 cm",
+            "image": "",
+            "status": "Museum collection"
+          },
+          {
+            "title": "Gravity and Grace",
+            "year": 2010,
+            "medium": "Aluminium and copper wire",
+            "dimensions": "457 × 1117 cm",
+            "image": "",
+            "price": "Price on request",
+            "status": "Sold"
+          }
         ]
       },
       {
@@ -176,7 +438,15 @@
         "year": "1980s–1990s",
         "description": "Chainsaw-carved and scorched wooden panels exploring Adinkra symbols, language, and rupture.",
         "works": [
-          { "title": "Erosion", "year": 1992, "medium": "Wood and tempera", "dimensions": "Dimensions variable", "image": "", "price": "Price on request", "status": "Available" }
+          {
+            "title": "Erosion",
+            "year": 1992,
+            "medium": "Wood and tempera",
+            "dimensions": "Dimensions variable",
+            "image": "",
+            "price": "Price on request",
+            "status": "Available"
+          }
         ]
       }
     ],
@@ -192,17 +462,32 @@
     "bornPlace": "Addis Ababa, Ethiopia",
     "livesIn": "New York City, USA",
     "artStatement": "My paintings are palimpsests — layered maps of architecture, migration, protest, and weather. I build dense fields of marks, gestures, and erased photographic source images so that history accumulates and dissolves at once. I am interested in the social agency of abstraction: how a non-figurative surface can hold the pressure of contemporary events without illustrating them.",
-    "movements": ["Abstraction", "Contemporary Art"],
-    "mediums": ["Painting", "Printmaking", "Drawing"],
+    "movements": [
+      "Abstraction",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Printmaking",
+      "Drawing"
+    ],
     "website": "https://www.juliemehretu.art/",
     "instagram": "https://www.instagram.com/juliemehretustudio/",
     "email": "studio@juliemehretu.example",
     "salesContact": "sales@juliemehretu.example",
-    "studio": { "location": "Chelsea, New York City, USA", "visits": "Private studio; not open to the public." },
+    "studio": {
+      "location": "Chelsea, New York City, USA",
+      "visits": "Private studio; not open to the public."
+    },
     "headshots": [
-      { "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Inside_the_Studio_with_Julie_Mehretu_00.01_%28cropped%29.jpg", "credit": "Photo: Galerie Magazine — CC BY 3.0 via Wikimedia Commons" }
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Inside_the_Studio_with_Julie_Mehretu_00.01_%28cropped%29.jpg",
+        "credit": "Photo: Galerie Magazine — CC BY 3.0 via Wikimedia Commons"
+      }
     ],
-    "cv": { "url": "#" },
+    "cv": {
+      "url": "#"
+    },
     "education": [
       "BA, Kalamazoo College (1992)",
       "MFA, Rhode Island School of Design (1997)"
@@ -212,21 +497,62 @@
       "U.S. Department of State Medal of Arts (2015)"
     ],
     "galleries": [
-      { "name": "Marian Goodman Gallery", "location": "New York / Paris", "url": "https://www.mariangoodman.com/artists/julie-mehretu/" },
-      { "name": "White Cube", "location": "London / Hong Kong", "url": "https://www.whitecube.com/artists/julie-mehretu" }
+      {
+        "name": "Marian Goodman Gallery",
+        "location": "New York / Paris",
+        "url": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "name": "White Cube",
+        "location": "London / Hong Kong",
+        "url": "https://www.whitecube.com/artists/julie-mehretu"
+      }
     ],
     "interviews": [
-      { "title": "Julie Mehretu Interview: The In-Between Place", "type": "video", "source": "Louisiana Channel", "url": "https://www.youtube.com/watch?v=38uTZCU0VqQ" },
-      { "title": "“It's very hard to understand what our reality is.”", "type": "video", "source": "Louisiana Channel", "url": "https://www.youtube.com/watch?v=R71GBWjyjLE" },
-      { "title": "Mapping the Present", "type": "written", "source": "Artforum", "url": "#" }
+      {
+        "title": "Julie Mehretu Interview: The In-Between Place",
+        "type": "video",
+        "source": "Louisiana Channel",
+        "url": "https://www.youtube.com/watch?v=38uTZCU0VqQ"
+      },
+      {
+        "title": "“It's very hard to understand what our reality is.”",
+        "type": "video",
+        "source": "Louisiana Channel",
+        "url": "https://www.youtube.com/watch?v=R71GBWjyjLE"
+      },
+      {
+        "title": "Mapping the Present",
+        "type": "written",
+        "source": "Artforum",
+        "url": "#"
+      }
     ],
     "press": [
-      { "title": "Julie Mehretu's Sweeping Mid-Career Survey", "source": "The New York Times", "url": "#" },
-      { "title": "Abstraction as Political Force", "source": "The New Yorker", "url": "#" }
+      {
+        "title": "Julie Mehretu's Sweeping Mid-Career Survey",
+        "source": "The New York Times",
+        "url": "#"
+      },
+      {
+        "title": "Abstraction as Political Force",
+        "source": "The New Yorker",
+        "url": "#"
+      }
     ],
     "books": [
-      { "title": "Julie Mehretu", "year": 2019, "publisher": "DelMonico Books / LACMA", "url": "#" },
-      { "title": "Julie Mehretu: Grey Area", "year": 2009, "publisher": "Deutsche Guggenheim", "url": "#" }
+      {
+        "title": "Julie Mehretu",
+        "year": 2019,
+        "publisher": "DelMonico Books / LACMA",
+        "url": "#"
+      },
+      {
+        "title": "Julie Mehretu: Grey Area",
+        "year": 2009,
+        "publisher": "Deutsche Guggenheim",
+        "url": "#"
+      }
     ],
     "publicCollections": [
       "The Museum of Modern Art, New York",
@@ -235,15 +561,49 @@
       "San Francisco Museum of Modern Art"
     ],
     "pastExhibitions": [
-      { "title": "Julie Mehretu (mid-career survey)", "venue": "LACMA / Whitney Museum", "location": "Los Angeles / New York", "year": 2019, "type": "Solo", "url": "#" },
-      { "title": "Julie Mehretu: Grey Area", "venue": "Deutsche Guggenheim / Guggenheim", "location": "Berlin / New York", "year": 2009, "type": "Solo", "url": "#" },
-      { "title": "documenta 13", "venue": "Fridericianum", "location": "Kassel, Germany", "year": 2012, "type": "Group", "url": "#" }
+      {
+        "title": "Julie Mehretu (mid-career survey)",
+        "venue": "LACMA / Whitney Museum",
+        "location": "Los Angeles / New York",
+        "year": 2019,
+        "type": "Solo",
+        "url": "#"
+      },
+      {
+        "title": "Julie Mehretu: Grey Area",
+        "venue": "Deutsche Guggenheim / Guggenheim",
+        "location": "Berlin / New York",
+        "year": 2009,
+        "type": "Solo",
+        "url": "#"
+      },
+      {
+        "title": "documenta 13",
+        "venue": "Fridericianum",
+        "location": "Kassel, Germany",
+        "year": 2012,
+        "type": "Group",
+        "url": "#"
+      }
     ],
     "artFairs": [
-      { "name": "Art Basel Miami Beach", "presentedBy": "Marian Goodman Gallery", "location": "Miami Beach, USA", "year": 2025, "url": "#" }
+      {
+        "name": "Art Basel Miami Beach",
+        "presentedBy": "Marian Goodman Gallery",
+        "location": "Miami Beach, USA",
+        "year": 2025,
+        "url": "#"
+      }
     ],
     "upcomingShows": [
-      { "title": "New Paintings", "venue": "Marian Goodman Gallery", "location": "Paris, France", "startDate": "2026-10-05", "endDate": "2026-11-21", "url": "#" }
+      {
+        "title": "New Paintings",
+        "venue": "Marian Goodman Gallery",
+        "location": "Paris, France",
+        "startDate": "2026-10-05",
+        "endDate": "2026-11-21",
+        "url": "#"
+      }
     ],
     "series": [
       {
@@ -251,7 +611,14 @@
         "year": "2004",
         "description": "Explosive arena-like compositions of flags, banners, and architectural fragments evoking spectacle and global crowds.",
         "works": [
-          { "title": "Stadia II", "year": 2004, "medium": "Ink and acrylic on canvas", "dimensions": "274 × 356 cm", "image": "", "status": "Museum collection" }
+          {
+            "title": "Stadia II",
+            "year": 2004,
+            "medium": "Ink and acrylic on canvas",
+            "dimensions": "274 × 356 cm",
+            "image": "",
+            "status": "Museum collection"
+          }
         ]
       },
       {
@@ -259,7 +626,15 @@
         "year": "2008–2009",
         "description": "Quieter, smoke-like canvases where marks are sanded and erased — abstraction approaching atmosphere and loss.",
         "works": [
-          { "title": "Berliner Plätze", "year": 2008, "medium": "Ink and acrylic on canvas", "dimensions": "Dimensions variable", "image": "", "price": "Price on request", "status": "Available" }
+          {
+            "title": "Berliner Plätze",
+            "year": 2008,
+            "medium": "Ink and acrylic on canvas",
+            "dimensions": "Dimensions variable",
+            "image": "",
+            "price": "Price on request",
+            "status": "Available"
+          }
         ]
       },
       {
@@ -267,7 +642,709 @@
         "year": "2016–present",
         "description": "Large works built over blurred photographic images of protest and conflict, layered with airbrushed colour and gesture.",
         "works": [
-          { "title": "Hineni (E. 3:4)", "year": 2018, "medium": "Ink and acrylic on canvas", "dimensions": "243 × 304 cm", "image": "", "price": "Price on request", "status": "Sold" }
+          {
+            "title": "Hineni (E. 3:4)",
+            "year": 2018,
+            "medium": "Ink and acrylic on canvas",
+            "dimensions": "243 × 304 cm",
+            "image": "",
+            "price": "Price on request",
+            "status": "Sold"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": []
+  },
+  {
+    "id": "anish-kapoor",
+    "name": "Anish Kapoor",
+    "nationality": "British-Indian",
+    "bornDate": "March 12, 1954",
+    "bornPlace": "Mumbai, India",
+    "livesIn": "London, United Kingdom",
+    "artStatement": "Kapoor's sculpture works between the monumental and the void — polished mirror-surfaces that dissolve the object into its surroundings, deep saturated pigment, and engineered voids that pull the eye into apparent bottomlessness. He is preoccupied with the negative, the immaterial and the sublime: the point at which a physical object becomes a perceptual and almost spiritual event.",
+    "movements": [
+      "Contemporary Sculpture",
+      "Installation Art",
+      "Conceptual Art"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Stainless steel",
+      "Pigment",
+      "Stone"
+    ],
+    "website": "https://anishkapoor.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/04/Anish_Kapoor_2017.jpg",
+        "credit": "Anish Kapoor, 2017 — Image via Wikimedia Commons"
+      }
+    ],
+    "education": [
+      "Hornsey College of Art, London (1973–1977)",
+      "Chelsea School of Art, London (1977–1978)"
+    ],
+    "awards": [
+      "Turner Prize (1991)",
+      "Knighthood for services to the visual arts (2013)",
+      "Praemium Imperiale, Sculpture (2017)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Public sculpture, mirror works and pigment pieces.",
+        "works": [
+          {
+            "title": "Cloud Gate",
+            "year": 2006,
+            "medium": "Stainless steel",
+            "dimensions": "10 × 13 × 20 m",
+            "image": "",
+            "status": "Millennium Park, Chicago"
+          },
+          {
+            "title": "Sky Mirror",
+            "year": 2006,
+            "medium": "Polished stainless steel",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/%27Sky_Mirror%27_by_Anish_Kapoor_-_geograph.org.uk_-_2329829.jpg",
+            "status": "Various sites"
+          },
+          {
+            "title": "ArcelorMittal Orbit",
+            "year": 2012,
+            "medium": "Steel (with Cecil Balmond)",
+            "dimensions": "114.5 m",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Orbit2.jpg/1280px-Orbit2.jpg",
+            "status": "Queen Elizabeth Olympic Park, London"
+          },
+          {
+            "title": "Descension",
+            "year": 2014,
+            "medium": "Water, steel, pigment",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Anish_Kapoor_Descension%2C_Brooklyn%2C_Sept_2017.jpg/1280px-Anish_Kapoor_Descension%2C_Brooklyn%2C_Sept_2017.jpg",
+            "status": ""
+          },
+          {
+            "title": "Marsyas",
+            "year": 2002,
+            "medium": "PVC membrane and steel",
+            "dimensions": "",
+            "image": "",
+            "status": "Tate Modern Turbine Hall"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "olafur-eliasson",
+      "james-turrell",
+      "alicja-kwade"
+    ]
+  },
+  {
+    "id": "olafur-eliasson",
+    "name": "Olafur Eliasson",
+    "nationality": "Icelandic-Danish",
+    "bornDate": "February 5, 1967",
+    "bornPlace": "Copenhagen, Denmark",
+    "livesIn": "Copenhagen and Berlin",
+    "artStatement": "Eliasson builds installations from elemental materials — light, water, fog, temperature and reflection — that make perception itself the subject of the work. By staging atmospheric phenomena indoors, he turns viewers into active participants who become aware of their own act of seeing, and increasingly extends that attention to climate and ecology.",
+    "movements": [
+      "Installation Art",
+      "Light and Space",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Light",
+      "Sculpture",
+      "Photography"
+    ],
+    "website": "https://olafureliasson.net/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/13/%C3%93lafur_El%C3%ADasson_Internationale_Jury_Berlinale_2017_%28cropped%29.jpg",
+        "credit": "Olafur Eliasson, Berlinale 2017 — Image via Wikimedia Commons"
+      }
+    ],
+    "education": [
+      "Royal Danish Academy of Fine Arts, Copenhagen (1989–1995)"
+    ],
+    "awards": [
+      "Benesse Prize (1996)",
+      "Crown Prince Couple's Culture Prize (2006)",
+      "Goslar Kaiserring (2019)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Large-scale installations and public projects.",
+        "works": [
+          {
+            "title": "The Weather Project",
+            "year": 2003,
+            "medium": "Mono-frequency lights, mist, mirror",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Tate.modern.weather.project.jpg",
+            "status": "Tate Modern Turbine Hall"
+          },
+          {
+            "title": "Your rainbow panorama",
+            "year": 2011,
+            "medium": "Coloured glass, steel",
+            "dimensions": "Ø 52 m",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Your_rainbow_panorama_p%C3%A5_taget_af_ARoS_Aarhus_Kunstmuseum.jpg/1280px-Your_rainbow_panorama_p%C3%A5_taget_af_ARoS_Aarhus_Kunstmuseum.jpg",
+            "status": "ARoS Aarhus Art Museum"
+          },
+          {
+            "title": "The New York City Waterfalls",
+            "year": 2008,
+            "medium": "Scaffolding, water, pumps",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Olafur_Eliasson%27s_Waterfalls_under_the_Brooklyn_Bridge.jpg",
+            "status": "New York City (temporary)"
+          },
+          {
+            "title": "Ice Watch",
+            "year": 2014,
+            "medium": "Glacial ice",
+            "dimensions": "",
+            "image": "",
+            "status": "Various cities"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "anish-kapoor",
+      "james-turrell",
+      "tomas-saraceno",
+      "ann-veronica-janssens"
+    ]
+  },
+  {
+    "id": "jesus-rafael-soto",
+    "name": "Jesús Rafael Soto",
+    "nationality": "Venezuelan",
+    "bornDate": "June 5, 1923",
+    "bornPlace": "Ciudad Bolívar, Venezuela",
+    "livesIn": "Paris, France (1950–2005)",
+    "artStatement": "A founder of kinetic and op art, Soto made works in which line, grid and suspended elements vibrate as the spectator moves, dissolving the boundary between object and space. His immersive 'Penetrables' invited viewers to walk into fields of hanging tubes, replacing the static picture with pure relational movement.",
+    "movements": [
+      "Kinetic Art",
+      "Op Art",
+      "Geometric Abstraction"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Painting",
+      "Mixed media"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Jesus_Rafael_Soto_by_Lothar_Wolleh.jpg",
+        "credit": "Jesús Rafael Soto, photo by Lothar Wolleh — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "Wolf Prize in Arts (1995)",
+      "National Prize for Plastic Arts, Venezuela (1960)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Kinetic structures and immersive Penetrables.",
+        "works": [
+          {
+            "title": "Penetrable (Penetrable Amarillo)",
+            "year": 1990,
+            "medium": "Painted metal and PVC tubes",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/%22Penetrable_Amarillo%22_del_artista_venezolano_Jes%C3%BAs_Soto.JPG/1280px-%22Penetrable_Amarillo%22_del_artista_venezolano_Jes%C3%BAs_Soto.JPG",
+            "status": ""
+          },
+          {
+            "title": "Esfera Caracas",
+            "year": 1996,
+            "medium": "Painted metal",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Esfera_Caracas_%22Jesus_Soto%22.jpg/1280px-Esfera_Caracas_%22Jesus_Soto%22.jpg",
+            "status": "Caracas, Venezuela"
+          },
+          {
+            "title": "Vibración",
+            "year": 1965,
+            "medium": "Paint, metal rods on board",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "carlos-cruz-diez",
+      "julio-le-parc"
+    ]
+  },
+  {
+    "id": "carlos-cruz-diez",
+    "name": "Carlos Cruz-Diez",
+    "nationality": "Franco-Venezuelan",
+    "bornDate": "August 17, 1923",
+    "bornPlace": "Caracas, Venezuela",
+    "livesIn": "Paris, France (1960–2019)",
+    "artStatement": "Cruz-Diez treated colour as an autonomous, time-based event rather than a property of form. Across his Physichromie, Chromosaturation and Chromointerference series he engineered situations in which colour is generated in the eye of the moving viewer, making perception unstable, additive and continuously in flux.",
+    "movements": [
+      "Kinetic Art",
+      "Op Art",
+      "Colour Field"
+    ],
+    "mediums": [
+      "Painting",
+      "Installation",
+      "Public art",
+      "Printmaking"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Retrato_Cruz-Diez_France_2013.jpg",
+        "credit": "Carlos Cruz-Diez, France 2013 — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Series investigating colour as a perceptual event.",
+        "works": [
+          {
+            "title": "Physichromie series",
+            "year": 1959,
+            "medium": "Industrial paint on aluminium/PVC",
+            "dimensions": "",
+            "image": "",
+            "status": "Ongoing series"
+          },
+          {
+            "title": "Chromosaturation",
+            "year": 1965,
+            "medium": "Immersive colour chambers",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Chromointerférence",
+            "year": 1964,
+            "medium": "Mixed media",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "jesus-rafael-soto",
+      "julio-le-parc"
+    ]
+  },
+  {
+    "id": "james-turrell",
+    "name": "James Turrell",
+    "nationality": "American",
+    "bornDate": "May 6, 1943",
+    "bornPlace": "Los Angeles, California, USA",
+    "livesIn": "Flagstaff, Arizona, USA",
+    "artStatement": "A central figure of the Light and Space movement, Turrell treats light as a physical, almost tangible material. His Skyspaces, Ganzfelds and the decades-long Roden Crater frame and shape light and sky so that perception turns inward — 'I make spaces that apprehend light for our perception,' he has said, 'and in some ways gather it, or seem to hold it.'",
+    "movements": [
+      "Light and Space",
+      "Minimalism",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Light",
+      "Installation",
+      "Architecture"
+    ],
+    "website": "https://jamesturrell.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/James-Turrell-medals-hi-res.jpg",
+        "credit": "James Turrell — Image via Wikimedia Commons"
+      }
+    ],
+    "education": [
+      "Pomona College (psychology, perceptual psychology), 1965",
+      "Claremont Graduate University (MA, art), 1973"
+    ],
+    "awards": [
+      "MacArthur Fellowship (1984)",
+      "National Medal of Arts (2013)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Light works, Skyspaces and the Roden Crater project.",
+        "works": [
+          {
+            "title": "Roden Crater",
+            "year": "1979–ongoing",
+            "medium": "Volcanic cinder cone observatory",
+            "dimensions": "",
+            "image": "",
+            "status": "Painted Desert, Arizona"
+          },
+          {
+            "title": "Skyspace (Three Gems)",
+            "year": 2005,
+            "medium": "Enclosed chamber with ceiling aperture",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Three_Gems%2C_James_Turrell_Skyspace%2C_interior.jpg/1280px-Three_Gems%2C_James_Turrell_Skyspace%2C_interior.jpg",
+            "status": "de Young Museum, San Francisco"
+          },
+          {
+            "title": "Within Without",
+            "year": 2010,
+            "medium": "Skyspace, basalt, water, light",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Within_without_by_James_Turrell%2C_January_2026_06.jpg/1280px-Within_without_by_James_Turrell%2C_January_2026_06.jpg",
+            "status": "National Gallery of Australia, Canberra"
+          },
+          {
+            "title": "Aten Reign",
+            "year": 2013,
+            "medium": "Daylight and LED light",
+            "dimensions": "",
+            "image": "",
+            "status": "Guggenheim Museum, New York"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "olafur-eliasson",
+      "anish-kapoor",
+      "ann-veronica-janssens"
+    ]
+  },
+  {
+    "id": "ann-veronica-janssens",
+    "name": "Ann Veronica Janssens",
+    "nationality": "Belgian",
+    "bornDate": "1956",
+    "bornPlace": "Folkestone, United Kingdom",
+    "livesIn": "Brussels, Belgium",
+    "artStatement": "Janssens works with light, colour, mist and reflection to produce ephemeral, destabilising experiences. Her fog-filled rooms saturate space with coloured artificial haze until depth and edges dissolve, foregrounding the fragility and physicality of perception itself.",
+    "movements": [
+      "Installation Art",
+      "Light and Space",
+      "Minimalism"
+    ],
+    "mediums": [
+      "Installation",
+      "Light",
+      "Sculpture",
+      "Glass"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Studio portrait"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Mist installations and light/glass works.",
+        "works": [
+          {
+            "title": "Rial",
+            "year": "",
+            "medium": "Mixed media",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ann_Veronica_Janssen%2C_Rial_-_Collection_Belfius.jpg/1280px-Ann_Veronica_Janssen%2C_Rial_-_Collection_Belfius.jpg",
+            "status": "Collection Belfius"
+          },
+          {
+            "title": "Mist rooms (blue, yellow, red)",
+            "year": 2001,
+            "medium": "Artificial fog and coloured light",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Magic Mirror",
+            "year": 2013,
+            "medium": "Glass, dichroic film",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "olafur-eliasson",
+      "james-turrell"
+    ]
+  },
+  {
+    "id": "tomas-saraceno",
+    "name": "Tomás Saraceno",
+    "nationality": "Argentine",
+    "bornDate": "1973",
+    "bornPlace": "San Miguel de Tucumán, Argentina",
+    "livesIn": "Berlin, Germany",
+    "artStatement": "Trained as an architect, Saraceno makes floating sculptures, vast cable webs and air-fuelled balloons that imagine new, fossil-free ways of inhabiting the planet. Drawing on spider silk, thermodynamics and the atmosphere, his Aerocene and Cloud Cities projects propose a speculative, ecological reorganisation of how we live and move.",
+    "movements": [
+      "Installation Art",
+      "Contemporary Art",
+      "Eco Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Sculpture",
+      "Architecture",
+      "Performance"
+    ],
+    "website": "https://studiotomassaraceno.org/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/77/Tom%C3%A1s_Saraceno_a_Firenze%2C_21_febbraio_2020%2C_04.jpg",
+        "credit": "Tomás Saraceno, Florence 2020 — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Floating sculptures, webs and Aerocene.",
+        "works": [
+          {
+            "title": "In Orbit",
+            "year": 2013,
+            "medium": "Steel cable net, spheres",
+            "dimensions": "",
+            "image": "",
+            "status": "K21 Ständehaus, Düsseldorf"
+          },
+          {
+            "title": "Aerocene",
+            "year": "2015–ongoing",
+            "medium": "Solar- and air-driven sculptures",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Cloud Cities",
+            "year": 2011,
+            "medium": "Modular spheres, steel",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "olafur-eliasson",
+      "conrad-shawcross"
+    ]
+  },
+  {
+    "id": "conrad-shawcross",
+    "name": "Conrad Shawcross",
+    "nationality": "British",
+    "bornDate": "1977",
+    "bornPlace": "London, United Kingdom",
+    "livesIn": "London, United Kingdom",
+    "artStatement": "Shawcross builds mechanical and geometric sculptures rooted in scientific and philosophical ideas — light, motion, harmonics and the limits of knowledge. His kinetic machines and perforated structures translate abstract systems into physical objects that perform, cast shifting shadows, or reach toward the impossible.",
+    "movements": [
+      "Contemporary Sculpture",
+      "Kinetic Art",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Light",
+      "Mechanical"
+    ],
+    "website": "https://conradshawcross.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Conrad_Shawcross%2C_2011_%28cropped%29.JPG",
+        "credit": "Conrad Shawcross, 2011 — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "Elected Royal Academician (2013)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Mechanical sculpture and architectural light works.",
+        "works": [
+          {
+            "title": "Optic Cloak",
+            "year": 2016,
+            "medium": "Perforated aluminium façade",
+            "dimensions": "49 m",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Greenwich_CHP_energy_centre.jpg/1280px-Greenwich_CHP_energy_centre.jpg",
+            "status": "Greenwich Peninsula, London"
+          },
+          {
+            "title": "The Dappled Light of the Sun",
+            "year": 2015,
+            "medium": "Steel",
+            "dimensions": "",
+            "image": "",
+            "status": "Royal Academy, London"
+          },
+          {
+            "title": "Timepiece",
+            "year": 2013,
+            "medium": "Mechanical light installation",
+            "dimensions": "",
+            "image": "",
+            "status": "Roundhouse, London"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "alicja-kwade",
+      "anish-kapoor",
+      "tomas-saraceno"
+    ]
+  },
+  {
+    "id": "alicja-kwade",
+    "name": "Alicja Kwade",
+    "nationality": "Polish-German",
+    "bornDate": "1979",
+    "bornPlace": "Katowice, Poland",
+    "livesIn": "Berlin, Germany",
+    "artStatement": "Kwade's sculptures and installations probe the subjectivity of time, space and value, using mirrors, stone, metal and everyday objects to stage quiet perceptual paradoxes. Reflections and rotations multiply and displace objects until the viewer can no longer trust what is real, original or merely its double.",
+    "movements": [
+      "Contemporary Sculpture",
+      "Installation Art",
+      "Conceptual Art"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Stone",
+      "Mirror",
+      "Metal"
+    ],
+    "website": "https://www.alicjakwade.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Oliver_Mark_-_Alicja_Kwade%2C_Berlin_2014.jpg",
+        "credit": "Alicja Kwade, Berlin 2014, photo by Oliver Mark — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Installations on time, space and perception.",
+        "works": [
+          {
+            "title": "WeltenLinie",
+            "year": 2017,
+            "medium": "Steel, mirror, stone, wood",
+            "dimensions": "",
+            "image": "",
+            "status": "Venice Biennale (2017)"
+          },
+          {
+            "title": "ParAllele / Pars pro Toto",
+            "year": 2018,
+            "medium": "Stone spheres",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Against the Run",
+            "year": 2015,
+            "medium": "Public clock",
+            "dimensions": "",
+            "image": "",
+            "status": "Public installation"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "conrad-shawcross",
+      "anish-kapoor"
+    ]
+  },
+  {
+    "id": "tomas-sanchez",
+    "name": "Tomás Sánchez",
+    "nationality": "Cuban",
+    "bornDate": "1948",
+    "bornPlace": "Aguada de Pasajeros, Cuba",
+    "livesIn": "Costa Rica and Miami",
+    "artStatement": "Sánchez paints meticulous, meditative landscapes — vast skies, still waters, dense forests and a solitary figure absorbed in contemplation — informed by his long practice of meditation. A counter-series of monumental landfills (basureros) sets that serenity against images of human waste and ecological reckoning.",
+    "movements": [
+      "Contemporary Landscape",
+      "Photorealism",
+      "Latin American Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Acrylic",
+      "Drawing"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lake_island_and_cloud_painting.jpg",
+        "credit": "Landscape painting by Tomás Sánchez — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Meditative landscapes and landfill series.",
+        "works": [
+          {
+            "title": "Landscape (meditator series)",
+            "year": "",
+            "medium": "Acrylic on canvas",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Lake_island_and_cloud_painting.jpg",
+            "status": ""
+          },
+          {
+            "title": "Basurero (Landfill) series",
+            "year": 1990,
+            "medium": "Acrylic on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
         ]
       }
     ],
