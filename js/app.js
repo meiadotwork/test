@@ -13,6 +13,7 @@
   var lightboxCaption = document.getElementById("lightboxCaption");
   var readBtn = document.getElementById("readAloud");
   var speechOK = "speechSynthesis" in window;
+  var galleryItems = [], lightIndex = 0;
 
   /* ---------- utilities ---------- */
 
@@ -51,6 +52,75 @@
 
   function img(src, seed, label, tall) {
     return src && src.trim() ? src : placeholder(seed, label, tall);
+  }
+
+  /* ---------- runtime image resolution (free sources) ---------- */
+  // Empty src/image values are upgraded to real photos at render time using
+  // CORS-enabled free APIs (Wikipedia lead images + Wikimedia Commons search).
+  // Placeholders stay as the fallback, so the site still works fully offline.
+  var imageCache = {};
+  try { imageCache = JSON.parse(localStorage.getItem("artisearch_imgcache") || "{}"); } catch (e) {}
+
+  function cachePut(key, url) {
+    imageCache[key] = url || "";
+    if (url) { try { localStorage.setItem("artisearch_imgcache", JSON.stringify(imageCache)); } catch (e) {} }
+  }
+
+  function fetchJSON(url) {
+    return fetch(url, { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; });
+  }
+
+  function resolvePortrait(name) {
+    return fetchJSON("https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(name))
+      .then(function (d) {
+        if (!d) return "";
+        return (d.originalimage && d.originalimage.source) || (d.thumbnail && d.thumbnail.source) || "";
+      });
+  }
+
+  function resolveWork(q) {
+    var api = "https://commons.wikimedia.org/w/api.php?action=query&generator=search" +
+      "&gsrnamespace=6&gsrsearch=" + encodeURIComponent(q) + "&gsrlimit=1" +
+      "&prop=imageinfo&iiprop=url&iiurlwidth=1000&format=json&origin=*";
+    return fetchJSON(api).then(function (d) {
+      if (!d || !d.query || !d.query.pages) return "";
+      var pages = d.query.pages, k = Object.keys(pages)[0];
+      var ii = pages[k] && pages[k].imageinfo && pages[k].imageinfo[0];
+      return ii ? (ii.thumburl || ii.url) : "";
+    });
+  }
+
+  // Once a real URL loads, swap it in and keep the lightbox gallery in sync.
+  function applyImage(el, url) {
+    if (!url) return;
+    var pre = new Image();
+    pre.onload = function () {
+      el.style.backgroundImage = "url('" + url + "')";
+      el.classList.add("img-loaded");
+      var workBtn = el.closest(".work");
+      if (workBtn) {
+        workBtn.setAttribute("data-img", url);
+        var idx = workBtn.getAttribute("data-index");
+        if (idx != null && galleryItems[idx]) galleryItems[idx].img = url;
+      }
+    };
+    pre.src = url;
+  }
+
+  function hydrateImages(root) {
+    if (!("fetch" in window)) return;
+    var els = root.querySelectorAll("[data-resolve]");
+    Array.prototype.forEach.call(els, function (el) {
+      var type = el.getAttribute("data-resolve");
+      var q = el.getAttribute("data-q") || "";
+      var q2 = el.getAttribute("data-q2") || "";
+      var key = type + ":" + q;
+      if (Object.prototype.hasOwnProperty.call(imageCache, key)) { applyImage(el, imageCache[key]); return; }
+      var p = type === "portrait" ? resolvePortrait(q) : resolveWork(q);
+      p.then(function (url) { return (!url && q2) ? resolveWork(q2) : url; })
+        .then(function (url) { cachePut(key, url || ""); applyImage(el, url); })
+        .catch(function () { imageCache[key] = ""; });
+    });
   }
 
   function fmtDate(d) {
@@ -122,8 +192,9 @@
     var tags = (a.movements || []).slice(0, 3).map(function (m) {
       return '<span class="tag">' + esc(m) + "</span>";
     }).join("");
+    var headResolve = head ? "" : ' data-resolve="portrait" data-q="' + esc(a.name) + '"';
     return '<button class="card" data-id="' + esc(a.id) + '">' +
-      '<div class="card-thumb" style="background-image:url(\'' + img(head, a.id, a.name) + '\')"></div>' +
+      '<div class="card-thumb"' + headResolve + ' style="background-image:url(\'' + img(head, a.id, a.name) + '\')"></div>' +
       '<div class="card-body">' +
         '<h3 class="card-name">' + esc(a.name) + "</h3>" +
         '<p class="card-sub">' + esc(a.nationality || "") + (a.livesIn ? " · lives in " + esc(a.livesIn) : "") + "</p>" +
@@ -148,6 +219,7 @@
       html += '<div class="grid">' + results.map(cardHTML).join("") + "</div>";
     }
     view.innerHTML = html;
+    hydrateImages(view);
   }
 
   /* ---------- rendering: profile ---------- */
@@ -179,9 +251,10 @@
     if (a.email) links += '<a class="link-btn" href="mailto:' + esc(a.email) + '">Email</a>';
     if (a.cv && a.cv.url) links += '<a class="link-btn" target="_blank" rel="noopener" href="' + esc(a.cv.url) + '">Download C.V.</a>';
 
+    var portraitResolve = head.src ? "" : ' data-resolve="portrait" data-q="' + esc(a.name) + '"';
     var hero =
       '<div class="hero">' +
-        '<div><div class="hero-portrait" style="background-image:url(\'' + img(head.src, a.id, a.name, true) + '\')"></div>' +
+        '<div><div class="hero-portrait"' + portraitResolve + ' style="background-image:url(\'' + img(head.src, a.id, a.name, true) + '\')"></div>' +
           (head.credit ? '<p class="portrait-credit">' + esc(head.credit) + "</p>" : "") +
         "</div>" +
         "<div>" +
@@ -282,6 +355,7 @@
 
     /* work by series */
     var workInner = "";
+    galleryItems = [];
     (a.series || []).forEach(function (s) {
       var works = (s.works || []).map(function (w, i) {
         var src = img(w.image, a.id + "-" + s.name + "-" + i, w.title);
@@ -294,8 +368,12 @@
         var capDetail = s.name + " — " + (w.title || "") + (w.year ? " (" + w.year + ")" : "") +
           (meta ? " · " + (w.medium || "") + " " + (w.dimensions || "") : "") +
           (availLine ? " · " + (w.price || "") + (w.price && w.status ? " — " : "") + (w.status || "") : "");
-        return '<button class="work" data-img="' + esc(src) + '" data-caption="' + esc(capDetail) + '">' +
-          '<div class="work-img" style="background-image:url(\'' + src + '\')">' + statusBadge + "</div>" +
+        var gi = galleryItems.length;
+        galleryItems.push({ img: src, caption: capDetail });
+        var workResolve = w.image ? "" : ' data-resolve="work" data-q="' +
+          esc(a.name + " " + (w.title || "")) + '" data-q2="' + esc(a.name + " " + s.name) + '"';
+        return '<button class="work" data-index="' + gi + '" data-img="' + esc(src) + '" data-caption="' + esc(capDetail) + '">' +
+          '<div class="work-img"' + workResolve + ' style="background-image:url(\'' + src + '\')">' + statusBadge + "</div>" +
           '<div class="work-cap"><div class="work-title">' + caption + '</div>' +
           (meta ? '<div class="work-meta">' + meta + "</div>" : "") +
           (availLine ? '<div class="work-avail">' + availLine + "</div>" : "") + "</div></button>";
@@ -355,6 +433,7 @@
         : "") +
       galleries + cv + press + interviews + books + collections + shows + pastEx + fairs + work + studio + related;
 
+    hydrateImages(view);
     window.scrollTo(0, 0);
   }
 
@@ -500,7 +579,7 @@
       if (card) { location.hash = "artist/" + card.getAttribute("data-id"); return; }
       if (e.target.closest("#backBtn")) { location.hash = ""; return; }
       var work = e.target.closest(".work");
-      if (work) openLightbox(work.getAttribute("data-img"), work.getAttribute("data-caption"));
+      if (work) openLightbox(parseInt(work.getAttribute("data-index"), 10) || 0);
     });
 
     document.getElementById("brandLink").addEventListener("click", function (e) {
@@ -514,15 +593,36 @@
     window.addEventListener("beforeunload", stopRead);
 
     document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+    document.getElementById("lightboxPrev").addEventListener("click", function () { navLight(-1); });
+    document.getElementById("lightboxNext").addEventListener("click", function () { navLight(1); });
     lightbox.addEventListener("click", function (e) { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
+    document.addEventListener("keydown", function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowLeft") navLight(-1);
+      else if (e.key === "ArrowRight") navLight(1);
+    });
 
     window.addEventListener("hashchange", route);
   }
 
-  function openLightbox(src, caption) {
-    lightboxImg.style.backgroundImage = "url('" + src + "')";
-    lightboxCaption.textContent = caption || "";
+  function showLight() {
+    var item = galleryItems[lightIndex];
+    if (!item) return;
+    lightboxImg.style.backgroundImage = "url('" + item.img + "')";
+    lightboxCaption.textContent = item.caption || "";
+    var multi = galleryItems.length > 1;
+    document.getElementById("lightboxPrev").hidden = !multi;
+    document.getElementById("lightboxNext").hidden = !multi;
+  }
+  function navLight(delta) {
+    if (!galleryItems.length) return;
+    lightIndex = (lightIndex + delta + galleryItems.length) % galleryItems.length;
+    showLight();
+  }
+  function openLightbox(index) {
+    lightIndex = index || 0;
+    showLight();
     lightbox.hidden = false;
   }
   function closeLightbox() { lightbox.hidden = true; }

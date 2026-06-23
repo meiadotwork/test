@@ -97,17 +97,24 @@ except `id` and `name`; empty sections are simply hidden.
   beneath the work and in the lightbox caption.
 - **`pastExhibitions[].type`** is a free label (e.g. "Solo", "Group").
 - **Dates** for shows should be ISO `YYYY-MM-DD` so they format nicely.
-- **Images** — leave any `src`/`image` empty (`""`) and the app draws a tasteful
-  generated placeholder, so everything renders even before you add real photos.
-  Drop real files into an `img/` folder and reference them by relative path, or use
-  a remote URL.
-  - The seeded data uses **real, freely-licensed portraits** from Wikimedia Commons
-    (CC BY) for Yayoi Kusama and Julie Mehretu, with attribution in each headshot's
-    `credit`. El Anatsui keeps a placeholder — no freely-licensed portrait was
-    available.
-  - **Artworks are intentionally left as placeholders.** These artists' works are
-    under copyright, so they can't be embedded from a free source. Add your own
-    licensed images (or images you have rights to) via each work's `image` field.
+- **Images** — three layers, in priority order:
+  1. **Explicit** — set a `src` (headshot) or `image` (work) to a file in an `img/`
+     folder or a remote URL; it's always used as-is.
+  2. **Auto-resolved at runtime** — if left empty (`""`), the app fetches a real
+     image from free, CORS-enabled sources: **Wikipedia** lead images for portraits
+     and **Wikimedia Commons** image search for works (matched on artist + title,
+     falling back to artist + series). Results are cached in `localStorage`. Images
+     fade in as they resolve.
+  3. **Placeholder** — if nothing resolves (or you're offline), a generated SVG
+     placeholder is shown, so the page always renders.
+  - The seeded data also pins **real CC BY portraits** (Wikimedia Commons) for Yayoi
+    Kusama and Julie Mehretu, with attribution in each headshot's `credit`.
+  - Auto-resolved photos are free-licensed *photographs*; the underlying artworks
+    remain under copyright (same posture as Wikipedia). For production, supply images
+    you have the rights to via the explicit `src`/`image` fields.
+- **Image lightbox** — click any work to open it fullscreen. Use the on-screen
+  **‹ ›** arrows or the **← / →** keys to move through all of an artist's works;
+  **Esc** closes.
 - **Related artists** — if `relatedArtists` is omitted, suggestions are computed
   automatically from shared movements and mediums.
 

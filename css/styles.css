@@ -533,6 +533,38 @@ code {
   color: #fff; font-size: 2.4rem; line-height: 1;
   cursor: pointer;
 }
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, transform .15s;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,.28); }
+.lightbox-nav.prev { left: 24px; }
+.lightbox-nav.next { right: 24px; }
+.lightbox-nav[hidden] { display: none; }
+
+/* progressive image fade-in once a real source resolves */
+.card-thumb, .hero-portrait, .work-img { transition: background-image .2s ease, filter .3s ease; }
+.img-loaded { animation: img-fade .4s ease; }
+@keyframes img-fade { from { filter: opacity(.35); } to { filter: none; } }
+
+@media (max-width: 560px) {
+  .lightbox-nav { width: 44px; height: 44px; font-size: 1.5rem; }
+  .lightbox-nav.prev { left: 8px; }
+  .lightbox-nav.next { right: 8px; }
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
