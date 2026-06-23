@@ -45,6 +45,8 @@ code {
   background: rgba(247,246,243,.85);
   backdrop-filter: saturate(160%) blur(12px);
   border-bottom: 1px solid var(--line);
+  max-height: 40vh;
+  overflow: hidden;
 }
 
 .header-inner {
