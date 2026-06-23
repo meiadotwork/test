@@ -301,6 +301,18 @@
     var statement = a.artStatement
       ? section("Artist Statement", '<p class="statement">' + esc(a.artStatement) + "</p>") : "";
 
+    /* long-form biography — a deep, ~10-minute read */
+    var biography = "";
+    if (a.biography && a.biography.length) {
+      var bodyHtml = a.biography.map(function (b) {
+        var paras = String(b.text || "").split(/\n\n+/).map(function (p) {
+          return p.trim() ? "<p>" + esc(p.trim()) + "</p>" : "";
+        }).join("");
+        return (b.heading ? '<h3 class="bio-head">' + esc(b.heading) + "</h3>" : "") + paras;
+      }).join("");
+      biography = section("Biography", '<div class="bio">' + bodyHtml + "</div>");
+    }
+
     /* galleries */
     var galleries = (a.galleries && a.galleries.length) ? section("Represented By",
       '<ul class="link-list">' + a.galleries.map(function (g) {
@@ -468,7 +480,7 @@
 
     view.innerHTML =
       '<button class="back-btn" id="backBtn">← Back to results</button>' +
-      hero + statement + section("Movement", (a.movements || []).length
+      hero + statement + biography + section("Movement", (a.movements || []).length
         ? '<div class="tag-row">' + a.movements.map(function (m) { return '<span class="tag">' + esc(m) + "</span>"; }).join("") + "</div>"
         : "") +
       videosSection +
