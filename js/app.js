@@ -202,9 +202,30 @@
       "</div></button>";
   }
 
+  // Compact, clickable A–Z directory of every artist (for when you can't
+  // recall a name). Grouped by first letter, names sorted alphabetically.
+  function renderIndex(list) {
+    var groups = {};
+    list.forEach(function (a) {
+      var letter = (a.name || "#").charAt(0).toUpperCase();
+      (groups[letter] = groups[letter] || []).push(a);
+    });
+    var letters = Object.keys(groups).sort();
+    var cols = letters.map(function (L) {
+      var names = groups[L].map(function (a) {
+        return '<button class="index-name" data-id="' + esc(a.id) + '">' + esc(a.name) + "</button>";
+      }).join("");
+      return '<div class="index-group"><h3 class="index-letter">' + esc(L) + "</h3>" + names + "</div>";
+    }).join("");
+    return '<details class="artist-index" open><summary>Browse all artists A–Z</summary>' +
+      '<div class="index-cols">' + cols + "</div></details>";
+  }
+
   function renderList() {
     stopRead();
-    var results = filtered();
+    var results = filtered().slice().sort(function (a, b) {
+      return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+    });
     var html = "";
 
     var label = "";
@@ -216,6 +237,8 @@
     if (!results.length) {
       html += '<div class="empty"><h2>No artists found</h2><p>Try a different name, movement, medium, or place.</p></div>';
     } else {
+      // On the "browse all" home view, show the scannable name index first.
+      if (!state.query && !state.filter) html += renderIndex(results);
       html += '<div class="grid">' + results.map(cardHTML).join("") + "</div>";
     }
     view.innerHTML = html;
@@ -575,6 +598,8 @@
     });
 
     view.addEventListener("click", function (e) {
+      var idx = e.target.closest(".index-name");
+      if (idx) { location.hash = "artist/" + idx.getAttribute("data-id"); return; }
       var card = e.target.closest(".card");
       if (card) { location.hash = "artist/" + card.getAttribute("data-id"); return; }
       if (e.target.closest("#backBtn")) { location.hash = ""; return; }
