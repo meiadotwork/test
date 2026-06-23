@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artisearch — Artist Discovery Engine</title>
+  <meta name="description" content="A clean, modern search engine for discovering artists: biography, statement, movement, galleries, CV, books, shows and work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#" id="brandLink">
+        <span class="brand-dot"></span>
+        Artisearch
+      </a>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Search artists, movements, mediums, places…" autocomplete="off" aria-label="Search artists" />
+      </div>
+    </div>
+    <div class="chips" id="filterChips" aria-label="Quick filters"></div>
+  </header>
+
+  <main id="view" class="view">
+    <!-- Rendered by app.js -->
+  </main>
+
+  <footer class="site-footer">
+    <p>Artisearch — a static artist discovery engine. Data lives in <code>data/artists.json</code>.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <figure class="lightbox-fig">
+      <div class="lightbox-img" id="lightboxImg"></div>
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
