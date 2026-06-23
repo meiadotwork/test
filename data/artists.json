@@ -1349,5 +1349,2292 @@
       }
     ],
     "relatedArtists": []
+  },
+  {
+    "id": "bridget-riley",
+    "name": "Bridget Riley",
+    "nationality": "British",
+    "bornDate": "1931",
+    "bornPlace": "London, United Kingdom",
+    "livesIn": "London and France",
+    "artStatement": "A central figure of Op art, Riley makes precise abstract paintings of lines, curves and colour that set the eye in motion — producing shimmer, after-images and a sense of instability that locates the artwork in the act of looking itself.",
+    "movements": [
+      "Op Art",
+      "Abstraction",
+      "Perceptual Abstraction"
+    ],
+    "mediums": [
+      "Painting"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Op art paintings.",
+        "works": [
+          {
+            "title": "Movement in Squares",
+            "year": 1961,
+            "medium": "Tempera on board",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Cataract series",
+            "year": 1967,
+            "medium": "Emulsion on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Late Morning",
+            "year": 1968,
+            "medium": "Acrylic on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": "Tate, London"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "julio-le-parc",
+      "carlos-cruz-diez"
+    ]
+  },
+  {
+    "id": "felipe-pantone",
+    "name": "Felipe Pantone",
+    "nationality": "Argentine-Spanish",
+    "bornDate": "1986",
+    "bornPlace": "Buenos Aires, Argentina",
+    "livesIn": "Spain",
+    "artStatement": "Pantone fuses graffiti, kinetic art and digital aesthetics into hard-edged works of gradient colour, glitch and optical pattern — a visual language for the speed, screens and dynamism of the hyper-digital age.",
+    "movements": [
+      "Kinetic Art",
+      "Op Art",
+      "Street Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Installation",
+      "Mural",
+      "Sculpture"
+    ],
+    "website": "https://www.felipepantone.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/a7/2017%2C_H%C3%AF_Ibiza%2C_H%C3%AF_Felipe_Pantone_%26_Okuda%2C_Felipe_Pantone_01.jpg",
+        "credit": "Felipe Pantone — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Chromodynamica series",
+            "year": "",
+            "medium": "Mixed media",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Subtractive Variability",
+            "year": "",
+            "medium": "Installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Optichromie",
+            "year": "",
+            "medium": "Painting",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "carlos-cruz-diez",
+      "bridget-riley"
+    ]
+  },
+  {
+    "id": "tauba-auerbach",
+    "name": "Tauba Auerbach",
+    "nationality": "American",
+    "bornDate": "1981",
+    "bornPlace": "San Francisco, California, USA",
+    "livesIn": "New York, USA",
+    "artStatement": "Auerbach works across painting, sculpture, weaving and artists' books to explore structure, dimension and perception — fold paintings, woven canvases and pattern systems that probe how order, space and logic are constructed.",
+    "movements": [
+      "Abstraction",
+      "Conceptual Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Sculpture",
+      "Artists' books",
+      "Weaving"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Fold series",
+            "year": 2009,
+            "medium": "Acrylic on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Weave paintings",
+            "year": "",
+            "medium": "Woven canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "[2,3]",
+            "year": "",
+            "medium": "Artist's book",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "sarah-morris"
+    ]
+  },
+  {
+    "id": "sarah-morris",
+    "name": "Sarah Morris",
+    "nationality": "British-American",
+    "bornDate": "1967",
+    "bornPlace": "Sevenoaks, United Kingdom",
+    "livesIn": "New York, USA",
+    "artStatement": "Morris makes glossy geometric paintings and films that map the psychology of cities, institutions and power — bright grids and abstracted architecture mirrored by documentary-essay films on urban systems.",
+    "movements": [
+      "Abstraction",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Film"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Painting by Sarah Morris — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "AM/PM",
+            "year": 1999,
+            "medium": "Household gloss on canvas",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/AM_PM_SM.jpg",
+            "status": ""
+          },
+          {
+            "title": "Origami series",
+            "year": "",
+            "medium": "Gloss on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Capital (film)",
+            "year": 2000,
+            "medium": "Film",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tauba-auerbach"
+    ]
+  },
+  {
+    "id": "julio-le-parc",
+    "name": "Julio Le Parc",
+    "nationality": "Argentine",
+    "bornDate": "1928",
+    "bornPlace": "Mendoza, Argentina",
+    "livesIn": "Paris, France",
+    "artStatement": "A founder of kinetic and op art and of the Groupe de Recherche d'Art Visuel (GRAV), Le Parc made works of moving light, reflection and instability designed to activate the spectator and dissolve the authority of the static art object.",
+    "movements": [
+      "Kinetic Art",
+      "Op Art",
+      "Geometric Abstraction"
+    ],
+    "mediums": [
+      "Installation",
+      "Painting",
+      "Light"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/04/Leparc_julio.png",
+        "credit": "Julio Le Parc — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "Grand Prize for Painting, Venice Biennale (1966)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Continuel-lumière series",
+            "year": "1960s",
+            "medium": "Light and reflective metal",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Continuel-mobile",
+            "year": "1960s",
+            "medium": "Suspended reflective elements",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Lumière en mouvement",
+            "year": "",
+            "medium": "Installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "jesus-rafael-soto",
+      "carlos-cruz-diez",
+      "bridget-riley"
+    ]
+  },
+  {
+    "id": "jim-lambie",
+    "name": "Jim Lambie",
+    "nationality": "British",
+    "bornDate": "1964",
+    "bornPlace": "Glasgow, Scotland",
+    "livesIn": "Glasgow, Scotland",
+    "artStatement": "Lambie turns everyday objects and pop culture into vivid sculptural installations, most famously his 'Zobop' floors of coloured vinyl tape that warp and energise architectural space.",
+    "movements": [
+      "Installation Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Sculpture"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Jim_Lambie.jpg/1280px-Jim_Lambie.jpg",
+        "credit": "Jim Lambie — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "Turner Prize shortlist (2005)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Zobop",
+            "year": "1999",
+            "medium": "Coloured vinyl tape",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Mental Oyster",
+            "year": 2004,
+            "medium": "Mixed-media installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "The Strokes",
+            "year": "",
+            "medium": "Mixed media",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "spencer-finch"
+    ]
+  },
+  {
+    "id": "spencer-finch",
+    "name": "Spencer Finch",
+    "nationality": "American",
+    "bornDate": "1962",
+    "bornPlace": "New Haven, Connecticut, USA",
+    "livesIn": "Brooklyn, New York, USA",
+    "artStatement": "Finch records the colour, light and atmosphere of specific places and moments, translating fugitive perceptual experience into installations of filtered light, glass and fluorescent tubes.",
+    "movements": [
+      "Conceptual Art",
+      "Light and Space",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Light",
+      "Drawing",
+      "Glass"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Mars_%28Sunrise%29%2C_Spencer_Finch%2C_Gloriette_02.jpg/1280px-Mars_%28Sunrise%29%2C_Spencer_Finch%2C_Gloriette_02.jpg",
+        "credit": "Work by Spencer Finch — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Mars (Sunrise)",
+            "year": "",
+            "medium": "Light installation",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Mars_%28Sunrise%29%2C_Spencer_Finch%2C_Gloriette_02.jpg/1280px-Mars_%28Sunrise%29%2C_Spencer_Finch%2C_Gloriette_02.jpg",
+            "status": ""
+          },
+          {
+            "title": "Trying to Remember the Color of the Sky on That September Morning",
+            "year": 2014,
+            "medium": "Watercolor, paper",
+            "dimensions": "",
+            "image": "",
+            "status": "9/11 Memorial Museum, New York"
+          },
+          {
+            "title": "Moonlight (Luna County)",
+            "year": 2003,
+            "medium": "Fluorescent tubes, filters",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "james-turrell",
+      "olafur-eliasson"
+    ]
+  },
+  {
+    "id": "anthony-mccall",
+    "name": "Anthony McCall",
+    "nationality": "British",
+    "bornDate": "1946",
+    "bornPlace": "London, United Kingdom",
+    "livesIn": "New York, USA",
+    "artStatement": "McCall pioneered 'solid light' works in which a film projector throws slowly evolving lines of light through haze, sculpting volumetric forms that visitors can walk into — film, sculpture, drawing and time collapsed into a single beam.",
+    "movements": [
+      "Light and Space",
+      "Installation Art",
+      "Structural Film"
+    ],
+    "mediums": [
+      "Light",
+      "Film",
+      "Installation"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Anthony_McCall.jpg",
+        "credit": "Anthony McCall — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Line Describing a Cone",
+            "year": 1973,
+            "medium": "16mm projected light",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Line_Describing_a_Cone_%281973%29_frame.jpg",
+            "status": ""
+          },
+          {
+            "title": "You and I, Horizontal",
+            "year": 2005,
+            "medium": "Projected light, haze",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Solid Light works",
+            "year": "1973–",
+            "medium": "Projected light",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "james-turrell",
+      "olafur-eliasson",
+      "doug-wheeler"
+    ]
+  },
+  {
+    "id": "doug-wheeler",
+    "name": "Doug Wheeler",
+    "nationality": "American",
+    "bornDate": "1939",
+    "bornPlace": "Globe, Arizona, USA",
+    "livesIn": "New Mexico, USA",
+    "artStatement": "A founder of the Light and Space movement, Wheeler builds 'infinity environments' — seamless, evenly lit rooms that erase edges and horizon so that light, space and silence become the entire content of the work.",
+    "movements": [
+      "Light and Space",
+      "Minimalism",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Light",
+      "Installation"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Infinity Environment",
+            "year": "",
+            "medium": "Light, fabricated room",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "SA MI 75 DZ NY 12",
+            "year": 1975,
+            "medium": "Light installation",
+            "dimensions": "",
+            "image": "",
+            "status": "David Zwirner, New York"
+          },
+          {
+            "title": "PSAD Synthetic Desert III",
+            "year": 1971,
+            "medium": "Light, anechoic environment",
+            "dimensions": "",
+            "image": "",
+            "status": "Guggenheim, New York"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "james-turrell",
+      "anthony-mccall"
+    ]
+  },
+  {
+    "id": "do-ho-suh",
+    "name": "Do Ho Suh",
+    "nationality": "South Korean",
+    "bornDate": "1962",
+    "bornPlace": "Seoul, South Korea",
+    "livesIn": "London and Seoul",
+    "artStatement": "Suh recreates the architecture of homes he has lived in as translucent, full-scale fabric sculptures — measuring memory, migration and the idea of home as a portable, ghostly space stitched in colored gossamer.",
+    "movements": [
+      "Installation Art",
+      "Sculpture",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Fabric",
+      "Sculpture",
+      "Drawing"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/19/Do_Ho_Suh_and_Eitaro_Ogawa_%28cropped%29.jpg",
+        "credit": "Do Ho Suh — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Staircase-III",
+            "year": 2010,
+            "medium": "Polyester fabric, stainless steel",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Staircase-III.JPG/1280px-Staircase-III.JPG",
+            "status": "Tate"
+          },
+          {
+            "title": "Home Within Home",
+            "year": "2009–",
+            "medium": "Fabric, steel",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Some/One",
+            "year": 2001,
+            "medium": "Stainless-steel military dog tags",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "rachel-whiteread",
+      "chiharu-shiota"
+    ]
+  },
+  {
+    "id": "rachel-whiteread",
+    "name": "Rachel Whiteread",
+    "nationality": "British",
+    "bornDate": "1963",
+    "bornPlace": "London, United Kingdom",
+    "livesIn": "London, United Kingdom",
+    "artStatement": "Whiteread casts the negative space in and around everyday things — the air inside a room, beneath a chair, within a water tower — turning absence, memory and the overlooked into solid, monumental form.",
+    "movements": [
+      "Contemporary Sculpture",
+      "Minimalism",
+      "Young British Artists"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Casting"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Rachel_Whiteread_2018.jpg",
+        "credit": "Rachel Whiteread, 2018 — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "Turner Prize (1993)",
+      "CBE / DBE for services to art"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "House",
+            "year": 1993,
+            "medium": "Concrete cast of a house",
+            "dimensions": "",
+            "image": "",
+            "status": "London (demolished 1994)"
+          },
+          {
+            "title": "Judenplatz Holocaust Memorial",
+            "year": 2000,
+            "medium": "Concrete",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/HOLOCAUST_MEMORIAL-VIENNA-Dr._Murali_Mohan_Gurram_%284%29.jpg",
+            "status": "Vienna, Austria"
+          },
+          {
+            "title": "Untitled (Stairs)",
+            "year": 2001,
+            "medium": "Cast",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "do-ho-suh",
+      "anish-kapoor"
+    ]
+  },
+  {
+    "id": "olga-de-amaral",
+    "name": "Olga de Amaral",
+    "nationality": "Colombian",
+    "bornDate": "1932",
+    "bornPlace": "Bogotá, Colombia",
+    "livesIn": "Bogotá, Colombia",
+    "artStatement": "De Amaral expands weaving into architecture and landscape, building large-scale fiber works layered with gesso, gold and silver leaf that hang in space and shimmer between textile, painting and pre-Columbian heritage.",
+    "movements": [
+      "Fiber Art",
+      "Abstraction",
+      "Latin American Art"
+    ],
+    "mediums": [
+      "Fiber",
+      "Textile",
+      "Gold leaf"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Olga_in_Ubat%C3%A9_%28cropped%29.jpg",
+        "credit": "Olga de Amaral — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Alquimia series",
+            "year": "",
+            "medium": "Fiber, gesso, gold leaf",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Brumas",
+            "year": "",
+            "medium": "Cotton, paint",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Estelas",
+            "year": "",
+            "medium": "Fiber, gold leaf",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": []
+  },
+  {
+    "id": "lee-ufan",
+    "name": "Lee Ufan",
+    "nationality": "South Korean",
+    "bornDate": "1936",
+    "bornPlace": "Haman County, South Korea",
+    "livesIn": "Kamakura, Japan and Paris",
+    "artStatement": "A leading figure of Japan's Mono-ha movement, Lee makes spare paintings and sculptures that stage relationships between natural stone, industrial steel and empty space — privileging encounter, process and the unmade over representation.",
+    "movements": [
+      "Mono-ha",
+      "Minimalism",
+      "Conceptual Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Sculpture",
+      "Installation"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Lee_Ufan.jpg",
+        "credit": "Lee Ufan — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Relatum series",
+            "year": "1968–",
+            "medium": "Stone and steel",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/2024_RMT%2C_Asd-Lee_Ufan-Relatum-The_skyroad-uitleg.jpg/1280px-2024_RMT%2C_Asd-Lee_Ufan-Relatum-The_skyroad-uitleg.jpg",
+            "status": ""
+          },
+          {
+            "title": "From Point / From Line",
+            "year": "1970s",
+            "medium": "Pigment on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Dialogue",
+            "year": "",
+            "medium": "Acrylic on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tatsuo-miyajima"
+    ]
+  },
+  {
+    "id": "tatsuo-miyajima",
+    "name": "Tatsuo Miyajima",
+    "nationality": "Japanese",
+    "bornDate": "1957",
+    "bornPlace": "Tokyo, Japan",
+    "livesIn": "Ibaraki, Japan",
+    "artStatement": "Miyajima fills space with grids of digital LED counters cycling 1 to 9 — never reaching zero — drawing on Buddhist thought to make installations about time, life, death and continuous change.",
+    "movements": [
+      "Installation Art",
+      "Contemporary Art",
+      "Digital Art"
+    ],
+    "mediums": [
+      "Installation",
+      "LED",
+      "Sculpture"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Tatsuo_Miyajima%2C_Life_%28Rhizome%29_No_3._2012.jpg/1280px-Tatsuo_Miyajima%2C_Life_%28Rhizome%29_No_3._2012.jpg",
+        "credit": "Tatsuo Miyajima, Life (Rhizome) — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Life (Rhizome) No 3",
+            "year": 2012,
+            "medium": "LED, IC, electric wire",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Tatsuo_Miyajima%2C_Life_%28Rhizome%29_No_3._2012.jpg/1280px-Tatsuo_Miyajima%2C_Life_%28Rhizome%29_No_3._2012.jpg",
+            "status": ""
+          },
+          {
+            "title": "Sea of Time",
+            "year": 1988,
+            "medium": "LED counters",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Mega Death",
+            "year": 1999,
+            "medium": "LED installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "lee-ufan",
+      "ryoji-ikeda"
+    ]
+  },
+  {
+    "id": "chiharu-shiota",
+    "name": "Chiharu Shiota",
+    "nationality": "Japanese",
+    "bornDate": "1972",
+    "bornPlace": "Osaka, Japan",
+    "livesIn": "Berlin, Germany",
+    "artStatement": "Shiota weaves vast webs of red or black thread through entire rooms, entangling keys, beds, boats and dresses — externalizing memory, anxiety, connection and absence as immersive, body-scale drawings in space.",
+    "movements": [
+      "Installation Art",
+      "Performance Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Thread",
+      "Performance"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/0/01/Chiharu_Shiota%E2%80%99s_The_Soul_Trembles_exhibition_QGOMA%2C_15.jpg",
+        "credit": "Chiharu Shiota, The Soul Trembles — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "The Soul Trembles",
+            "year": "",
+            "medium": "Thread installation",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/Chiharu_Shiota%E2%80%99s_The_Soul_Trembles_exhibition_QGOMA%2C_15.jpg",
+            "status": ""
+          },
+          {
+            "title": "Uncertain Journey",
+            "year": 2016,
+            "medium": "Red thread, metal frames",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "The Key in the Hand",
+            "year": 2015,
+            "medium": "Keys, red thread, boats",
+            "dimensions": "",
+            "image": "",
+            "status": "Japan Pavilion, Venice Biennale"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "do-ho-suh"
+    ]
+  },
+  {
+    "id": "teresita-fernandez",
+    "name": "Teresita Fernández",
+    "nationality": "American",
+    "bornDate": "1968",
+    "bornPlace": "Miami, Florida, USA",
+    "livesIn": "New York, USA",
+    "artStatement": "Fernández makes immersive public sculptures and installations that rethink landscape — using materials like graphite, glazed tile, gold and glass to evoke fire, water, cosmos and the politics of how land is seen.",
+    "movements": [
+      "Installation Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Sculpture",
+      "Public art"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/TF_portrait_2019_02_full_image%28by_Natalia_Mantini%29.jpg",
+        "credit": "Teresita Fernández, photo by Natalia Mantini — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "MacArthur Fellowship (2005)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Fata Morgana",
+            "year": 2015,
+            "medium": "Mirror-polished discs",
+            "dimensions": "",
+            "image": "",
+            "status": "Madison Square Park, New York"
+          },
+          {
+            "title": "Fire",
+            "year": 2005,
+            "medium": "Silk yarn",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Stacked Waters",
+            "year": 2009,
+            "medium": "Cast acrylic",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "olafur-eliasson"
+    ]
+  },
+  {
+    "id": "ivan-navarro",
+    "name": "Iván Navarro",
+    "nationality": "Chilean",
+    "bornDate": "1972",
+    "bornPlace": "Santiago, Chile",
+    "livesIn": "Brooklyn, New York, USA",
+    "artStatement": "Navarro builds sculptures from fluorescent and neon light, mirrors and glowing tubes that open illusory infinite tunnels — works charged with memory of dictatorship, power, surveillance and the politics of electricity.",
+    "movements": [
+      "Installation Art",
+      "Light Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Light",
+      "Neon",
+      "Sculpture",
+      "Mirror"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ivan_Navarro_Die_Again.jpg/1280px-Ivan_Navarro_Die_Again.jpg",
+        "credit": "Iván Navarro, Die Again — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Die Again",
+            "year": "",
+            "medium": "Neon, mirror, electric energy",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ivan_Navarro_Die_Again.jpg/1280px-Ivan_Navarro_Die_Again.jpg",
+            "status": ""
+          },
+          {
+            "title": "Heaven or Las Vegas",
+            "year": 2009,
+            "medium": "Fluorescent light, mirror",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "This Land Is Your Land",
+            "year": 2014,
+            "medium": "Light, mirror, water towers",
+            "dimensions": "",
+            "image": "",
+            "status": "Madison Square Park, New York"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "ryoji-ikeda",
+      "anthony-mccall"
+    ]
+  },
+  {
+    "id": "ryoji-ikeda",
+    "name": "Ryoji Ikeda",
+    "nationality": "Japanese",
+    "bornDate": "1966",
+    "bornPlace": "Gifu, Japan",
+    "livesIn": "Paris, France",
+    "artStatement": "Ikeda composes with raw sound, data and light — sine tones, noise and torrents of numbers rendered as vast monochrome projections and beams — making the scale and abstraction of information into a visceral, immersive experience.",
+    "movements": [
+      "Digital Art",
+      "Sound Art",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Sound",
+      "Light",
+      "Installation",
+      "Data"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ryoji_Ikeda_-_Spectra.jpg/1280px-Ryoji_Ikeda_-_Spectra.jpg",
+        "credit": "Ryoji Ikeda, Spectra — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Spectra",
+            "year": "2008–",
+            "medium": "Searchlights",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ryoji_Ikeda_-_Spectra.jpg/1280px-Ryoji_Ikeda_-_Spectra.jpg",
+            "status": ""
+          },
+          {
+            "title": "test pattern",
+            "year": "2008–",
+            "medium": "Audiovisual installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "data.tron",
+            "year": "",
+            "medium": "Audiovisual installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tatsuo-miyajima",
+      "refik-anadol"
+    ]
+  },
+  {
+    "id": "mariko-mori",
+    "name": "Mariko Mori",
+    "nationality": "Japanese",
+    "bornDate": "1967",
+    "bornPlace": "Tokyo, Japan",
+    "livesIn": "New York and Tokyo",
+    "artStatement": "Mori fuses technology, Buddhism and futurism in photographs, video and luminous sculptures — serene, otherworldly environments that imagine a connection between cosmos, nature, ritual and a hybrid future self.",
+    "movements": [
+      "Contemporary Art",
+      "Installation Art",
+      "Digital Art"
+    ],
+    "mediums": [
+      "Photography",
+      "Video",
+      "Sculpture",
+      "Installation"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Mori_Mariko_at_the_Japan_Society_Panel_on_Art_%26_Nature_2010.jpg",
+        "credit": "Mariko Mori — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Wave UFO",
+            "year": "1999–2003",
+            "medium": "Technological environment",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Nirvana",
+            "year": 1997,
+            "medium": "3D video",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Tom Na H-iu",
+            "year": 2006,
+            "medium": "Glass, LED, real-time data",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": []
+  },
+  {
+    "id": "gerhard-richter",
+    "name": "Gerhard Richter",
+    "nationality": "German",
+    "bornDate": "1932",
+    "bornPlace": "Dresden, Germany",
+    "livesIn": "Cologne, Germany",
+    "artStatement": "One of the most important living painters, Richter moves between photo-based realism and pure abstraction — blurred photo-paintings and squeegee-dragged abstractions that interrogate how images, memory and truth are made and doubted.",
+    "movements": [
+      "Abstraction",
+      "Photorealism",
+      "Capitalist Realism"
+    ],
+    "mediums": [
+      "Painting",
+      "Photography",
+      "Glass"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Gerhard_Richter%2C_Prague_%282017%29.jpg",
+        "credit": "Gerhard Richter, Prague 2017 — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Abstraktes Bild series",
+            "year": "1980s–",
+            "medium": "Oil on canvas (squeegee)",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Betty",
+            "year": 1988,
+            "medium": "Oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Cage paintings",
+            "year": 2006,
+            "medium": "Oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "katharina-grosse"
+    ]
+  },
+  {
+    "id": "tomma-abts",
+    "name": "Tomma Abts",
+    "nationality": "German",
+    "bornDate": "1967",
+    "bornPlace": "Kiel, Germany",
+    "livesIn": "London, United Kingdom",
+    "artStatement": "Abts paints small, identically-sized abstract canvases built slowly, without reference, layer upon layer — taut geometries, shadows and reversals that seem to generate their own internal logic and light.",
+    "movements": [
+      "Abstraction",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "awards": [
+      "Turner Prize (2006)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Untitled abstractions",
+            "year": "",
+            "medium": "Acrylic and oil on canvas (48 × 38 cm)",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Folke",
+            "year": "",
+            "medium": "Acrylic and oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Zebe",
+            "year": "",
+            "medium": "Acrylic and oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tomory-dodge",
+      "mark-grotjahn"
+    ]
+  },
+  {
+    "id": "mark-bradford",
+    "name": "Mark Bradford",
+    "nationality": "American",
+    "bornDate": "1961",
+    "bornPlace": "Los Angeles, California, USA",
+    "livesIn": "Los Angeles, California, USA",
+    "artStatement": "Bradford builds large abstract 'paintings' from layered and sanded paper, posters and signage scavenged from the city — maps of social, racial and economic life in which abstraction carries documentary and political weight.",
+    "movements": [
+      "Abstraction",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Collage",
+      "Mixed media"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/MarkBradfordPortrait4.jpg/3840px-MarkBradfordPortrait4.jpg",
+        "credit": "Mark Bradford — Image via Wikimedia Commons"
+      }
+    ],
+    "awards": [
+      "MacArthur Fellowship (2009)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Pickett's Charge",
+            "year": 2017,
+            "medium": "Mixed-media collage",
+            "dimensions": "",
+            "image": "",
+            "status": "Hirshhorn Museum, Washington"
+          },
+          {
+            "title": "Helter Skelter I",
+            "year": 2007,
+            "medium": "Mixed media on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Tomorrow Is Another Day",
+            "year": 2017,
+            "medium": "Installation",
+            "dimensions": "",
+            "image": "",
+            "status": "U.S. Pavilion, Venice Biennale"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "julie-mehretu"
+    ]
+  },
+  {
+    "id": "mark-grotjahn",
+    "name": "Mark Grotjahn",
+    "nationality": "American",
+    "bornDate": "1968",
+    "bornPlace": "Pasadena, California, USA",
+    "livesIn": "Los Angeles, California, USA",
+    "artStatement": "Grotjahn is known for his 'Butterfly' perspective paintings and dense, carved impasto 'Face' works — abstractions that play one-point perspective and gestural mark-making against each other with intense colour.",
+    "movements": [
+      "Abstraction",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Drawing"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Mark_Grotjahn.jpeg",
+        "credit": "Mark Grotjahn — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Butterfly series",
+            "year": "2000s",
+            "medium": "Colored pencil / oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Face series",
+            "year": "",
+            "medium": "Oil on cardboard mounted on linen",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Untitled (Capri)",
+            "year": "",
+            "medium": "Oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tomma-abts",
+      "tomory-dodge"
+    ]
+  },
+  {
+    "id": "tomory-dodge",
+    "name": "Tomory Dodge",
+    "nationality": "American",
+    "bornDate": "1974",
+    "bornPlace": "Denver, Colorado, USA",
+    "livesIn": "Los Angeles, California, USA",
+    "artStatement": "Dodge paints thickly worked canvases that hover between abstraction and landscape — fragmented, gestural fields of strokes and debris that coalesce into image and then dissolve back into paint.",
+    "movements": [
+      "Abstraction",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Untitled abstractions",
+            "year": "",
+            "medium": "Oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Wreckage",
+            "year": "",
+            "medium": "Oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Ghost",
+            "year": "",
+            "medium": "Oil on canvas",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "mark-grotjahn",
+      "tomma-abts",
+      "sarah-cain"
+    ]
+  },
+  {
+    "id": "tom-mcglynn",
+    "name": "Tom McGlynn",
+    "nationality": "American",
+    "bornDate": "",
+    "bornPlace": "United States",
+    "livesIn": "New York / New Jersey, USA",
+    "artStatement": "McGlynn is an American artist, writer and educator whose hard-edged, reductive abstract paintings and works on paper draw on signage and vernacular geometry, pursuing what he calls a 'non-relational' visual order. (He is also an art critic and curator.)",
+    "movements": [
+      "Geometric Abstraction",
+      "Hard-edge Painting",
+      "Minimalism"
+    ],
+    "mediums": [
+      "Painting",
+      "Works on paper"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Default System Drawings",
+            "year": "",
+            "medium": "Gouache on paper",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Untitled (geometric)",
+            "year": "",
+            "medium": "Acrylic on panel",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tom-friedman",
+      "sarah-cain"
+    ]
+  },
+  {
+    "id": "sarah-cain",
+    "name": "Sarah Cain",
+    "nationality": "American",
+    "bornDate": "1979",
+    "bornPlace": "Albany, New York, USA",
+    "livesIn": "Los Angeles, California, USA",
+    "artStatement": "Cain makes exuberant, improvisational paintings that spill off the canvas onto floors, walls, windows and found objects — site-responsive installations that treat painting as a physical, immersive and joyful act.",
+    "movements": [
+      "Abstraction",
+      "Installation Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Installation",
+      "Stained glass"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Sarah_Cain-We_Will_Walk_Right_Up_To_the_Sun-SFO.jpg",
+        "credit": "Sarah Cain, installation at SFO — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "We Will Walk Right Up To the Sun",
+            "year": "",
+            "medium": "Site-specific installation",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Sarah_Cain-We_Will_Walk_Right_Up_To_the_Sun-SFO.jpg",
+            "status": "San Francisco International Airport"
+          },
+          {
+            "title": "Now I'm going to tell you everything",
+            "year": "",
+            "medium": "Acrylic, found objects",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Stained-glass works",
+            "year": "",
+            "medium": "Stained glass",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "katharina-grosse",
+      "tomory-dodge"
+    ]
+  },
+  {
+    "id": "katharina-grosse",
+    "name": "Katharina Grosse",
+    "nationality": "German",
+    "bornDate": "1961",
+    "bornPlace": "Freiburg, Germany",
+    "livesIn": "Berlin, Germany",
+    "artStatement": "Grosse uses an industrial spray gun to flood architecture, landscape and objects with sweeping fields of saturated colour — liberating painting from the canvas into immersive, site-swallowing environments.",
+    "movements": [
+      "Abstraction",
+      "Installation Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Painting",
+      "Installation",
+      "Spray paint"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/62/Oliver_Mark_-_Katharina_Grosse%2C_Berlin_2011.jpg",
+        "credit": "Katharina Grosse, Berlin 2011, photo by Oliver Mark — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Rockaway!",
+            "year": 2016,
+            "medium": "Sprayed acrylic on architecture",
+            "dimensions": "",
+            "image": "",
+            "status": "Fort Tilden, New York"
+          },
+          {
+            "title": "Asphalt Air and Hair",
+            "year": 2017,
+            "medium": "Sprayed acrylic",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "The Horse Trotted Another Couple of Metres, Then It Stopped",
+            "year": 2018,
+            "medium": "Sprayed acrylic on fabric",
+            "dimensions": "",
+            "image": "",
+            "status": "Hamburger Bahnhof, Berlin"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "gerhard-richter",
+      "sarah-cain"
+    ]
+  },
+  {
+    "id": "tom-friedman",
+    "name": "Tom Friedman",
+    "nationality": "American",
+    "bornDate": "1965",
+    "bornPlace": "St. Louis, Missouri, USA",
+    "livesIn": "Massachusetts, USA",
+    "artStatement": "Friedman is a conceptual sculptor who transforms humble materials — paper, foil, sugar cubes, styrofoam, his own materials pushed to obsessive extremes — into witty, precise objects that test perception, scale and the limits of making.",
+    "movements": [
+      "Conceptual Art",
+      "Contemporary Sculpture"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Mixed media"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Tom_Friedman.JPG/1920px-Tom_Friedman.JPG",
+        "credit": "Tom Friedman — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Circle Dance",
+            "year": "",
+            "medium": "Stainless steel (roasting pans)",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Tom_Friedman_Circle_Dance.jpeg/1280px-Tom_Friedman_Circle_Dance.jpeg",
+            "status": ""
+          },
+          {
+            "title": "Untitled (self-portrait in soap)",
+            "year": "",
+            "medium": "Soap",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Hot Dog",
+            "year": "",
+            "medium": "Mixed media",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "josiah-mcelheny",
+      "tom-mcglynn"
+    ]
+  },
+  {
+    "id": "doris-salcedo",
+    "name": "Doris Salcedo",
+    "nationality": "Colombian",
+    "bornDate": "1958",
+    "bornPlace": "Bogotá, Colombia",
+    "livesIn": "Bogotá, Colombia",
+    "artStatement": "Salcedo makes sculpture and public interventions that mourn the victims of political violence — furniture filled with concrete, a fissure cut into a museum floor — turning grief, absence and testimony into materially exacting form.",
+    "movements": [
+      "Installation Art",
+      "Contemporary Sculpture",
+      "Conceptual Art"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Public art"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/c9/GUGG_Doris_Salcedo.jpg",
+        "credit": "Doris Salcedo — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Shibboleth",
+            "year": 2007,
+            "medium": "Fissure in concrete floor",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Shibboleth_Tate_Modern.jpg/1280px-Shibboleth_Tate_Modern.jpg",
+            "status": "Tate Modern, London"
+          },
+          {
+            "title": "Untitled (furniture)",
+            "year": "",
+            "medium": "Wood, concrete, steel",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Plegaria Muda",
+            "year": "2008–2010",
+            "medium": "Wood, concrete, grass",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "rachel-whiteread"
+    ]
+  },
+  {
+    "id": "haroon-mirza",
+    "name": "Haroon Mirza",
+    "nationality": "British",
+    "bornDate": "1977",
+    "bornPlace": "London, United Kingdom",
+    "livesIn": "London, United Kingdom",
+    "artStatement": "Mirza orchestrates electricity, LEDs, sound and found media into sculptural installations where current itself is the medium — composing rhythmic circuits that blur the line between noise, music, light and sculpture.",
+    "movements": [
+      "Installation Art",
+      "Sound Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Sound",
+      "LED",
+      "Electronics"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "awards": [
+      "Silver Lion, Venice Biennale (2011)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "The National Apavilion of Then and Now",
+            "year": 2011,
+            "medium": "Anechoic chamber, LED, sound",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Solar symphonies",
+            "year": "",
+            "medium": "Solar cells, LED, sound",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Stone Circle",
+            "year": 2018,
+            "medium": "Megaliths, solar, LED, sound",
+            "dimensions": "",
+            "image": "",
+            "status": "Marfa, Texas"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "ryoji-ikeda",
+      "rafael-lozano-hemmer"
+    ]
+  },
+  {
+    "id": "rafael-lozano-hemmer",
+    "name": "Rafael Lozano-Hemmer",
+    "nationality": "Mexican-Canadian",
+    "bornDate": "1967",
+    "bornPlace": "Mexico City, Mexico",
+    "livesIn": "Montreal, Canada",
+    "artStatement": "Lozano-Hemmer makes large-scale interactive installations using robotics, sensors, light and biometric data — public works completed only by participation, recording heartbeats, breath and presence as collective portraits.",
+    "movements": [
+      "Interactive Art",
+      "Digital Art",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Light",
+      "Robotics",
+      "Data"
+    ],
+    "website": "https://www.lozano-hemmer.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Rafael_Lozano-Hemmer_Portrait.jpg",
+        "credit": "Rafael Lozano-Hemmer — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Pulse Room",
+            "year": 2006,
+            "medium": "Incandescent bulbs, heart-rate sensors",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Vectorial Elevation",
+            "year": 1999,
+            "medium": "Robotic searchlights, internet",
+            "dimensions": "",
+            "image": "",
+            "status": "Mexico City"
+          },
+          {
+            "title": "Border Tuner",
+            "year": 2019,
+            "medium": "Searchlights, voice",
+            "dimensions": "",
+            "image": "",
+            "status": "US–Mexico border"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "haroon-mirza",
+      "tatsuo-miyajima"
+    ]
+  },
+  {
+    "id": "nairy-baghramian",
+    "name": "Nairy Baghramian",
+    "nationality": "German",
+    "bornDate": "1971",
+    "bornPlace": "Isfahan, Iran",
+    "livesIn": "Berlin, Germany",
+    "artStatement": "Baghramian makes elegant, bodily abstract sculptures in cast metal, glass, silicone and wax that lean, prop and rest against architecture — probing the body, support, fragility and the relationship of object to space.",
+    "movements": [
+      "Contemporary Sculpture",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Nairy_Baghramian_-_Beliebte_Stellen_PM17-01.jpg/1280px-Nairy_Baghramian_-_Beliebte_Stellen_PM17-01.jpg",
+        "credit": "Nairy Baghramian, Beliebte Stellen — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Beliebte Stellen / Privileged Points",
+            "year": 2017,
+            "medium": "Cast aluminium, lacquer",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Nairy_Baghramian_-_Beliebte_Stellen_PM17-01.jpg/1280px-Nairy_Baghramian_-_Beliebte_Stellen_PM17-01.jpg",
+            "status": ""
+          },
+          {
+            "title": "Maintainers",
+            "year": "",
+            "medium": "Metal, glass",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Misfits",
+            "year": 2021,
+            "medium": "Cast resin, metal",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "monika-sosnowska",
+      "alicja-kwade"
+    ]
+  },
+  {
+    "id": "carsten-holler",
+    "name": "Carsten Höller",
+    "nationality": "German",
+    "bornDate": "1961",
+    "bornPlace": "Brussels, Belgium",
+    "livesIn": "Stockholm, Sweden",
+    "artStatement": "Trained as a scientist, Höller designs experiential installations — giant slides, rotating beds, mirror carousels and perception-altering devices — that treat the visitor as a test subject and doubt as a creative method.",
+    "movements": [
+      "Installation Art",
+      "Relational Aesthetics",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Installation",
+      "Sculpture"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/LUMA_Arles_Innenansicht_Rutsche_von_Carsten_H%C3%B6ller.jpg/1280px-LUMA_Arles_Innenansicht_Rutsche_von_Carsten_H%C3%B6ller.jpg",
+        "credit": "Carsten Höller, slide at LUMA Arles — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Test Site (slides)",
+            "year": 2006,
+            "medium": "Steel slides",
+            "dimensions": "",
+            "image": "",
+            "status": "Tate Modern Turbine Hall"
+          },
+          {
+            "title": "Isomeric Slides",
+            "year": "",
+            "medium": "Steel",
+            "dimensions": "",
+            "image": "",
+            "status": "LUMA Arles"
+          },
+          {
+            "title": "Upside Down Mushroom Room",
+            "year": "",
+            "medium": "Installation",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "olafur-eliasson",
+      "tomas-saraceno"
+    ]
+  },
+  {
+    "id": "monika-sosnowska",
+    "name": "Monika Sosnowska",
+    "nationality": "Polish",
+    "bornDate": "1972",
+    "bornPlace": "Ryki, Poland",
+    "livesIn": "Warsaw, Poland",
+    "artStatement": "Sosnowska makes large steel sculptures that twist, crush and contort the modernist architecture of post-war Poland — staircases, gates and facades wrenched into knots that register utopian ambition and its collapse.",
+    "movements": [
+      "Installation Art",
+      "Contemporary Sculpture"
+    ],
+    "mediums": [
+      "Sculpture",
+      "Installation",
+      "Steel"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Stairs%2C_Monika_Sosnowska_01.jpg/1280px-Stairs%2C_Monika_Sosnowska_01.jpg",
+        "credit": "Monika Sosnowska, Stairs — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Stairs",
+            "year": "",
+            "medium": "Painted steel",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Stairs%2C_Monika_Sosnowska_01.jpg/1280px-Stairs%2C_Monika_Sosnowska_01.jpg",
+            "status": ""
+          },
+          {
+            "title": "1:1",
+            "year": 2007,
+            "medium": "Steel",
+            "dimensions": "",
+            "image": "",
+            "status": "Polish Pavilion, Venice Biennale"
+          },
+          {
+            "title": "Tower",
+            "year": 2014,
+            "medium": "Steel, concrete",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "nairy-baghramian",
+      "rachel-whiteread"
+    ]
+  },
+  {
+    "id": "josiah-mcelheny",
+    "name": "Josiah McElheny",
+    "nationality": "American",
+    "bornDate": "1966",
+    "bornPlace": "Boston, Massachusetts, USA",
+    "livesIn": "New York, USA",
+    "artStatement": "McElheny is a sculptor working primarily in hand-blown glass and mirror, building dazzling reflective assemblages and cosmological models that fuse modernist design, history and ideas about infinity and light.",
+    "movements": [
+      "Contemporary Sculpture",
+      "Conceptual Art"
+    ],
+    "mediums": [
+      "Glass",
+      "Sculpture",
+      "Installation",
+      "Mirror"
+    ],
+    "headshots": [
+      {
+        "src": "",
+        "credit": "Portrait"
+      }
+    ],
+    "awards": [
+      "MacArthur Fellowship (2006)"
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "An End to Modernity",
+            "year": 2005,
+            "medium": "Chrome, glass, electric light",
+            "dimensions": "",
+            "image": "",
+            "status": "cosmological chandelier"
+          },
+          {
+            "title": "Endlessly Repeating Twentieth Century Modernism",
+            "year": 2007,
+            "medium": "Mirror, glass, display case",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Island Universe",
+            "year": 2008,
+            "medium": "Aluminium, glass, light",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "tom-friedman",
+      "ivan-navarro"
+    ]
+  },
+  {
+    "id": "tony-oursler",
+    "name": "Tony Oursler",
+    "nationality": "American",
+    "bornDate": "1957",
+    "bornPlace": "New York, USA",
+    "livesIn": "New York, USA",
+    "artStatement": "A pioneer of video sculpture, Oursler projects talking faces and eyes onto dolls, eggs and sculptural forms — uncanny, muttering effigies that explore media, identity, psychology and our entanglement with screens.",
+    "movements": [
+      "Video Art",
+      "Installation Art",
+      "Contemporary Art"
+    ],
+    "mediums": [
+      "Video",
+      "Installation",
+      "Sculpture"
+    ],
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/Probe-_Tony_Oursler-_UFOs_and_Effigies_%288660619927%29_%28cropped%29.jpg",
+        "credit": "Tony Oursler — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Getaway series",
+            "year": "1990s",
+            "medium": "Video projection on figures",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Judy",
+            "year": 1994,
+            "medium": "Video, mixed media",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Tear of the Cloud",
+            "year": 2018,
+            "medium": "Public video installation",
+            "dimensions": "",
+            "image": "",
+            "status": "New York"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "refik-anadol",
+      "mariko-mori"
+    ]
+  },
+  {
+    "id": "refik-anadol",
+    "name": "Refik Anadol",
+    "nationality": "Turkish-American",
+    "bornDate": "1985",
+    "bornPlace": "Istanbul, Turkey",
+    "livesIn": "Los Angeles, California, USA",
+    "artStatement": "Anadol is a pioneer of data-driven art, using machine-learning models trained on vast datasets to generate immersive 'data sculptures' and 'machine hallucinations' — fluid, dreaming projections that visualize memory, nature and the mind of the machine.",
+    "movements": [
+      "Digital Art",
+      "Data Art",
+      "Installation Art"
+    ],
+    "mediums": [
+      "Data",
+      "AI",
+      "Projection",
+      "Installation"
+    ],
+    "website": "https://refikanadol.com/",
+    "headshots": [
+      {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/60/Dubai_Future_Forum_2024_-_Refik_Anadol.jpg",
+        "credit": "Refik Anadol — Image via Wikimedia Commons"
+      }
+    ],
+    "series": [
+      {
+        "name": "Selected Works",
+        "year": "",
+        "description": "Selected works.",
+        "works": [
+          {
+            "title": "Machine Hallucinations",
+            "year": "2019–",
+            "medium": "AI data painting / projection",
+            "dimensions": "",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Machine_Hallucinations-Artechouse_NYC_by_Refik_Anadol.jpg/1280px-Machine_Hallucinations-Artechouse_NYC_by_Refik_Anadol.jpg",
+            "status": ""
+          },
+          {
+            "title": "Melting Memories",
+            "year": 2018,
+            "medium": "Data sculpture",
+            "dimensions": "",
+            "image": "",
+            "status": ""
+          },
+          {
+            "title": "Unsupervised",
+            "year": 2022,
+            "medium": "AI installation",
+            "dimensions": "",
+            "image": "",
+            "status": "Museum of Modern Art, New York"
+          }
+        ]
+      }
+    ],
+    "relatedArtists": [
+      "ryoji-ikeda",
+      "tony-oursler"
+    ]
   }
 ]
