@@ -17,7 +17,7 @@
     "salesContact": "sales@yayoi-kusama.example",
     "studio": { "location": "Shinjuku, Tokyo, Japan", "visits": "Private working studio; not open to the public. Inquiries via her studio." },
     "headshots": [
-      { "src": "", "credit": "Portrait © Yayoi Kusama Studio" },
+      { "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Yayoi_Kusama_circa_2004.jpg", "credit": "Photo: George Quasha, “art is (Speaking Portraits)” — CC BY 3.0 via Wikimedia Commons" },
       { "src": "", "credit": "Studio portrait, Tokyo" }
     ],
     "cv": { "url": "#" },
@@ -116,7 +116,7 @@
     "salesContact": "sales@elanatsui.example",
     "studio": { "location": "Nsukka, Nigeria", "visits": "Active working studio; visits by arrangement through his galleries." },
     "headshots": [
-      { "src": "", "credit": "Portrait in the Nsukka studio" }
+      { "src": "", "credit": "Portrait placeholder — no freely-licensed photo of the artist was available" }
     ],
     "cv": { "url": "#" },
     "education": [
@@ -200,7 +200,7 @@
     "salesContact": "sales@juliemehretu.example",
     "studio": { "location": "Chelsea, New York City, USA", "visits": "Private studio; not open to the public." },
     "headshots": [
-      { "src": "", "credit": "Studio portrait, New York" }
+      { "src": "https://upload.wikimedia.org/wikipedia/commons/0/05/Inside_the_Studio_with_Julie_Mehretu_00.01_%28cropped%29.jpg", "credit": "Photo: Galerie Magazine — CC BY 3.0 via Wikimedia Commons" }
     ],
     "cv": { "url": "#" },
     "education": [
