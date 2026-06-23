@@ -11,6 +11,8 @@
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
   var lightboxCaption = document.getElementById("lightboxCaption");
+  var readBtn = document.getElementById("readAloud");
+  var speechOK = "speechSynthesis" in window;
 
   /* ---------- utilities ---------- */
 
@@ -130,6 +132,7 @@
   }
 
   function renderList() {
+    stopRead();
     var results = filtered();
     var html = "";
 
@@ -375,9 +378,96 @@
     });
   }
 
+  /* ---------- read aloud ---------- */
+
+  function currentArtist() {
+    var h = location.hash.replace(/^#/, "");
+    if (h.indexOf("artist/") === 0) {
+      var id = h.slice("artist/".length);
+      return ARTISTS.find(function (a) { return a.id === id; }) || null;
+    }
+    return null;
+  }
+
+  function joinList(arr) { return (arr || []).filter(Boolean).join(", "); }
+
+  function buildNarration() {
+    var a = currentArtist();
+    if (a) {
+      var p = [];
+      p.push(a.name + ".");
+      if (a.nationality) p.push(a.nationality + " artist.");
+      var bio = [];
+      if (a.bornDate) bio.push("Born " + a.bornDate + (a.bornPlace ? " in " + a.bornPlace : ""));
+      if (a.livesIn) bio.push("lives and works in " + a.livesIn);
+      if (bio.length) p.push(bio.join("; ") + ".");
+      if (a.movements && a.movements.length) p.push("Associated with " + joinList(a.movements) + ".");
+      if (a.mediums && a.mediums.length) p.push("Works in " + joinList(a.mediums) + ".");
+      if (a.artStatement) p.push("Artist statement. " + a.artStatement);
+      if (a.galleries && a.galleries.length) p.push("Represented by " + joinList(a.galleries.map(function (g) { return g.name; })) + ".");
+      if (a.upcomingShows && a.upcomingShows.length) {
+        p.push("Upcoming shows: " + joinList(a.upcomingShows.map(function (s) {
+          return s.title + (s.venue ? " at " + s.venue : "");
+        })) + ".");
+      }
+      if (a.series && a.series.length) p.push("Bodies of work include " + joinList(a.series.map(function (s) { return s.name; })) + ".");
+      return p.join(" ");
+    }
+    var results = filtered();
+    if (!results.length) return "No artists found. Try a different search.";
+    var intro = "Showing " + results.length + " artist" + (results.length === 1 ? "" : "s") + ". ";
+    return intro + results.map(function (r) {
+      return r.name + (r.nationality ? ", " + r.nationality : "") +
+        (r.movements && r.movements.length ? ", known for " + joinList(r.movements) : "") + ".";
+    }).join(" ");
+  }
+
+  // Speak text in sentence-sized chunks (avoids the long-utterance cutoff bug).
+  function chunkText(text) {
+    var sentences = text.match(/[^.!?]+[.!?]*\s*/g) || [text];
+    var chunks = [], buf = "";
+    sentences.forEach(function (s) {
+      if ((buf + s).length > 200 && buf) { chunks.push(buf); buf = s; }
+      else { buf += s; }
+    });
+    if (buf.trim()) chunks.push(buf);
+    return chunks;
+  }
+
+  function setReadState(speaking) {
+    readBtn.classList.toggle("speaking", speaking);
+    readBtn.setAttribute("aria-pressed", speaking ? "true" : "false");
+    readBtn.querySelector(".ra-label").textContent = speaking ? "Stop" : "Read aloud";
+  }
+
+  function stopRead() {
+    if (!speechOK) return;
+    window.speechSynthesis.cancel();
+    setReadState(false);
+  }
+
+  function toggleRead() {
+    if (!speechOK) return;
+    var synth = window.speechSynthesis;
+    if (synth.speaking || synth.pending) { stopRead(); return; }
+    var text = buildNarration();
+    if (!text) return;
+    synth.cancel();
+    var chunks = chunkText(text), done = 0;
+    chunks.forEach(function (c) {
+      var u = new SpeechSynthesisUtterance(c);
+      u.rate = 1; u.pitch = 1;
+      u.onend = function () { done++; if (done >= chunks.length) setReadState(false); };
+      u.onerror = function () { setReadState(false); };
+      synth.speak(u);
+    });
+    setReadState(true);
+  }
+
   /* ---------- routing ---------- */
 
   function route() {
+    stopRead();
     var hash = location.hash.replace(/^#/, "");
     if (hash.indexOf("artist/") === 0) {
       var id = hash.slice("artist/".length);
@@ -420,6 +510,9 @@
       if (location.hash) location.hash = ""; else renderList();
     });
 
+    readBtn.addEventListener("click", toggleRead);
+    window.addEventListener("beforeunload", stopRead);
+
     document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
     lightbox.addEventListener("click", function (e) { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLightbox(); });
@@ -438,6 +531,7 @@
 
   function start(data) {
     ARTISTS = data;
+    if (speechOK) readBtn.hidden = false;
     buildChips();
     bindEvents();
     route();
