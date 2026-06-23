@@ -64,6 +64,16 @@
     return out;
   }
 
+  // Convert a YouTube/Vimeo watch URL into an embeddable URL, or null.
+  function toEmbed(url) {
+    if (!url) return null;
+    var yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{6,})/);
+    if (yt) return "https://www.youtube.com/embed/" + yt[1];
+    var vi = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (vi) return "https://player.vimeo.com/video/" + vi[1];
+    return null;
+  }
+
   /* ---------- search / filter ---------- */
 
   function matchesSearch(a, q) {
@@ -173,7 +183,9 @@
         "</div>" +
         "<div>" +
           '<h1 class="hero-name">' + esc(a.name) + "</h1>" +
-          '<p class="hero-nat">' + esc(a.nationality || "") + "</p>" +
+          (a.pronunciation ? '<p class="hero-pron">/ ' + esc(a.pronunciation) + " /</p>" : "") +
+          '<p class="hero-nat">' + esc(a.nationality || "") +
+            (a.pronouns ? ' <span class="hero-pronouns">· ' + esc(a.pronouns) + "</span>" : "") + "</p>" +
           '<div class="facts">' +
             fact("Born", esc(a.bornDate)) +
             fact("Birthplace", esc(a.bornPlace)) +
@@ -211,14 +223,31 @@
           "</a><span class=\"li-source\">" + esc(p.source || "") + "</span></li>";
       }).join("") + "</ul>") : "";
 
-    /* interviews */
-    var interviews = (a.interviews && a.interviews.length) ? section("Interviews & Talks",
-      '<ul class="link-list">' + a.interviews.map(function (it) {
-        return "<li><span><span class=\"badge " + (it.type === "video" ? "video" : "written") + "\">" +
-          esc(it.type === "video" ? "Video" : "Written") + "</span>" +
-          "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(it.url) + "\">" + esc(it.title) + "</a></span>" +
-          "<span class=\"li-source\">" + esc(it.source || "") + "</span></li>";
-      }).join("") + "</ul>") : "";
+    /* interviews — embed playable videos, list the rest */
+    var interviews = "";
+    if (a.interviews && a.interviews.length) {
+      var embeds = "", others = "";
+      a.interviews.forEach(function (it) {
+        var embed = it.type === "video" ? toEmbed(it.url) : null;
+        if (embed) {
+          embeds += '<figure class="video-embed">' +
+            '<div class="video-frame"><iframe src="' + esc(embed) +
+            '" title="' + esc(it.title) + '" loading="lazy" allowfullscreen ' +
+            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>' +
+            '<figcaption class="video-cap"><span class="video-title">' + esc(it.title) + "</span>" +
+            (it.source ? '<span class="li-source">' + esc(it.source) + "</span>" : "") + "</figcaption></figure>";
+        } else {
+          others += "<li><span><span class=\"badge " + (it.type === "video" ? "video" : "written") + "\">" +
+            esc(it.type === "video" ? "Video" : "Written") + "</span>" +
+            "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(it.url) + "\">" + esc(it.title) + "</a></span>" +
+            "<span class=\"li-source\">" + esc(it.source || "") + "</span></li>";
+        }
+      });
+      var inner = "";
+      if (embeds) inner += '<div class="video-grid">' + embeds + "</div>";
+      if (others) inner += '<ul class="link-list"' + (embeds ? ' style="margin-top:22px"' : "") + ">" + others + "</ul>";
+      interviews = section("Interviews & Talks", inner);
+    }
 
     /* books */
     var books = (a.books && a.books.length) ? section("Books & Publications",
@@ -255,11 +284,18 @@
         var src = img(w.image, a.id + "-" + s.name + "-" + i, w.title);
         var caption = esc([w.title, w.year].filter(Boolean).join(", "));
         var meta = esc([w.medium, w.dimensions].filter(Boolean).join(", "));
-        return '<button class="work" data-img="' + esc(src) + '" data-caption="' +
-          esc(s.name + " — " + (w.title || "") + (w.year ? " (" + w.year + ")" : "") + (meta ? " · " + (w.medium || "") + " " + (w.dimensions || "") : "")) + '">' +
-          '<div class="work-img" style="background-image:url(\'' + src + '\')"></div>' +
+        var availLine = [w.price, w.status].filter(Boolean).map(esc).join(" · ");
+        var statusClass = (w.status || "").toLowerCase().indexOf("avail") !== -1 ? "avail"
+          : (w.status || "").toLowerCase().indexOf("sold") !== -1 ? "sold" : "other";
+        var statusBadge = w.status ? '<span class="work-status ' + statusClass + '">' + esc(w.status) + "</span>" : "";
+        var capDetail = s.name + " — " + (w.title || "") + (w.year ? " (" + w.year + ")" : "") +
+          (meta ? " · " + (w.medium || "") + " " + (w.dimensions || "") : "") +
+          (availLine ? " · " + (w.price || "") + (w.price && w.status ? " — " : "") + (w.status || "") : "");
+        return '<button class="work" data-img="' + esc(src) + '" data-caption="' + esc(capDetail) + '">' +
+          '<div class="work-img" style="background-image:url(\'' + src + '\')">' + statusBadge + "</div>" +
           '<div class="work-cap"><div class="work-title">' + caption + '</div>' +
-          (meta ? '<div class="work-meta">' + meta + "</div>" : "") + "</div></button>";
+          (meta ? '<div class="work-meta">' + meta + "</div>" : "") +
+          (availLine ? '<div class="work-avail">' + availLine + "</div>" : "") + "</div></button>";
       }).join("");
       workInner += '<div class="series-block"><div class="series-head">' +
         '<p class="series-name">' + esc(s.name) +
@@ -267,7 +303,42 @@
         (s.description ? '<p class="series-desc">' + esc(s.description) + "</p>" : "") + "</div>" +
         '<div class="work-grid">' + works + "</div></div>";
     });
+    if (workInner && a.salesContact) {
+      workInner = '<p class="sales-note">For pricing &amp; availability, contact ' +
+        '<a href="mailto:' + esc(a.salesContact) + '">' + esc(a.salesContact) + "</a>.</p>" + workInner;
+    }
     var work = workInner ? section("Work — by Body of Work & Series", workInner) : "";
+
+    /* selected (past) exhibitions */
+    var pastEx = (a.pastExhibitions && a.pastExhibitions.length) ? section("Selected Exhibitions",
+      '<ul class="link-list">' + a.pastExhibitions.map(function (e) {
+        var title = e.url && e.url !== "#"
+          ? "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(e.url) + "\">" + esc(e.title) + "</a>"
+          : esc(e.title);
+        var left = (e.type ? '<span class="badge other">' + esc(e.type) + "</span>" : "") + title +
+          (e.venue || e.location ? ' <span class="def-meta">— ' + esc([e.venue, e.location].filter(Boolean).join(", ")) + "</span>" : "");
+        return "<li><span>" + left + '</span><span class="li-source">' + esc(e.year || "") + "</span></li>";
+      }).join("") + "</ul>") : "";
+
+    /* art fairs */
+    var fairs = (a.artFairs && a.artFairs.length) ? section("Art Fairs",
+      '<ul class="link-list">' + a.artFairs.map(function (f) {
+        var name = f.url && f.url !== "#"
+          ? "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(f.url) + "\">" + esc(f.name) + "</a>"
+          : esc(f.name);
+        var detail = [f.presentedBy ? "presented by " + f.presentedBy : "", f.location].filter(Boolean).join(" · ");
+        return "<li><span>" + name + (detail ? ' <span class="def-meta">— ' + esc(detail) + "</span>" : "") +
+          '</span><span class="li-source">' + esc(f.year || "") + "</span></li>";
+      }).join("") + "</ul>") : "";
+
+    /* studio */
+    var studioInner = "";
+    if (a.studio && (a.studio.location || a.studio.visits)) {
+      studioInner = '<div class="facts">' +
+        fact("Location", esc(a.studio.location)) +
+        fact("Visits", esc(a.studio.visits)) + "</div>";
+    }
+    var studio = studioInner ? section("Studio & Visits", studioInner) : "";
 
     /* related */
     var rel = relatedTo(a);
@@ -279,7 +350,7 @@
       hero + statement + section("Movement", (a.movements || []).length
         ? '<div class="tag-row">' + a.movements.map(function (m) { return '<span class="tag">' + esc(m) + "</span>"; }).join("") + "</div>"
         : "") +
-      galleries + cv + press + interviews + books + collections + shows + work + related;
+      galleries + cv + press + interviews + books + collections + shows + pastEx + fairs + work + studio + related;
 
     window.scrollTo(0, 0);
   }

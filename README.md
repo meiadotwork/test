@@ -39,6 +39,8 @@ except `id` and `name`; empty sections are simply hidden.
 {
   "id": "unique-slug",                // used in the URL (#artist/unique-slug)
   "name": "Artist Name",
+  "pronunciation": "AR-tist naym",     // optional phonetic guide
+  "pronouns": "she/her",               // optional
   "nationality": "Nationality",
   "bornDate": "March 22, 1929",        // when born
   "bornPlace": "City, Country",        // where born
@@ -49,15 +51,25 @@ except `id` and `name`; empty sections are simply hidden.
   "website": "https://…",
   "instagram": "https://instagram.com/…",
   "email": "studio@example.com",
+  "salesContact": "sales@example.com", // shown above the Work section
+  "studio": { "location": "City", "visits": "Visit policy / note" },
   "headshots": [{ "src": "img/portrait.jpg", "credit": "Photo © …" }],
   "cv": { "url": "files/cv.pdf" },
   "education": ["Degree, School (year)"],
   "awards": ["Award (year)"],
   "galleries": [{ "name": "Gallery", "location": "City", "url": "https://…" }],
-  "interviews": [{ "title": "…", "type": "video", "source": "…", "url": "https://…" }],
+  "interviews": [{ "title": "…", "type": "video", "source": "…", "url": "https://youtu.be/…" }],
   "press": [{ "title": "…", "source": "…", "url": "https://…" }],
   "books": [{ "title": "…", "year": 2020, "publisher": "…", "url": "https://…" }],
   "publicCollections": ["Museum, City"],
+  "pastExhibitions": [
+    { "title": "Show", "venue": "Venue", "location": "City",
+      "year": 2019, "type": "Solo", "url": "https://…" }
+  ],
+  "artFairs": [
+    { "name": "Art Basel", "presentedBy": "Gallery", "location": "City",
+      "year": 2025, "url": "https://…" }
+  ],
   "upcomingShows": [
     { "title": "Show", "venue": "Venue", "location": "City",
       "startDate": "2026-09-10", "endDate": "2026-10-31", "url": "https://…" }
@@ -66,7 +78,8 @@ except `id` and `name`; empty sections are simply hidden.
     { "name": "Series Name", "year": "2010–present", "description": "…",
       "works": [
         { "title": "Work", "year": 2014, "medium": "Oil on canvas",
-          "dimensions": "100 × 120 cm", "image": "img/work.jpg" }
+          "dimensions": "100 × 120 cm", "image": "img/work.jpg",
+          "price": "Price on request", "status": "Available" }
       ]
     }
   ],
@@ -77,6 +90,12 @@ except `id` and `name`; empty sections are simply hidden.
 ### Notes
 
 - **`type`** on an interview must be `"video"` or `"written"` (controls the badge).
+  Video interviews with a **YouTube or Vimeo** URL are embedded and play inline;
+  anything else falls back to a link.
+- **Work `status`** containing "available" renders a green badge, "sold" a red one;
+  any other value (e.g. "Museum collection") gets a neutral badge. `price` is shown
+  beneath the work and in the lightbox caption.
+- **`pastExhibitions[].type`** is a free label (e.g. "Solo", "Group").
 - **Dates** for shows should be ISO `YYYY-MM-DD` so they format nicely.
 - **Images** — leave any `src`/`image` empty (`""`) and the app draws a tasteful
   generated placeholder, so everything renders even before you add real photos.

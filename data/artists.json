@@ -2,6 +2,8 @@
   {
     "id": "yayoi-kusama",
     "name": "Yayoi Kusama",
+    "pronunciation": "yah-YOH-ee koo-SAH-mah",
+    "pronouns": "she/her",
     "nationality": "Japanese",
     "bornDate": "March 22, 1929",
     "bornPlace": "Matsumoto, Nagano, Japan",
@@ -12,6 +14,8 @@
     "website": "https://www.yayoi-kusama.jp/",
     "instagram": "https://www.instagram.com/yayoikusama_/",
     "email": "studio@yayoi-kusama.example",
+    "salesContact": "sales@yayoi-kusama.example",
+    "studio": { "location": "Shinjuku, Tokyo, Japan", "visits": "Private working studio; not open to the public. Inquiries via her studio." },
     "headshots": [
       { "src": "", "credit": "Portrait © Yayoi Kusama Studio" },
       { "src": "", "credit": "Studio portrait, Tokyo" }
@@ -32,9 +36,9 @@
       { "name": "Ota Fine Arts", "location": "Tokyo / Singapore / Shanghai", "url": "#" }
     ],
     "interviews": [
-      { "title": "Yayoi Kusama: Infinity (documentary)", "type": "video", "source": "Magnolia Pictures", "url": "#" },
-      { "title": "A Conversation with Yayoi Kusama", "type": "written", "source": "Tate", "url": "#" },
-      { "title": "Studio Visit: Inside the Infinity Mirror Rooms", "type": "video", "source": "Art21", "url": "#" }
+      { "title": "Kusama: Infinity (documentary)", "type": "video", "source": "Magnolia Pictures", "url": "https://www.youtube.com/watch?v=0-C69t22twQ" },
+      { "title": "Yayoi Kusama: The Universe of Infinite Dots", "type": "video", "source": "Art Documentary", "url": "https://www.youtube.com/watch?v=kY88qjKpgJA" },
+      { "title": "A Conversation with Yayoi Kusama", "type": "written", "source": "Tate", "url": "#" }
     ],
     "press": [
       { "title": "How Yayoi Kusama Conquered the Art World", "source": "The New York Times", "url": "#" },
@@ -51,6 +55,15 @@
       "National Museum of Modern Art, Tokyo",
       "Stedelijk Museum, Amsterdam"
     ],
+    "pastExhibitions": [
+      { "title": "Yayoi Kusama: Infinity Mirrors", "venue": "Hirshhorn Museum", "location": "Washington, D.C.", "year": 2017, "type": "Solo", "url": "#" },
+      { "title": "Yayoi Kusama", "venue": "Tate Modern", "location": "London", "year": 2012, "type": "Solo", "url": "#" },
+      { "title": "Love Forever: Yayoi Kusama 1958–1968", "venue": "The Museum of Modern Art", "location": "New York", "year": 1998, "type": "Solo", "url": "#" }
+    ],
+    "artFairs": [
+      { "name": "Art Basel", "presentedBy": "David Zwirner", "location": "Basel, Switzerland", "year": 2025, "url": "#" },
+      { "name": "Frieze London", "presentedBy": "Victoria Miro", "location": "London, UK", "year": 2025, "url": "#" }
+    ],
     "upcomingShows": [
       { "title": "Infinite Accumulation", "venue": "David Zwirner", "location": "New York, USA", "startDate": "2026-09-10", "endDate": "2026-10-31", "url": "#" },
       { "title": "Cosmic Nature (touring)", "venue": "Various Botanical Gardens", "location": "International", "startDate": "2026-11-15", "endDate": "2027-03-01", "url": "#" }
@@ -61,8 +74,8 @@
         "year": "1959–present",
         "description": "Vast monochrome canvases built from repeated, hand-painted loops — the foundational gesture of accumulation and self-obliteration.",
         "works": [
-          { "title": "No. F", "year": 1959, "medium": "Oil on canvas", "dimensions": "105 × 132 cm", "image": "" },
-          { "title": "Infinity Nets (White)", "year": 1979, "medium": "Acrylic on canvas", "dimensions": "194 × 259 cm", "image": "" }
+          { "title": "No. F", "year": 1959, "medium": "Oil on canvas", "dimensions": "105 × 132 cm", "image": "", "price": "Price on request", "status": "Private collection" },
+          { "title": "Infinity Nets (White)", "year": 1979, "medium": "Acrylic on canvas", "dimensions": "194 × 259 cm", "image": "", "price": "Price on request", "status": "Sold" }
         ]
       },
       {
@@ -70,8 +83,8 @@
         "year": "1965–present",
         "description": "Immersive mirrored environments filled with lights and forms that dissolve the viewer into endlessly reflected space.",
         "works": [
-          { "title": "Infinity Mirror Room — Phalli's Field", "year": 1965, "medium": "Mirrors, sewn fabric", "dimensions": "Dimensions variable", "image": "" },
-          { "title": "Infinity Mirrored Room — The Souls of Millions of Light Years Away", "year": 2013, "medium": "Mixed media installation", "dimensions": "Dimensions variable", "image": "" }
+          { "title": "Infinity Mirror Room — Phalli's Field", "year": 1965, "medium": "Mirrors, sewn fabric", "dimensions": "Dimensions variable", "image": "", "status": "Museum collection" },
+          { "title": "Infinity Mirrored Room — The Souls of Millions of Light Years Away", "year": 2013, "medium": "Mixed media installation", "dimensions": "Dimensions variable", "image": "", "status": "Museum collection" }
         ]
       },
       {
@@ -79,7 +92,7 @@
         "year": "1990–present",
         "description": "The artist's beloved motif rendered as paintings and monumental polka-dot sculptures — humble, humorous, and deeply personal.",
         "works": [
-          { "title": "Pumpkin (Yellow)", "year": 1994, "medium": "Painted bronze", "dimensions": "200 × 250 cm", "image": "" }
+          { "title": "Pumpkin (Yellow)", "year": 1994, "medium": "Painted bronze", "dimensions": "200 × 250 cm", "image": "", "price": "Price on request", "status": "Available" }
         ]
       }
     ],
@@ -88,6 +101,8 @@
   {
     "id": "el-anatsui",
     "name": "El Anatsui",
+    "pronunciation": "el ah-NAHT-soo-ee",
+    "pronouns": "he/him",
     "nationality": "Ghanaian",
     "bornDate": "February 4, 1944",
     "bornPlace": "Anyako, Ghana",
@@ -98,6 +113,8 @@
     "website": "https://www.elanatsui.art/",
     "instagram": "https://www.instagram.com/el.anatsui/",
     "email": "studio@elanatsui.example",
+    "salesContact": "sales@elanatsui.example",
+    "studio": { "location": "Nsukka, Nigeria", "visits": "Active working studio; visits by arrangement through his galleries." },
     "headshots": [
       { "src": "", "credit": "Portrait in the Nsukka studio" }
     ],
@@ -115,7 +132,8 @@
       { "name": "October Gallery", "location": "London", "url": "https://www.octobergallery.co.uk/artists/anatsui" }
     ],
     "interviews": [
-      { "title": "El Anatsui: Triumphant Scale", "type": "video", "source": "Haus der Kunst", "url": "#" },
+      { "title": "El Anatsui: Studio Process", "type": "video", "source": "Art21 “Extended Play”", "url": "https://www.youtube.com/watch?v=_d3RIE195JI" },
+      { "title": "El Anatsui in “Change”", "type": "video", "source": "Art21", "url": "https://www.youtube.com/watch?v=4tK2e_mSSps" },
       { "title": "On Material and Memory", "type": "written", "source": "Frieze", "url": "#" }
     ],
     "press": [
@@ -132,6 +150,14 @@
       "Centre Pompidou, Paris",
       "Smithsonian National Museum of African Art, Washington D.C."
     ],
+    "pastExhibitions": [
+      { "title": "El Anatsui: Triumphant Scale", "venue": "Haus der Kunst", "location": "Munich", "year": 2019, "type": "Solo", "url": "#" },
+      { "title": "Gravity and Grace: Monumental Works", "venue": "Brooklyn Museum", "location": "New York", "year": 2013, "type": "Solo", "url": "#" },
+      { "title": "All the World's Futures — 56th Venice Biennale", "venue": "Giardini & Arsenale", "location": "Venice", "year": 2015, "type": "Group", "url": "#" }
+    ],
+    "artFairs": [
+      { "name": "Art Basel", "presentedBy": "Jack Shainman Gallery", "location": "Basel, Switzerland", "year": 2024, "url": "#" }
+    ],
     "upcomingShows": [
       { "title": "Behind the Red Moon (touring)", "venue": "Tate Modern, Turbine Hall", "location": "London, UK", "startDate": "2026-07-01", "endDate": "2026-12-20", "url": "#" }
     ],
@@ -141,8 +167,8 @@
         "year": "2002–present",
         "description": "Monumental shimmering 'cloths' made from flattened liquor-bottle caps stitched with copper wire — metal that flows like fabric.",
         "works": [
-          { "title": "Sasa", "year": 2004, "medium": "Aluminium and copper wire", "dimensions": "640 × 840 cm", "image": "" },
-          { "title": "Gravity and Grace", "year": 2010, "medium": "Aluminium and copper wire", "dimensions": "457 × 1117 cm", "image": "" }
+          { "title": "Sasa", "year": 2004, "medium": "Aluminium and copper wire", "dimensions": "640 × 840 cm", "image": "", "status": "Museum collection" },
+          { "title": "Gravity and Grace", "year": 2010, "medium": "Aluminium and copper wire", "dimensions": "457 × 1117 cm", "image": "", "price": "Price on request", "status": "Sold" }
         ]
       },
       {
@@ -150,7 +176,7 @@
         "year": "1980s–1990s",
         "description": "Chainsaw-carved and scorched wooden panels exploring Adinkra symbols, language, and rupture.",
         "works": [
-          { "title": "Erosion", "year": 1992, "medium": "Wood and tempera", "dimensions": "Dimensions variable", "image": "" }
+          { "title": "Erosion", "year": 1992, "medium": "Wood and tempera", "dimensions": "Dimensions variable", "image": "", "price": "Price on request", "status": "Available" }
         ]
       }
     ],
@@ -159,6 +185,8 @@
   {
     "id": "julie-mehretu",
     "name": "Julie Mehretu",
+    "pronunciation": "JOO-lee MEH-reh-too",
+    "pronouns": "she/her",
     "nationality": "Ethiopian-American",
     "bornDate": "November 28, 1970",
     "bornPlace": "Addis Ababa, Ethiopia",
@@ -169,6 +197,8 @@
     "website": "https://www.juliemehretu.art/",
     "instagram": "https://www.instagram.com/juliemehretustudio/",
     "email": "studio@juliemehretu.example",
+    "salesContact": "sales@juliemehretu.example",
+    "studio": { "location": "Chelsea, New York City, USA", "visits": "Private studio; not open to the public." },
     "headshots": [
       { "src": "", "credit": "Studio portrait, New York" }
     ],
@@ -186,7 +216,8 @@
       { "name": "White Cube", "location": "London / Hong Kong", "url": "https://www.whitecube.com/artists/julie-mehretu" }
     ],
     "interviews": [
-      { "title": "Julie Mehretu in the Studio", "type": "video", "source": "Art21", "url": "#" },
+      { "title": "Julie Mehretu Interview: The In-Between Place", "type": "video", "source": "Louisiana Channel", "url": "https://www.youtube.com/watch?v=38uTZCU0VqQ" },
+      { "title": "“It's very hard to understand what our reality is.”", "type": "video", "source": "Louisiana Channel", "url": "https://www.youtube.com/watch?v=R71GBWjyjLE" },
       { "title": "Mapping the Present", "type": "written", "source": "Artforum", "url": "#" }
     ],
     "press": [
@@ -203,6 +234,14 @@
       "Guggenheim Museum, New York",
       "San Francisco Museum of Modern Art"
     ],
+    "pastExhibitions": [
+      { "title": "Julie Mehretu (mid-career survey)", "venue": "LACMA / Whitney Museum", "location": "Los Angeles / New York", "year": 2019, "type": "Solo", "url": "#" },
+      { "title": "Julie Mehretu: Grey Area", "venue": "Deutsche Guggenheim / Guggenheim", "location": "Berlin / New York", "year": 2009, "type": "Solo", "url": "#" },
+      { "title": "documenta 13", "venue": "Fridericianum", "location": "Kassel, Germany", "year": 2012, "type": "Group", "url": "#" }
+    ],
+    "artFairs": [
+      { "name": "Art Basel Miami Beach", "presentedBy": "Marian Goodman Gallery", "location": "Miami Beach, USA", "year": 2025, "url": "#" }
+    ],
     "upcomingShows": [
       { "title": "New Paintings", "venue": "Marian Goodman Gallery", "location": "Paris, France", "startDate": "2026-10-05", "endDate": "2026-11-21", "url": "#" }
     ],
@@ -212,7 +251,7 @@
         "year": "2004",
         "description": "Explosive arena-like compositions of flags, banners, and architectural fragments evoking spectacle and global crowds.",
         "works": [
-          { "title": "Stadia II", "year": 2004, "medium": "Ink and acrylic on canvas", "dimensions": "274 × 356 cm", "image": "" }
+          { "title": "Stadia II", "year": 2004, "medium": "Ink and acrylic on canvas", "dimensions": "274 × 356 cm", "image": "", "status": "Museum collection" }
         ]
       },
       {
@@ -220,7 +259,7 @@
         "year": "2008–2009",
         "description": "Quieter, smoke-like canvases where marks are sanded and erased — abstraction approaching atmosphere and loss.",
         "works": [
-          { "title": "Berliner Plätze", "year": 2008, "medium": "Ink and acrylic on canvas", "dimensions": "Dimensions variable", "image": "" }
+          { "title": "Berliner Plätze", "year": 2008, "medium": "Ink and acrylic on canvas", "dimensions": "Dimensions variable", "image": "", "price": "Price on request", "status": "Available" }
         ]
       },
       {
@@ -228,7 +267,7 @@
         "year": "2016–present",
         "description": "Large works built over blurred photographic images of protest and conflict, layered with airbrushed colour and gesture.",
         "works": [
-          { "title": "Hineni (E. 3:4)", "year": 2018, "medium": "Ink and acrylic on canvas", "dimensions": "243 × 304 cm", "image": "" }
+          { "title": "Hineni (E. 3:4)", "year": 2018, "medium": "Ink and acrylic on canvas", "dimensions": "243 × 304 cm", "image": "", "price": "Price on request", "status": "Sold" }
         ]
       }
     ],
