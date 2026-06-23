@@ -137,11 +137,18 @@ code {
   margin: 0 auto;
   padding: 0 24px 14px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
+.chips::-webkit-scrollbar { height: 6px; }
+.chips::-webkit-scrollbar-thumb { background: var(--line); border-radius: 999px; }
 
 .chip {
+  flex: 0 0 auto;
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink-soft);
