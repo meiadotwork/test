@@ -22,7 +22,7 @@
       "Performance"
     ],
     "website": "https://www.yayoi-kusama.jp/",
-    "instagram": "https://www.instagram.com/yayoikusama_/",
+    "instagram": "https://www.instagram.com/yayoikusamamuseum/",
     "email": "studio@yayoi-kusama.example",
     "salesContact": "sales@yayoi-kusama.example",
     "studio": {
@@ -311,7 +311,7 @@
       "Printmaking"
     ],
     "website": "https://www.elanatsui.art/",
-    "instagram": "https://www.instagram.com/el.anatsui/",
+    "instagram": "https://www.instagram.com/elanatsui.art/",
     "email": "studio@elanatsui.example",
     "salesContact": "sales@elanatsui.example",
     "studio": {
@@ -545,7 +545,7 @@
       "Drawing"
     ],
     "website": "https://www.juliemehretu.art/",
-    "instagram": "https://www.instagram.com/juliemehretustudio/",
+    "instagram": "https://www.instagram.com/juliemehretu/",
     "email": "studio@juliemehretu.example",
     "salesContact": "sales@juliemehretu.example",
     "studio": {
@@ -904,7 +904,8 @@
         "name": "Gladstone Gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/anish.kapoor/"
   },
   {
     "id": "olafur-eliasson",
@@ -1035,7 +1036,8 @@
         "name": "neugerriemschneider",
         "location": "Berlin"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/studioolafureliasson/"
   },
   {
     "id": "jesus-rafael-soto",
@@ -1151,7 +1153,8 @@
         "name": "Sicardi Ayers Bacino",
         "location": "Houston"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/jesusrafaelsoto.official/"
   },
   {
     "id": "carlos-cruz-diez",
@@ -1263,7 +1266,8 @@
         "name": "Galerie Denise René",
         "location": "Paris"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/carloscruzdiez/"
   },
   {
     "id": "james-turrell",
@@ -1392,7 +1396,8 @@
         "name": "Pace Gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/jamesturell/"
   },
   {
     "id": "ann-veronica-janssens",
@@ -1503,7 +1508,8 @@
         "name": "kamel mennour",
         "location": "Paris"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/annveronicajanssens/"
   },
   {
     "id": "tomas-saraceno",
@@ -1611,7 +1617,8 @@
         "name": "Esther Schipper",
         "location": "Berlin"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/studiotomassaraceno/"
   },
   {
     "id": "conrad-shawcross",
@@ -1724,7 +1731,8 @@
         "name": "Victoria Miro",
         "location": "London"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/conradshawcross/"
   },
   {
     "id": "alicja-kwade",
@@ -1838,7 +1846,8 @@
         "name": "König Galerie",
         "location": "Berlin"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/alicjakwade/"
   },
   {
     "id": "tomas-sanchez",
@@ -1929,7 +1938,8 @@
         "name": "Marlborough Gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/tomassanchezstudio/"
   },
   {
     "id": "bridget-riley",
@@ -2142,7 +2152,8 @@
         "name": "Albertz Benda",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/felipepantone/"
   },
   {
     "id": "tauba-auerbach",
@@ -2248,7 +2259,8 @@
         "name": "STANDARD (OSLO)",
         "location": "Oslo"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/tau_au/"
   },
   {
     "id": "sarah-morris",
@@ -2351,7 +2363,8 @@
         "name": "Petzel Gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/sarahmorris/"
   },
   {
     "id": "julio-le-parc",
@@ -2466,7 +2479,8 @@
         "name": "Nara Roesler",
         "location": "São Paulo / New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/julio_le_parc_official/"
   },
   {
     "id": "jim-lambie",
@@ -2572,7 +2586,8 @@
         "name": "Sadie Coles HQ",
         "location": "London"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/jimlambie/"
   },
   {
     "id": "spencer-finch",
@@ -2796,7 +2811,8 @@
         "name": "Sprüth Magers",
         "location": "Berlin / London"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/anthonymccallstudio/"
   },
   {
     "id": "doug-wheeler",
@@ -3009,7 +3025,8 @@
         "name": "Victoria Miro",
         "location": "London"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/dohosuhstudio/"
   },
   {
     "id": "rachel-whiteread",
@@ -3123,7 +3140,8 @@
         "name": "Galleria Lorcan O'Neill",
         "location": "Rome"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/rachelwhitereadofficial/"
   },
   {
     "id": "olga-de-amaral",
@@ -3227,7 +3245,8 @@
         "name": "Lisson Gallery",
         "location": "London / New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/olgadeamaral/"
   },
   {
     "id": "lee-ufan",
@@ -3341,7 +3360,8 @@
         "name": "kamel mennour",
         "location": "Paris"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/ufanlee/"
   },
   {
     "id": "tatsuo-miyajima",
@@ -3452,7 +3472,8 @@
         "name": "SCAI The Bathhouse",
         "location": "Tokyo"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/tatsuomiyajimastudio/"
   },
   {
     "id": "chiharu-shiota",
@@ -3557,7 +3578,8 @@
         "name": "König Galerie",
         "location": "Berlin"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/chiharushiota/"
   },
   {
     "id": "teresita-fernandez",
@@ -3660,7 +3682,8 @@
         "name": "Lehmann Maupin",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/teresita.fernandez/"
   },
   {
     "id": "ivan-navarro",
@@ -3876,7 +3899,8 @@
         "name": "Almine Rech",
         "location": "Paris / Brussels"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/_ryoji_ikeda_/"
   },
   {
     "id": "mariko-mori",
@@ -3976,7 +4000,8 @@
         "name": "Sean Kelly Gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/marikomori/"
   },
   {
     "id": "gerhard-richter",
@@ -4295,7 +4320,8 @@
         "name": "Hauser & Wirth",
         "location": "Los Angeles / New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/markbradfordart/"
   },
   {
     "id": "mark-grotjahn",
@@ -4395,7 +4421,8 @@
         "name": "Gagosian",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/markgrotjahn/"
   },
   {
     "id": "tomory-dodge",
@@ -4495,7 +4522,8 @@
         "name": "Miles McEnery Gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/new_weather/"
   },
   {
     "id": "tom-mcglynn",
@@ -4684,7 +4712,8 @@
         "name": "Galerie Lelong & Co.",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/sarahcainstudio/"
   },
   {
     "id": "katharina-grosse",
@@ -4790,7 +4819,8 @@
         "name": "König Galerie",
         "location": "Berlin"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/katharina_grosse/"
   },
   {
     "id": "tom-friedman",
@@ -4899,7 +4929,8 @@
         "name": "Stephen Friedman Gallery",
         "location": "London"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/tomfriedmanartist/"
   },
   {
     "id": "doris-salcedo",
@@ -5106,7 +5137,8 @@
         "name": "Lisson Gallery",
         "location": "London / New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/haroonmirzaofficial/"
   },
   {
     "id": "rafael-lozano-hemmer",
@@ -5219,7 +5251,8 @@
         "name": "bitforms gallery",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/lozanohemmer/"
   },
   {
     "id": "nairy-baghramian",
@@ -5323,7 +5356,8 @@
         "name": "kurimanzutto",
         "location": "Mexico City"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/nairybaghramian/"
   },
   {
     "id": "carsten-holler",
@@ -5429,7 +5463,8 @@
         "name": "Gagosian",
         "location": "New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/carsten.holler/"
   },
   {
     "id": "monika-sosnowska",
@@ -5535,7 +5570,8 @@
         "name": "Hauser & Wirth",
         "location": "Zurich / New York"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/monikasosnowska/"
   },
   {
     "id": "josiah-mcelheny",
@@ -5746,7 +5782,8 @@
         "name": "Lisson Gallery",
         "location": "London"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/tonyoursler/"
   },
   {
     "id": "refik-anadol",
@@ -5850,6 +5887,7 @@
         "name": "Pilevneli",
         "location": "Istanbul"
       }
-    ]
+    ],
+    "instagram": "https://www.instagram.com/refikanadol/"
   }
 ]
