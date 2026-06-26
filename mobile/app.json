@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "RaceLine",
+    "slug": "raceline",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "raceline",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.raceline.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "RaceLine uses your location to record and time your tracks.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "RaceLine records your route in the background while you race or train.",
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "android": {
+      "package": "com.raceline.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "SET_IN_EAS_SECRET_OR_ENV"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "RaceLine records your route while you race or train.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "mapboxAccessToken": "SET_VIA_ENV"
+    }
+  }
+}
