@@ -5,6 +5,65 @@
   var ARTISTS = [];
   var state = { query: "", filter: null }; // filter = {type, value} or null
 
+  /* ---------- i18n (English / Brazilian Portuguese) ---------- */
+  var LANG = (function () { try { return localStorage.getItem("ac_lang") || "en"; } catch (e) { return "en"; } })();
+  function setLang(l) { LANG = l; try { localStorage.setItem("ac_lang", l); } catch (e) {} }
+
+  var STR = {
+    searchPlaceholder: { en: "Search artists, movements, mediums, places…", pt: "Buscar artistas, movimentos, meios, lugares…" },
+    readAloud: { en: "Read aloud", pt: "Ouvir" },
+    stop: { en: "Stop", pt: "Parar" },
+    back: { en: "← Back to results", pt: "← Voltar aos resultados" },
+    browseAll: { en: "Browse all artists A–Z", pt: "Ver todos os artistas de A a Z" },
+    noArtists: { en: "No artists found", pt: "Nenhum artista encontrado" },
+    noArtistsSub: { en: "Try a different name, movement, medium, or place.", pt: "Tente outro nome, movimento, meio ou lugar." },
+    all: { en: "All", pt: "Todos" },
+    artist1: { en: "artist", pt: "artista" },
+    artistN: { en: "artists", pt: "artistas" },
+    matching: { en: "matching", pt: "para" },
+    inWord: { en: "in", pt: "em" },
+    livesInShort: { en: "lives in", pt: "vive em" },
+    fBorn: { en: "Born", pt: "Nascimento" },
+    fBirthplace: { en: "Birthplace", pt: "Local de nascimento" },
+    fLives: { en: "Lives & works", pt: "Vive e trabalha" },
+    fMovement: { en: "Movement", pt: "Movimento" },
+    fMediums: { en: "Mediums", pt: "Meios" },
+    website: { en: "Website ↗", pt: "Site ↗" },
+    instagram: { en: "Instagram", pt: "Instagram" },
+    email: { en: "Email", pt: "E-mail" },
+    downloadCV: { en: "Download C.V.", pt: "Baixar currículo" },
+    sStatement: { en: "Artist Statement", pt: "Declaração do Artista" },
+    sBiography: { en: "Biography", pt: "Biografia" },
+    sRepresented: { en: "Represented By", pt: "Representado por" },
+    sCV: { en: "Curriculum Vitae", pt: "Currículo" },
+    sEducation: { en: "Education", pt: "Formação" },
+    sAwards: { en: "Awards & Honors", pt: "Prêmios e Honrarias" },
+    sPress: { en: "Press & Reviews", pt: "Imprensa e Críticas" },
+    sInterviews: { en: "Interviews & Talks", pt: "Entrevistas e Palestras" },
+    sBooks: { en: "Books & Publications", pt: "Livros e Publicações" },
+    sCollections: { en: "Public Collections", pt: "Coleções Públicas" },
+    sUpcoming: { en: "Upcoming Shows", pt: "Próximas Exposições" },
+    sWork: { en: "Work — by Body of Work & Series", pt: "Obras — por Conjunto e Série" },
+    sPastEx: { en: "Selected Exhibitions", pt: "Exposições Selecionadas" },
+    sFairs: { en: "Art Fairs", pt: "Feiras de Arte" },
+    sStudio: { en: "Studio & Visits", pt: "Ateliê e Visitas" },
+    sRelated: { en: "Related Artists", pt: "Artistas Relacionados" },
+    sVideos: { en: "Works on Video", pt: "Obras em Vídeo" },
+    sBodies: { en: "Bodies of Work", pt: "Conjuntos de Obras" },
+    sCuriosity: { en: "Did You Know?", pt: "Você Sabia?" },
+    bVideo: { en: "Video", pt: "Vídeo" },
+    bWritten: { en: "Written", pt: "Texto" },
+    fLocation: { en: "Location", pt: "Local" },
+    fVisits: { en: "Visits", pt: "Visitas" },
+    presentedBy: { en: "presented by", pt: "apresentado por" },
+    salesPre: { en: "For pricing & availability, contact ", pt: "Para preços e disponibilidade, contate " },
+    browseCount: { en: "", pt: "" }
+  };
+  function t(key) { var e = STR[key]; return e ? (e[LANG] || e.en) : key; }
+  // Content getter: prefer the pt-BR field (e.g. artStatement_pt) when in PT.
+  function L(a, field) { return (LANG === "pt" && a[field + "_pt"]) ? a[field + "_pt"] : a[field]; }
+  function bioOf(a) { return (LANG === "pt" && a.biography_pt && a.biography_pt.length) ? a.biography_pt : a.biography; }
+
   var view = document.getElementById("view");
   var searchInput = document.getElementById("searchInput");
   var chipsEl = document.getElementById("filterChips");
@@ -44,7 +103,7 @@
       '<stop offset="0" stop-color="' + p[0] + '"/><stop offset="1" stop-color="' + p[1] + '"/>' +
       '</linearGradient></defs>' +
       '<rect width="100%" height="100%" fill="url(#g)"/>' +
-      '<text x="50%" y="50%" font-family="Inter,sans-serif" font-size="' + (ratioTall ? 150 : 130) +
+      '<text x="50%" y="50%" font-family="\'Courier Prime\',Courier,monospace" font-size="' + (ratioTall ? 150 : 130) +
       '" font-weight="700" fill="rgba(0,0,0,.28)" text-anchor="middle" dominant-baseline="central">' +
       esc(initials) + "</text></svg>";
     return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
@@ -197,7 +256,7 @@
       '<div class="card-thumb"' + headResolve + ' style="background-image:url(\'' + img(head, a.id, a.name) + '\')"></div>' +
       '<div class="card-body">' +
         '<h3 class="card-name">' + esc(a.name) + "</h3>" +
-        '<p class="card-sub">' + esc(a.nationality || "") + (a.livesIn ? " · lives in " + esc(a.livesIn) : "") + "</p>" +
+        '<p class="card-sub">' + esc(a.nationality || "") + (a.livesIn ? " · " + t("livesInShort") + " " + esc(a.livesIn) : "") + "</p>" +
         '<div class="tag-row">' + tags + "</div>" +
       "</div></button>";
   }
@@ -217,7 +276,8 @@
       }).join("");
       return '<div class="index-group"><h3 class="index-letter">' + esc(L) + "</h3>" + names + "</div>";
     }).join("");
-    return '<details class="artist-index" open><summary>Browse all artists A–Z</summary>' +
+    return '<details class="artist-index"><summary>' + t("browseAll") + ' <span class="index-count">(' +
+      list.length + ')</span></summary>' +
       '<div class="index-cols">' + cols + "</div></details>";
   }
 
@@ -229,13 +289,13 @@
     var html = "";
 
     var label = "";
-    if (state.filter) label = " in " + esc(state.filter.value);
-    html += '<p class="results-meta">' + results.length + " artist" +
-      (results.length === 1 ? "" : "s") +
-      (state.query ? " matching “" + esc(state.query) + "”" : "") + label + "</p>";
+    if (state.filter) label = " " + t("inWord") + " " + esc(state.filter.value);
+    html += '<p class="results-meta">' + results.length + " " +
+      (results.length === 1 ? t("artist1") : t("artistN")) +
+      (state.query ? " " + t("matching") + " “" + esc(state.query) + "”" : "") + label + "</p>";
 
     if (!results.length) {
-      html += '<div class="empty"><h2>No artists found</h2><p>Try a different name, movement, medium, or place.</p></div>';
+      html += '<div class="empty"><h2>' + t("noArtists") + "</h2><p>" + t("noArtistsSub") + "</p></div>";
     } else {
       // On the "browse all" home view, show the scannable name index first.
       if (!state.query && !state.filter) html += renderIndex(results);
@@ -269,10 +329,10 @@
 
     /* hero links */
     var links = "";
-    if (a.website) links += '<a class="link-btn primary" target="_blank" rel="noopener" href="' + esc(a.website) + '">Website ↗</a>';
-    if (a.instagram) links += '<a class="link-btn" target="_blank" rel="noopener" href="' + esc(a.instagram) + '">Instagram</a>';
-    if (a.email) links += '<a class="link-btn" href="mailto:' + esc(a.email) + '">Email</a>';
-    if (a.cv && a.cv.url) links += '<a class="link-btn" target="_blank" rel="noopener" href="' + esc(a.cv.url) + '">Download C.V.</a>';
+    if (a.website) links += '<a class="link-btn primary" target="_blank" rel="noopener" href="' + esc(a.website) + '">' + t("website") + "</a>";
+    if (a.instagram) links += '<a class="link-btn" target="_blank" rel="noopener" href="' + esc(a.instagram) + '">' + t("instagram") + "</a>";
+    if (a.email) links += '<a class="link-btn" href="mailto:' + esc(a.email) + '">' + t("email") + "</a>";
+    if (a.cv && a.cv.url) links += '<a class="link-btn" target="_blank" rel="noopener" href="' + esc(a.cv.url) + '">' + t("downloadCV") + "</a>";
 
     var portraitResolve = head.src ? "" : ' data-resolve="portrait" data-q="' + esc(a.name) + '"';
     var hero =
@@ -286,22 +346,36 @@
           '<p class="hero-nat">' + esc(a.nationality || "") +
             (a.pronouns ? ' <span class="hero-pronouns">· ' + esc(a.pronouns) + "</span>" : "") + "</p>" +
           '<div class="facts">' +
-            fact("Born", esc(a.bornDate)) +
-            fact("Birthplace", esc(a.bornPlace)) +
-            fact("Lives & works", esc(a.livesIn)) +
-            fact("Movement", (a.movements || []).map(esc).join(", ")) +
-            fact("Mediums", (a.mediums || []).map(esc).join(", ")) +
+            fact(t("fBorn"), esc(a.bornDate)) +
+            fact(t("fBirthplace"), esc(a.bornPlace)) +
+            fact(t("fLives"), esc(a.livesIn)) +
+            fact(t("fMovement"), (a.movements || []).map(esc).join(", ")) +
+            fact(t("fMediums"), (a.mediums || []).map(esc).join(", ")) +
           "</div>" +
           '<div class="hero-links">' + links + "</div>" +
         "</div>" +
       "</div>";
 
     /* statement */
-    var statement = a.artStatement
-      ? section("Artist Statement", '<p class="statement">' + esc(a.artStatement) + "</p>") : "";
+    var stmt = L(a, "artStatement");
+    var statement = stmt
+      ? section(t("sStatement"), '<p class="statement">' + esc(stmt) + "</p>") : "";
+
+    /* long-form biography — a deep, ~10-minute read */
+    var biography = "";
+    var bioArr = bioOf(a);
+    if (bioArr && bioArr.length) {
+      var bodyHtml = bioArr.map(function (b) {
+        var paras = String(b.text || "").split(/\n\n+/).map(function (p) {
+          return p.trim() ? "<p>" + esc(p.trim()) + "</p>" : "";
+        }).join("");
+        return (b.heading ? '<h3 class="bio-head">' + esc(b.heading) + "</h3>" : "") + paras;
+      }).join("");
+      biography = section(t("sBiography"), '<div class="bio">' + bodyHtml + "</div>");
+    }
 
     /* galleries */
-    var galleries = (a.galleries && a.galleries.length) ? section("Represented By",
+    var galleries = (a.galleries && a.galleries.length) ? section(t("sRepresented"),
       '<ul class="link-list">' + a.galleries.map(function (g) {
         var name = g.url && g.url !== "#"
           ? '<a target="_blank" rel="noopener" href="' + esc(g.url) + '">' + esc(g.name) + " ↗</a>"
@@ -311,12 +385,12 @@
 
     /* CV: education + awards */
     var cvInner = "";
-    if (a.education && a.education.length) cvInner += "<div><p class=\"fact-label\">Education</p>" + listItems(a.education) + "</div>";
-    if (a.awards && a.awards.length) cvInner += "<div><p class=\"fact-label\">Awards & Honors</p>" + listItems(a.awards) + "</div>";
-    var cv = cvInner ? section("Curriculum Vitae", '<div class="cols-2">' + cvInner + "</div>") : "";
+    if (a.education && a.education.length) cvInner += "<div><p class=\"fact-label\">" + t("sEducation") + "</p>" + listItems(a.education) + "</div>";
+    if (a.awards && a.awards.length) cvInner += "<div><p class=\"fact-label\">" + t("sAwards") + "</p>" + listItems(a.awards) + "</div>";
+    var cv = cvInner ? section(t("sCV"), '<div class="cols-2">' + cvInner + "</div>") : "";
 
     /* press */
-    var press = (a.press && a.press.length) ? section("Press & Reviews",
+    var press = (a.press && a.press.length) ? section(t("sPress"),
       '<ul class="link-list">' + a.press.map(function (p) {
         return "<li><a target=\"_blank\" rel=\"noopener\" href=\"" + esc(p.url) + "\">" + esc(p.title) +
           "</a><span class=\"li-source\">" + esc(p.source || "") + "</span></li>";
@@ -337,7 +411,7 @@
             (it.source ? '<span class="li-source">' + esc(it.source) + "</span>" : "") + "</figcaption></figure>";
         } else {
           others += "<li><span><span class=\"badge " + (it.type === "video" ? "video" : "written") + "\">" +
-            esc(it.type === "video" ? "Video" : "Written") + "</span>" +
+            (it.type === "video" ? t("bVideo") : t("bWritten")) + "</span>" +
             "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(it.url) + "\">" + esc(it.title) + "</a></span>" +
             "<span class=\"li-source\">" + esc(it.source || "") + "</span></li>";
         }
@@ -345,11 +419,11 @@
       var inner = "";
       if (embeds) inner += '<div class="video-grid">' + embeds + "</div>";
       if (others) inner += '<ul class="link-list"' + (embeds ? ' style="margin-top:22px"' : "") + ">" + others + "</ul>";
-      interviews = section("Interviews & Talks", inner);
+      interviews = section(t("sInterviews"), inner);
     }
 
     /* books */
-    var books = (a.books && a.books.length) ? section("Books & Publications",
+    var books = (a.books && a.books.length) ? section(t("sBooks"),
       '<ul class="link-list">' + a.books.map(function (b) {
         var title = b.url && b.url !== "#"
           ? "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(b.url) + "\">" + esc(b.title) + "</a>"
@@ -359,13 +433,13 @@
       }).join("") + "</ul>") : "";
 
     /* public collections */
-    var collections = (a.publicCollections && a.publicCollections.length) ? section("Public Collections",
+    var collections = (a.publicCollections && a.publicCollections.length) ? section(t("sCollections"),
       '<ul class="collections">' + a.publicCollections.map(function (c) {
         return "<li>" + esc(c) + "</li>";
       }).join("") + "</ul>") : "";
 
     /* upcoming shows */
-    var shows = (a.upcomingShows && a.upcomingShows.length) ? section("Upcoming Shows",
+    var shows = (a.upcomingShows && a.upcomingShows.length) ? section(t("sUpcoming"),
       a.upcomingShows.map(function (s) {
         var when = [fmtDate(s.startDate), fmtDate(s.endDate)].filter(Boolean).join(" – ");
         var title = s.url && s.url !== "#"
@@ -408,13 +482,13 @@
         '<div class="work-grid">' + works + "</div></div>";
     });
     if (workInner && a.salesContact) {
-      workInner = '<p class="sales-note">For pricing &amp; availability, contact ' +
+      workInner = '<p class="sales-note">' + t("salesPre") +
         '<a href="mailto:' + esc(a.salesContact) + '">' + esc(a.salesContact) + "</a>.</p>" + workInner;
     }
-    var work = workInner ? section("Work — by Body of Work & Series", workInner) : "";
+    var work = workInner ? section(t("sWork"), workInner) : "";
 
     /* selected (past) exhibitions */
-    var pastEx = (a.pastExhibitions && a.pastExhibitions.length) ? section("Selected Exhibitions",
+    var pastEx = (a.pastExhibitions && a.pastExhibitions.length) ? section(t("sPastEx"),
       '<ul class="link-list">' + a.pastExhibitions.map(function (e) {
         var title = e.url && e.url !== "#"
           ? "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(e.url) + "\">" + esc(e.title) + "</a>"
@@ -425,12 +499,12 @@
       }).join("") + "</ul>") : "";
 
     /* art fairs */
-    var fairs = (a.artFairs && a.artFairs.length) ? section("Art Fairs",
+    var fairs = (a.artFairs && a.artFairs.length) ? section(t("sFairs"),
       '<ul class="link-list">' + a.artFairs.map(function (f) {
         var name = f.url && f.url !== "#"
           ? "<a target=\"_blank\" rel=\"noopener\" href=\"" + esc(f.url) + "\">" + esc(f.name) + "</a>"
           : esc(f.name);
-        var detail = [f.presentedBy ? "presented by " + f.presentedBy : "", f.location].filter(Boolean).join(" · ");
+        var detail = [f.presentedBy ? t("presentedBy") + " " + f.presentedBy : "", f.location].filter(Boolean).join(" · ");
         return "<li><span>" + name + (detail ? ' <span class="def-meta">— ' + esc(detail) + "</span>" : "") +
           '</span><span class="li-source">' + esc(f.year || "") + "</span></li>";
       }).join("") + "</ul>") : "";
@@ -439,14 +513,14 @@
     var studioInner = "";
     if (a.studio && (a.studio.location || a.studio.visits)) {
       studioInner = '<div class="facts">' +
-        fact("Location", esc(a.studio.location)) +
-        fact("Visits", esc(a.studio.visits)) + "</div>";
+        fact(t("fLocation"), esc(a.studio.location)) +
+        fact(t("fVisits"), esc(a.studio.visits)) + "</div>";
     }
-    var studio = studioInner ? section("Studio & Visits", studioInner) : "";
+    var studio = studioInner ? section(t("sStudio"), studioInner) : "";
 
     /* related */
     var rel = relatedTo(a);
-    var related = rel.length ? section("Related Artists",
+    var related = rel.length ? section(t("sRelated"),
       '<div class="related-grid">' + rel.map(cardHTML).join("") + "</div>") : "";
 
     /* works on video — embedded YouTube/Vimeo showing the artist's work */
@@ -462,12 +536,22 @@
           '<figcaption class="video-cap"><span class="video-title">' + esc(v.title) + "</span>" +
           (v.source ? '<span class="li-source">' + esc(v.source) + "</span>" : "") + "</figcaption></figure>";
       }).join("");
-      if (vembeds) videosSection = section("Works on Video", '<div class="video-grid">' + vembeds + "</div>");
+      if (vembeds) videosSection = section(t("sVideos"), '<div class="video-grid">' + vembeds + "</div>");
     }
 
+    /* individual curiosity */
+    var curioTxt = L(a, "curiosity");
+    var curiosity = curioTxt ? section(t("sCuriosity"), '<p class="statement">' + esc(curioTxt) + "</p>") : "";
+
+    /* bodies of work — full list by name & year */
+    var bodies = (a.bodiesOfWork && a.bodiesOfWork.length) ? section(t("sBodies"),
+      '<ul class="link-list">' + a.bodiesOfWork.map(function (b) {
+        return "<li><span>" + esc(b.name) + "</span><span class=\"li-source\">" + esc(b.year || "") + "</span></li>";
+      }).join("") + "</ul>") : "";
+
     view.innerHTML =
-      '<button class="back-btn" id="backBtn">← Back to results</button>' +
-      hero + statement + section("Movement", (a.movements || []).length
+      '<button class="back-btn" id="backBtn">' + t("back") + "</button>" +
+      hero + statement + curiosity + biography + bodies + section(t("fMovement"), (a.movements || []).length
         ? '<div class="tag-row">' + a.movements.map(function (m) { return '<span class="tag">' + esc(m) + "</span>"; }).join("") + "</div>"
         : "") +
       videosSection +
@@ -481,7 +565,7 @@
 
   function buildChips() {
     var movements = uniq([].concat.apply([], ARTISTS.map(function (a) { return a.movements || []; }))).sort();
-    var html = '<button class="chip" data-clear>All</button>';
+    var html = '<button class="chip" data-clear>' + t("all") + "</button>";
     movements.forEach(function (m) {
       html += '<button class="chip" data-type="movements" data-value="' + esc(m) + '">' + esc(m) + "</button>";
     });
@@ -511,33 +595,31 @@
   function joinList(arr) { return (arr || []).filter(Boolean).join(", "); }
 
   function buildNarration() {
+    var pt = LANG === "pt";
     var a = currentArtist();
     if (a) {
       var p = [];
       p.push(a.name + ".");
-      if (a.nationality) p.push(a.nationality + " artist.");
+      if (a.nationality) p.push(a.nationality + (pt ? ", artista." : " artist."));
       var bio = [];
-      if (a.bornDate) bio.push("Born " + a.bornDate + (a.bornPlace ? " in " + a.bornPlace : ""));
-      if (a.livesIn) bio.push("lives and works in " + a.livesIn);
+      if (a.bornDate) bio.push((pt ? "Nascido em " : "Born ") + a.bornDate + (a.bornPlace ? (pt ? " em " : " in ") + a.bornPlace : ""));
+      if (a.livesIn) bio.push((pt ? "vive e trabalha em " : "lives and works in ") + a.livesIn);
       if (bio.length) p.push(bio.join("; ") + ".");
-      if (a.movements && a.movements.length) p.push("Associated with " + joinList(a.movements) + ".");
-      if (a.mediums && a.mediums.length) p.push("Works in " + joinList(a.mediums) + ".");
-      if (a.artStatement) p.push("Artist statement. " + a.artStatement);
-      if (a.galleries && a.galleries.length) p.push("Represented by " + joinList(a.galleries.map(function (g) { return g.name; })) + ".");
-      if (a.upcomingShows && a.upcomingShows.length) {
-        p.push("Upcoming shows: " + joinList(a.upcomingShows.map(function (s) {
-          return s.title + (s.venue ? " at " + s.venue : "");
-        })) + ".");
-      }
-      if (a.series && a.series.length) p.push("Bodies of work include " + joinList(a.series.map(function (s) { return s.name; })) + ".");
+      if (a.movements && a.movements.length) p.push((pt ? "Associado a " : "Associated with ") + joinList(a.movements) + ".");
+      if (a.mediums && a.mediums.length) p.push((pt ? "Trabalha com " : "Works in ") + joinList(a.mediums) + ".");
+      var stmt = L(a, "artStatement");
+      if (stmt) p.push((pt ? "Declaração do artista. " : "Artist statement. ") + stmt);
+      if (a.galleries && a.galleries.length) p.push((pt ? "Representado por " : "Represented by ") + joinList(a.galleries.map(function (g) { return g.name; })) + ".");
+      if (a.series && a.series.length) p.push((pt ? "Conjuntos de obras incluem " : "Bodies of work include ") + joinList(a.series.map(function (s) { return s.name; })) + ".");
       return p.join(" ");
     }
     var results = filtered();
-    if (!results.length) return "No artists found. Try a different search.";
-    var intro = "Showing " + results.length + " artist" + (results.length === 1 ? "" : "s") + ". ";
+    if (!results.length) return pt ? "Nenhum artista encontrado. Tente outra busca." : "No artists found. Try a different search.";
+    var intro = (pt ? "Mostrando " : "Showing ") + results.length + " " +
+      (results.length === 1 ? t("artist1") : t("artistN")) + ". ";
     return intro + results.map(function (r) {
       return r.name + (r.nationality ? ", " + r.nationality : "") +
-        (r.movements && r.movements.length ? ", known for " + joinList(r.movements) : "") + ".";
+        (r.movements && r.movements.length ? (pt ? ", conhecido por " : ", known for ") + joinList(r.movements) : "") + ".";
     }).join(" ");
   }
 
@@ -556,7 +638,7 @@
   function setReadState(speaking) {
     readBtn.classList.toggle("speaking", speaking);
     readBtn.setAttribute("aria-pressed", speaking ? "true" : "false");
-    readBtn.querySelector(".ra-label").textContent = speaking ? "Stop" : "Read aloud";
+    readBtn.querySelector(".ra-label").textContent = speaking ? t("stop") : t("readAloud");
   }
 
   function stopRead() {
@@ -575,6 +657,7 @@
     var chunks = chunkText(text), done = 0;
     chunks.forEach(function (c) {
       var u = new SpeechSynthesisUtterance(c);
+      u.lang = LANG === "pt" ? "pt-BR" : "en-US";
       u.rate = 1; u.pitch = 1;
       u.onend = function () { done++; if (done >= chunks.length) setReadState(false); };
       u.onerror = function () { setReadState(false); };
@@ -632,6 +715,8 @@
     });
 
     readBtn.addEventListener("click", toggleRead);
+    var langToggle = document.getElementById("langToggle");
+    if (langToggle) langToggle.addEventListener("click", switchLang);
     window.addEventListener("beforeunload", stopRead);
 
     document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
@@ -669,18 +754,40 @@
   }
   function closeLightbox() { lightbox.hidden = true; }
 
+  /* ---------- language toggle ---------- */
+
+  function applyLang() {
+    try { document.documentElement.lang = LANG === "pt" ? "pt-BR" : "en"; } catch (e) {}
+    if (searchInput) searchInput.placeholder = t("searchPlaceholder");
+    if (readBtn) { var lab = readBtn.querySelector(".ra-label"); if (lab) lab.textContent = t("readAloud"); }
+    var lt = document.getElementById("langToggle");
+    if (lt) {
+      lt.textContent = LANG === "pt" ? "EN" : "PT";
+      lt.setAttribute("aria-label", LANG === "pt" ? "Switch to English" : "Mudar para português");
+    }
+  }
+
+  function switchLang() {
+    stopRead();
+    setLang(LANG === "pt" ? "en" : "pt");
+    applyLang();
+    buildChips();
+    route();
+  }
+
   /* ---------- init ---------- */
 
   function start(data) {
     ARTISTS = data;
     if (speechOK) readBtn.hidden = false;
+    applyLang();
     buildChips();
     bindEvents();
     route();
   }
 
   function fail(msg) {
-    view.innerHTML = '<div class="empty"><h2>Could not load artist data</h2><p>' + esc(msg) +
+    view.innerHTML = '<div class="empty"><h2>' + (LANG === "pt" ? "Não foi possível carregar os dados" : "Could not load artist data") + "</h2><p>" + esc(msg) +
       '</p><p>Run a local server in the project folder, e.g. <code>python3 -m http.server</code>, ' +
       'then open <code>http://localhost:8000</code>.</p></div>';
   }
