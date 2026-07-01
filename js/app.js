@@ -64,6 +64,74 @@
   function L(a, field) { return (LANG === "pt" && a[field + "_pt"]) ? a[field + "_pt"] : a[field]; }
   function bioOf(a) { return (LANG === "pt" && a.biography_pt && a.biography_pt.length) ? a.biography_pt : a.biography; }
 
+  /* ---------- curated artist portraits (verified free-licensed) ---------- */
+  var PORTRAITS = {
+    "yayoi-kusama": "https://commons.wikimedia.org/wiki/Special:FilePath/Yayoi_Kusama_circa_2004.jpg?width=600",
+    "tom-friedman": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom_Friedman.JPG?width=600",
+    "james-turrell": "https://commons.wikimedia.org/wiki/Special:FilePath/James-Turrell-medals-hi-res.jpg?width=600",
+    "ai-weiwei": "https://commons.wikimedia.org/wiki/Special:FilePath/Aj_Wej-wej_I_%282017%29.jpg?width=600",
+    "alicja-kwade": "https://commons.wikimedia.org/wiki/Special:FilePath/Oliver_Mark_-_Alicja_Kwade%2C_Berlin_2014.jpg?width=600",
+    "amy-sherald": "https://commons.wikimedia.org/wiki/Special:FilePath/AmySherald-byPhilipRomano.jpg?width=600",
+    "andreas-gursky": "https://commons.wikimedia.org/wiki/Special:FilePath/Gursky-andreas-010313-2.jpg?width=600",
+    "anish-kapoor": "https://commons.wikimedia.org/wiki/Special:FilePath/Anish_Kapoor_2017.jpg?width=600",
+    "anthony-mccall": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthony_McCall.jpg?width=600",
+    "antony-gormley": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Antony_Mark_David_Gormley_%282024%29.jpg?width=600",
+    "bharti-kher": "https://commons.wikimedia.org/wiki/Special:FilePath/Bharti_Kher.gif?width=600",
+    "cai-guo-qiang": "https://commons.wikimedia.org/wiki/Special:FilePath/CaiGuoQiangSpeakingOct10.jpg?width=600",
+    "carlos-cruz-diez": "https://commons.wikimedia.org/wiki/Special:FilePath/Retrato_Cruz-Diez_France_2013.jpg?width=600",
+    "cecily-brown": "https://commons.wikimedia.org/wiki/Special:FilePath/Cecily_Brown_2012.jpg?width=600",
+    "cildo-meireles": "https://commons.wikimedia.org/wiki/Special:FilePath/Cildo_Meireles_davant_de_la_seva_obra_%E2%80%98Entrevendo%E2%80%99.jpg?width=600",
+    "cindy-sherman": "https://commons.wikimedia.org/wiki/Special:FilePath/Cindy_Sherman_%28cropped%29.jpg?width=600",
+    "conrad-shawcross": "https://commons.wikimedia.org/wiki/Special:FilePath/Conrad_Shawcross%2C_2011_%28cropped%29.JPG?width=600",
+    "damien-hirst": "https://commons.wikimedia.org/wiki/Special:FilePath/Damien_Hirst_2_-_West_London_studio%2C_Jul_16%2C_2021.jpg?width=600",
+    "david-hockney": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Hockney_in_Washington_Square_Park_%281977%29.jpg?width=600",
+    "do-ho-suh": "https://commons.wikimedia.org/wiki/Special:FilePath/Do_Ho_Suh_and_Eitaro_Ogawa_%28cropped%29.jpg?width=600",
+    "doris-salcedo": "https://commons.wikimedia.org/wiki/Special:FilePath/GUGG_Doris_Salcedo.jpg?width=600",
+    "ernesto-neto": "https://commons.wikimedia.org/wiki/Special:FilePath/Ernsto_Neto_portrait_4.JPG?width=600",
+    "gabriel-orozco": "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Orozco%2C_2024.jpg?width=600",
+    "georg-baselitz": "https://commons.wikimedia.org/wiki/Special:FilePath/Georg_Baselitz_by_Erling_Mandelmann.jpg?width=600",
+    "gerhard-richter": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerhard_Richter%2C_Prague_%282017%29.jpg?width=600",
+    "glenn-ligon": "https://commons.wikimedia.org/wiki/Special:FilePath/Glenn_Ligon_Interview_at_Camden_Arts_Centre_6m24s_%28cropped%29.jpg?width=600",
+    "jeff-koons": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeff_Koons_01_%283x4_cropped%29.JPG?width=600",
+    "jesus-rafael-soto": "https://commons.wikimedia.org/wiki/Special:FilePath/Jesus_Rafael_Soto_by_Lothar_Wolleh.jpg?width=600",
+    "julie-mehretu": "https://commons.wikimedia.org/wiki/Special:FilePath/Inside_the_Studio_with_Julie_Mehretu_00.01_%28cropped%29.jpg?width=600",
+    "julio-le-parc": "https://commons.wikimedia.org/wiki/Special:FilePath/Leparc_julio.png?width=600",
+    "kara-walker": "https://commons.wikimedia.org/wiki/Special:FilePath/Kara_Walker_Interview_Camden_Arts_Centre_01.47_%28cropped%29.jpg?width=600",
+    "katharina-grosse": "https://commons.wikimedia.org/wiki/Special:FilePath/Oliver_Mark_-_Katharina_Grosse%2C_Berlin_2011.jpg?width=600",
+    "kehinde-wiley": "https://commons.wikimedia.org/wiki/Special:FilePath/Kehinde_Wiley_%282015%29_%28cropped%29.jpg?width=600",
+    "lee-ufan": "https://commons.wikimedia.org/wiki/Special:FilePath/Lee_Ufan.jpg?width=600",
+    "lorna-simpson": "https://commons.wikimedia.org/wiki/Special:FilePath/LornaSimpsonApr09_cropped.jpg?width=600",
+    "luc-tuymans": "https://commons.wikimedia.org/wiki/Special:FilePath/Luc_Tuymans_01.jpg?width=600",
+    "mariko-mori": "https://commons.wikimedia.org/wiki/Special:FilePath/Mori_Mariko_at_the_Japan_Society_Panel_on_Art_%26_Nature_2010.jpg?width=600",
+    "marina-abramovic": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasto24_28_300624_%28130_of_545%29_%2853838092455%29_%28cropped%29.jpg?width=600",
+    "mark-bradford": "https://commons.wikimedia.org/wiki/Special:FilePath/MarkBradfordPortrait4.jpg?width=600",
+    "mark-grotjahn": "https://commons.wikimedia.org/wiki/Special:FilePath/Mark_Grotjahn.jpeg?width=600",
+    "marlene-dumas": "https://commons.wikimedia.org/wiki/Special:FilePath/Marlene_Dumas.jpg?width=600",
+    "mickalene-thomas": "https://commons.wikimedia.org/wiki/Special:FilePath/Mickalene_Thomas%2C_April_2017.png?width=600",
+    "mona-hatoum": "https://commons.wikimedia.org/wiki/Special:FilePath/IVAM_-_Mona_Hatoum.jpg?width=600",
+    "njideka-akunyili-crosby": "https://commons.wikimedia.org/wiki/Special:FilePath/Njideka_Akunyili_2014.jpg?width=600",
+    "olafur-eliasson": "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%93lafur_El%C3%ADasson_Internationale_Jury_Berlinale_2017_%28cropped%29.jpg?width=600",
+    "olga-de-amaral": "https://commons.wikimedia.org/wiki/Special:FilePath/Olga_in_Ubat%C3%A9_%28cropped%29.jpg?width=600",
+    "peter-doig": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Doig_-_%27No_Foreign_Lands%27_Presser_-_2013-08-01.jpeg?width=600",
+    "pipilotti-rist": "https://commons.wikimedia.org/wiki/Special:FilePath/Portraitfoto_Pipilotti_Rist.jpg?width=600",
+    "rachel-whiteread": "https://commons.wikimedia.org/wiki/Special:FilePath/Rachel_Whiteread_2018.jpg?width=600",
+    "rafael-lozano-hemmer": "https://commons.wikimedia.org/wiki/Special:FilePath/Rafael_Lozano-Hemmer_Portrait.jpg?width=600",
+    "rashid-johnson": "https://commons.wikimedia.org/wiki/Special:FilePath/20081202_Rashid_Johnson_at_the_Rubell_Family_Collection.jpg?width=600",
+    "refik-anadol": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Future_Forum_2024_-_Refik_Anadol.jpg?width=600",
+    "shirin-neshat": "https://commons.wikimedia.org/wiki/Special:FilePath/Viennale_talk_%282%29%2C_Shirin_Neshat.jpg?width=600",
+    "subodh-gupta": "https://commons.wikimedia.org/wiki/Special:FilePath/Subodh_Gupta%2C_2020.jpg?width=600",
+    "takashi-murakami": "https://commons.wikimedia.org/wiki/Special:FilePath/Takashi_Murakami_at_Versailles_Sept._2010_%28crop%29.jpg?width=600",
+    "teresita-fernandez": "https://commons.wikimedia.org/wiki/Special:FilePath/TF_portrait_2019_02_full_image%28by_Natalia_Mantini%29.jpg?width=600",
+    "theaster-gates": "https://commons.wikimedia.org/wiki/Special:FilePath/Unleashing_Entrepreneurial_Innovation_with_Stanford_University_Theaster_Gates.jpg?width=600",
+    "tomas-saraceno": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom%C3%A1s_Saraceno_a_Firenze%2C_21_febbraio_2020%2C_04.jpg?width=600",
+    "tracey-emin": "https://commons.wikimedia.org/wiki/Special:FilePath/Tracey_Emin_1-cropped.jpg?width=600",
+    "vik-muniz": "https://commons.wikimedia.org/wiki/Special:FilePath/Visita_-_Artista_Pl%C3%A1stico_Vik_Muniz_%2853515588190%29_%28cropped%29.jpg?width=600",
+    "william-kentridge": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Kentridge_%282025%29.jpg?width=600",
+    "wolfgang-tillmans": "https://commons.wikimedia.org/wiki/Special:FilePath/Tillmans_crop.jpg?width=600",
+    "yinka-shonibare": "https://commons.wikimedia.org/wiki/Special:FilePath/Yinka_Shonibare_CBE_RA%2C_in_front_of_Hibiscus_Rising._LEEDS_2023_%28cropped%29.jpg?width=600",
+    "yoshitomo-nara": "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshitomo_Nara_Yokohama_2012.jpg?width=600"
+  };
+
   var view = document.getElementById("view");
   var searchInput = document.getElementById("searchInput");
   var chipsEl = document.getElementById("filterChips");
@@ -114,9 +182,9 @@
   }
 
   /* ---------- runtime image resolution (free sources) ---------- */
-  // Empty src/image values are upgraded to real photos at render time using
-  // CORS-enabled free APIs (Wikipedia lead images + Wikimedia Commons search).
-  // Placeholders stay as the fallback, so the site still works fully offline.
+  // Work images with an empty value are upgraded to real photos at render time
+  // using the CORS-enabled Wikimedia Commons search. Portraits are NOT guessed
+  // this way (see the curated PORTRAITS map) to avoid showing the wrong person.
   var imageCache = {};
   try { imageCache = JSON.parse(localStorage.getItem("artisearch_imgcache") || "{}"); } catch (e) {}
 
@@ -127,14 +195,6 @@
 
   function fetchJSON(url) {
     return fetch(url, { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; });
-  }
-
-  function resolvePortrait(name) {
-    return fetchJSON("https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(name))
-      .then(function (d) {
-        if (!d) return "";
-        return (d.originalimage && d.originalimage.source) || (d.thumbnail && d.thumbnail.source) || "";
-      });
   }
 
   function resolveWork(q) {
@@ -170,13 +230,12 @@
     if (!("fetch" in window)) return;
     var els = root.querySelectorAll("[data-resolve]");
     Array.prototype.forEach.call(els, function (el) {
-      var type = el.getAttribute("data-resolve");
       var q = el.getAttribute("data-q") || "";
       var q2 = el.getAttribute("data-q2") || "";
-      var key = type + ":" + q;
+      var key = "work:" + q;
       if (Object.prototype.hasOwnProperty.call(imageCache, key)) { applyImage(el, imageCache[key]); return; }
-      var p = type === "portrait" ? resolvePortrait(q) : resolveWork(q);
-      p.then(function (url) { return (!url && q2) ? resolveWork(q2) : url; })
+      resolveWork(q)
+        .then(function (url) { return (!url && q2) ? resolveWork(q2) : url; })
         .then(function (url) { cachePut(key, url || ""); applyImage(el, url); })
         .catch(function () { imageCache[key] = ""; });
     });
@@ -247,13 +306,12 @@
   /* ---------- rendering: list ---------- */
 
   function cardHTML(a) {
-    var head = a.headshots && a.headshots[0] ? a.headshots[0].src : "";
+    var head = PORTRAITS[a.id] || "";
     var tags = (a.movements || []).slice(0, 3).map(function (m) {
       return '<span class="tag">' + esc(m) + "</span>";
     }).join("");
-    var headResolve = head ? "" : ' data-resolve="portrait" data-q="' + esc(a.name) + '"';
     return '<button class="card" data-id="' + esc(a.id) + '">' +
-      '<div class="card-thumb"' + headResolve + ' style="background-image:url(\'' + img(head, a.id, a.name) + '\')"></div>' +
+      '<div class="card-thumb" style="background-image:url(\'' + img(head, a.id, a.name) + '\')"></div>' +
       '<div class="card-body">' +
         '<h3 class="card-name">' + esc(a.name) + "</h3>" +
         '<p class="card-sub">' + esc(a.nationality || "") + (a.livesIn ? " · " + t("livesInShort") + " " + esc(a.livesIn) : "") + "</p>" +
@@ -325,7 +383,7 @@
   }
 
   function renderProfile(a) {
-    var head = a.headshots && a.headshots[0] ? a.headshots[0] : { src: "", credit: "" };
+    var head = { src: PORTRAITS[a.id] || "", credit: "" };
 
     /* hero links */
     var links = "";
@@ -334,10 +392,9 @@
     if (a.email) links += '<a class="link-btn" href="mailto:' + esc(a.email) + '">' + t("email") + "</a>";
     if (a.cv && a.cv.url) links += '<a class="link-btn" target="_blank" rel="noopener" href="' + esc(a.cv.url) + '">' + t("downloadCV") + "</a>";
 
-    var portraitResolve = head.src ? "" : ' data-resolve="portrait" data-q="' + esc(a.name) + '"';
     var hero =
       '<div class="hero">' +
-        '<div><div class="hero-portrait"' + portraitResolve + ' style="background-image:url(\'' + img(head.src, a.id, a.name, true) + '\')"></div>' +
+        '<div><div class="hero-portrait" style="background-image:url(\'' + img(head.src, a.id, a.name, true) + '\')"></div>' +
           (head.credit ? '<p class="portrait-credit">' + esc(head.credit) + "</p>" : "") +
         "</div>" +
         "<div>" +
