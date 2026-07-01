@@ -609,8 +609,23 @@
       if (a.mediums && a.mediums.length) p.push((pt ? "Trabalha com " : "Works in ") + joinList(a.mediums) + ".");
       var stmt = L(a, "artStatement");
       if (stmt) p.push((pt ? "Declaração do artista. " : "Artist statement. ") + stmt);
+      var curio = L(a, "curiosity");
+      if (curio) p.push((pt ? "Você sabia? " : "Did you know? ") + curio);
+      var bioArr = bioOf(a);
+      if (bioArr && bioArr.length) {
+        p.push(pt ? "Biografia." : "Biography.");
+        bioArr.forEach(function (b) {
+          if (b.heading) p.push(b.heading + ".");
+          if (b.text) p.push(String(b.text).replace(/\s+/g, " ").trim());
+        });
+      }
+      if (a.bodiesOfWork && a.bodiesOfWork.length) {
+        p.push((pt ? "Conjuntos de obras: " : "Bodies of work: ") +
+          joinList(a.bodiesOfWork.map(function (b) { return b.name + (b.year ? " (" + b.year + ")" : ""); })) + ".");
+      } else if (a.series && a.series.length) {
+        p.push((pt ? "Conjuntos de obras incluem " : "Bodies of work include ") + joinList(a.series.map(function (s) { return s.name; })) + ".");
+      }
       if (a.galleries && a.galleries.length) p.push((pt ? "Representado por " : "Represented by ") + joinList(a.galleries.map(function (g) { return g.name; })) + ".");
-      if (a.series && a.series.length) p.push((pt ? "Conjuntos de obras incluem " : "Bodies of work include ") + joinList(a.series.map(function (s) { return s.name; })) + ".");
       return p.join(" ");
     }
     var results = filtered();
@@ -641,10 +656,32 @@
     readBtn.querySelector(".ra-label").textContent = speaking ? t("stop") : t("readAloud");
   }
 
+  // Chrome silently stops speaking after ~15s; a periodic pause/resume resets
+  // its internal timer so long readings play to the end.
+  var keepAlive = null;
+  function stopKeepAlive() { if (keepAlive) { clearInterval(keepAlive); keepAlive = null; } }
+
   function stopRead() {
     if (!speechOK) return;
+    stopKeepAlive();
     window.speechSynthesis.cancel();
     setReadState(false);
+  }
+
+  // Speak chunks one at a time: only one utterance is queued at a time, which
+  // avoids the browser bug where a long queue is dropped part-way through.
+  function speakChunks(chunks) {
+    var synth = window.speechSynthesis, i = 0;
+    function next() {
+      if (i >= chunks.length) { stopKeepAlive(); setReadState(false); return; }
+      var u = new SpeechSynthesisUtterance(chunks[i++]);
+      u.lang = LANG === "pt" ? "pt-BR" : "en-US";
+      u.rate = 1; u.pitch = 1;
+      u.onend = next;
+      u.onerror = function () { stopKeepAlive(); setReadState(false); };
+      synth.speak(u);
+    }
+    next();
   }
 
   function toggleRead() {
@@ -654,16 +691,10 @@
     var text = buildNarration();
     if (!text) return;
     synth.cancel();
-    var chunks = chunkText(text), done = 0;
-    chunks.forEach(function (c) {
-      var u = new SpeechSynthesisUtterance(c);
-      u.lang = LANG === "pt" ? "pt-BR" : "en-US";
-      u.rate = 1; u.pitch = 1;
-      u.onend = function () { done++; if (done >= chunks.length) setReadState(false); };
-      u.onerror = function () { setReadState(false); };
-      synth.speak(u);
-    });
     setReadState(true);
+    stopKeepAlive();
+    keepAlive = setInterval(function () { if (synth.speaking) { synth.pause(); synth.resume(); } }, 10000);
+    speakChunks(chunkText(text));
   }
 
   /* ---------- routing ---------- */
